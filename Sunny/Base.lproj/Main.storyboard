@@ -63,6 +63,7 @@
                         <color key="backgroundColor" red="0.98782641270000004" green="0.61927995759999999" blue="0.24168236360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="oYR-YT-QQ0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HXh-Sh-Mvh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evq-Yp-gvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
