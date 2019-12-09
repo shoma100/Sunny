@@ -13,13 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let _ : Timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(pageTransition), userInfo: nil, repeats: false)
+        let _ : Timer = Timer.scheduledTimer(timeInterval: 3,  target: self,selector: #selector(pageTransition), userInfo: nil, repeats: false)
     }
     
     @objc func pageTransition(timer : Timer) {
             let storyboard: UIStoryboard = self.storyboard!
-            let top = storyboard.instantiateViewController(identifier: "top")
-            self.present(top,animated: false,completion: nil)
+            let top = storyboard.instantiateViewController(identifier: "top") as! topViewController
+                top.modalTransitionStyle = .coverVertical
+        
+            self.present(top,animated: true,completion: nil)
         }
 
 
