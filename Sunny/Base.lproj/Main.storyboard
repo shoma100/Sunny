@@ -257,7 +257,7 @@
         <!--View Controller-->
         <scene sceneID="gBf-f8-hIC">
             <objects>
-                <viewController id="3db-S2-pPs" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3db-S2-pPs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m6W-Ly-hlh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,11 +358,15 @@
                                 <state key="normal" title="アカウント設定">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Bs6-PH-BRv" kind="show" id="XG9-Rz-QJo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="m1y-zH-3dx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e38-v4-Clh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sn3-47-voa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -371,7 +375,7 @@
         <!--View Controller-->
         <scene sceneID="nJG-3f-XW7">
             <objects>
-                <viewController id="Bs6-PH-BRv" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Bs6-PH-BRv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pTL-gE-jGB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,7 +386,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <items>
                                     <navigationItem title="設定" id="po6-xD-9PV">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="brJ-HH-ynC"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="brJ-HH-ynC">
+                                            <connections>
+                                                <segue destination="3db-S2-pPs" kind="show" id="seI-oh-C5H"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -399,7 +407,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="名前">
+                                        <fragment content="名前　　　　　　　　　　　　　　　　　　　　　　　＞">
                                             <attributes>
                                                 <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <font key="NSFont" size="15" name=".HiraKakuInterface-W3"/>
@@ -409,10 +417,34 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザネーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-sS-29X">
+                                <rect key="frame" x="279" y="147" width="104" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpY-mC-JcD">
+                                <rect key="frame" x="0.0" y="194" width="414" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="lHa-i7-JfV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vhm-mq-Ogj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7r4-zq-sie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -425,6 +457,7 @@
         <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XG9-Rz-QJo"/>
         <segue reference="t5d-qq-Ltq"/>
     </inferredMetricsTieBreakers>
 </document>
