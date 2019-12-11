@@ -10,7 +10,7 @@
         <!--top View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="top" title="top View Controller" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="topViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="top View Controller" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
         <!--Initial View Controller-->
         <scene sceneID="ZI7-uL-nQ3">
             <objects>
-                <viewController storyboardIdentifier="initial" title="Initial View Controller" modalPresentationStyle="fullScreen" id="8bO-pZ-qbq" customClass="topViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="top" title="Initial View Controller" modalPresentationStyle="fullScreen" id="8bO-pZ-qbq" customClass="topViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mJ-lj-Rod">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,6 @@
                                 <connections>
                                     <action selector="submit" destination="72u-1n-auk" eventType="touchUpInside" id="7Eb-Jv-ytM"/>
                                     <action selector="submit:" destination="72u-1n-auk" eventType="touchUpInside" id="xXQ-Y3-Din"/>
-                                    <segue destination="8bO-pZ-qbq" kind="show" identifier="top" id="nx2-YF-h01"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="B30-W2-hRR">
@@ -127,12 +126,6 @@
                                     <segue destination="8bO-pZ-qbq" kind="show" identifier="top" id="t5d-qq-Ltq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qyl-Oi-ure">
-                                <rect key="frame" x="52" y="387" width="310" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" textContentType="username"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-9h-2N8">
                                 <rect key="frame" x="52" y="457" width="310" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -151,11 +144,23 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qyl-Oi-ure">
+                                <rect key="frame" x="52" y="387" width="310" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.98782641270000004" green="0.61927995759999999" blue="0.24168236360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="3s6-vI-DxP"/>
                     </view>
                     <navigationItem key="navigationItem" id="6vc-Gk-mZv"/>
+                    <connections>
+                        <outlet property="id" destination="Qyl-Oi-ure" id="cSB-8X-uoj"/>
+                        <outlet property="name" destination="KCQ-9h-2N8" id="NGI-dW-KDx"/>
+                        <outlet property="pass" destination="hLg-sH-wwM" id="dLy-gA-0mY"/>
+                        <outlet property="pass_conf" destination="bge-vT-XMu" id="TLM-kH-VqF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOm-rS-IUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,6 +524,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="seI-oh-C5H"/>
-        <segue reference="nx2-YF-h01"/>
+        <segue reference="t5d-qq-Ltq"/>
     </inferredMetricsTieBreakers>
 </document>
