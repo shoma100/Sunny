@@ -31,7 +31,11 @@ class AccountcreateViewController: UIViewController {
         id.endEditing(true)
         pass_conf.endEditing(true)
         
-        self.performSegue(withIdentifier: "top", sender: nil)
+            let storyboard: UIStoryboard = self.storyboard!
+            let top = storyboard.instantiateViewController(identifier: "top") as! topViewController
+                top.modalTransitionStyle = .coverVertical
+        
+            self.present(top,animated: true,completion: nil)
     }
     
     override func viewDidLoad() {
