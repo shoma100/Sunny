@@ -174,7 +174,7 @@
                                 <rect key="frame" x="52" y="371" width="310" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.98782641270000004" green="0.61927995759999999" blue="0.24168236360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
