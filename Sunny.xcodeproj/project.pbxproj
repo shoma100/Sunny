@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA621C0239F719C0077D331 /* LoginViewController.swift */; };
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
+		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
+		1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
 		CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995946239A159200DEA54E /* AccountcreateViewController.swift */; };
 		CC995949239A251600DEA54E /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995948239A251600DEA54E /* topViewController.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		1AA621C0239F719C0077D331 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
+		1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		7289F2C5335F065664C861B0 /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,7 +60,6 @@
 				ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */,
 				C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +103,8 @@
 				CCFAE99E2399E9100003F3E2 /* Sunny.xcdatamodeld */,
 				CC995946239A159200DEA54E /* AccountcreateViewController.swift */,
 				1AA621C0239F719C0077D331 /* LoginViewController.swift */,
+				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
+				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 				CCFAE98F2399E9100003F3E2 /* Frameworks */,
 				CCFAE9902399E9100003F3E2 /* Resources */,
 				1EE0821E519671FE78CF10EA /* [CP] Embed Pods Frameworks */,
+				3822695D78F7608AA1CA967A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +196,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sunny/Pods-Sunny-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3822695D78F7608AA1CA967A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sunny/Pods-Sunny-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sunny/Pods-Sunny-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sunny/Pods-Sunny-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D1D1AB693B5C296AB98338C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,12 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */,
+				1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */,
 				CCFAE99A2399E9100003F3E2 /* ViewController.swift in Sources */,
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
 				CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */,
 				CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */,
 				CC995949239A251600DEA54E /* topViewController.swift in Sources */,
 				CCFAE9A02399E9100003F3E2 /* Sunny.xcdatamodeld in Sources */,
+				1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +387,9 @@
 			baseConfigurationReference = ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,6 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,7 +409,9 @@
 			baseConfigurationReference = C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -390,6 +420,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

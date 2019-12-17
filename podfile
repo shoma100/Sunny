@@ -9,5 +9,6 @@ target 'Sunny' do
   pod 'JSQMessagesViewController'
   pod 'Firebase/Database'
   pod 'Firebase/Analytics'
-
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI'
 end
