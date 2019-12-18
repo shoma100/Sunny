@@ -11,6 +11,7 @@
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
 		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
 		1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */; };
+		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
 		CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995946239A159200DEA54E /* AccountcreateViewController.swift */; };
 		CC995949239A251600DEA54E /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995948239A251600DEA54E /* topViewController.swift */; };
@@ -27,6 +28,7 @@
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
 		1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
 		7289F2C5335F065664C861B0 /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				1AA621C0239F719C0077D331 /* LoginViewController.swift */,
 				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
 				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
+				1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */,
+				1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */,
 				1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */,
 				CCFAE99A2399E9100003F3E2 /* ViewController.swift in Sources */,
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
