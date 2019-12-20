@@ -14,8 +14,12 @@
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
 		7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E78DCF923A9CAD40045923D /* Sub.storyboard */; };
+		CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D0AF323AC6AC200030825 /* StringExt.swift */; };
 		CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995946239A159200DEA54E /* AccountcreateViewController.swift */; };
 		CC995949239A251600DEA54E /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995948239A251600DEA54E /* topViewController.swift */; };
+		CCB193F923AB073400244318 /* QrcodeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193F823AB073400244318 /* QrcodeReadViewController.swift */; };
+		CCB193FB23AB141300244318 /* AddFriendoAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */; };
+		CCB193FD23AB14A000244318 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193FC23AB14A000244318 /* AddFriendViewController.swift */; };
 		CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFAE9952399E9100003F3E2 /* AppDelegate.swift */; };
 		CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFAE9972399E9100003F3E2 /* SceneDelegate.swift */; };
 		CCFAE99A2399E9100003F3E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFAE9992399E9100003F3E2 /* ViewController.swift */; };
@@ -34,8 +38,12 @@
 		7E78DCFA23A9CAD40045923D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sub.storyboard; sourceTree = "<group>"; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
+		CC5D0AF323AC6AC200030825 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		CC995946239A159200DEA54E /* AccountcreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountcreateViewController.swift; sourceTree = "<group>"; };
 		CC995948239A251600DEA54E /* topViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topViewController.swift; sourceTree = "<group>"; };
+		CCB193F823AB073400244318 /* QrcodeReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeReadViewController.swift; sourceTree = "<group>"; };
+		CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendoAuthViewController.swift; sourceTree = "<group>"; };
+		CCB193FC23AB14A000244318 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		CCFAE9922399E9100003F3E2 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFAE9952399E9100003F3E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCFAE9972399E9100003F3E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
 				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
 				1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */,
+				CCB193F823AB073400244318 /* QrcodeReadViewController.swift */,
+				CC5D0AF323AC6AC200030825 /* StringExt.swift */,
+				CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */,
+				CCB193FC23AB14A000244318 /* AddFriendViewController.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -256,9 +268,13 @@
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
 				CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */,
 				CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */,
+				CCB193F923AB073400244318 /* QrcodeReadViewController.swift in Sources */,
 				CC995949239A251600DEA54E /* topViewController.swift in Sources */,
+				CCB193FB23AB141300244318 /* AddFriendoAuthViewController.swift in Sources */,
+				CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */,
 				CCFAE9A02399E9100003F3E2 /* Sunny.xcdatamodeld in Sources */,
 				1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */,
+				CCB193FD23AB14A000244318 /* AddFriendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ATXD4M2CY3;
+				DEVELOPMENT_TEAM = 5GD39XY79F;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ATXD4M2CY3;
+				DEVELOPMENT_TEAM = 5GD39XY79F;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
