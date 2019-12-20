@@ -45,14 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     //ログイン完了後に、ListViewControllerへの遷移のためのメソッド
     func transitionToView()  {
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        let nextView = storyboard.instantiateInitialViewController() as! MyAccountViewController
-        self.present(nextView, animated: true, completion: nil)
-        
-        
-        
-       // self.performSegue(withIdentifier: "toMypage", sender: self)
+        self.performSegue(withIdentifier: "toMypage", sender: self)
     }
     
     func login() {
