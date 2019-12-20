@@ -14,9 +14,6 @@
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
 		7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E78DCF923A9CAD40045923D /* Sub.storyboard */; };
-		CC8FB1F723AA03D9003680E6 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FB1F623AA03D9003680E6 /* AddFriendViewController.swift */; };
-		CC8FB1F923AA05CF003680E6 /* FriendAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FB1F823AA05CF003680E6 /* FriendAddViewController.swift */; };
-		CC8FB1FB23AA05EF003680E6 /* SunnycodeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8FB1FA23AA05EF003680E6 /* SunnycodeReadViewController.swift */; };
 		CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995946239A159200DEA54E /* AccountcreateViewController.swift */; };
 		CC995949239A251600DEA54E /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995948239A251600DEA54E /* topViewController.swift */; };
 		CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFAE9952399E9100003F3E2 /* AppDelegate.swift */; };
@@ -37,9 +34,6 @@
 		7E78DCFA23A9CAD40045923D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sub.storyboard; sourceTree = "<group>"; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
-		CC8FB1F623AA03D9003680E6 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
-		CC8FB1F823AA05CF003680E6 /* FriendAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAddViewController.swift; sourceTree = "<group>"; };
-		CC8FB1FA23AA05EF003680E6 /* SunnycodeReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnycodeReadViewController.swift; sourceTree = "<group>"; };
 		CC995946239A159200DEA54E /* AccountcreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountcreateViewController.swift; sourceTree = "<group>"; };
 		CC995948239A251600DEA54E /* topViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topViewController.swift; sourceTree = "<group>"; };
 		CCFAE9922399E9100003F3E2 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,8 +103,6 @@
 				CCFAE9992399E9100003F3E2 /* ViewController.swift */,
 				CCFAE99B2399E9100003F3E2 /* Main.storyboard */,
 				7E78DCF923A9CAD40045923D /* Sub.storyboard */,
-				CC8FB1F623AA03D9003680E6 /* AddFriendViewController.swift */,
-				CC8FB1FA23AA05EF003680E6 /* SunnycodeReadViewController.swift */,
 				CCFAE9A12399E9160003F3E2 /* Assets.xcassets */,
 				CCFAE9A62399E9160003F3E2 /* Info.plist */,
 				CCFAE99E2399E9100003F3E2 /* Sunny.xcdatamodeld */,
@@ -119,7 +111,6 @@
 				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
 				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
 				1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */,
-				CC8FB1F823AA05CF003680E6 /* FriendAddViewController.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -266,9 +257,6 @@
 				CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */,
 				CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */,
 				CC995949239A251600DEA54E /* topViewController.swift in Sources */,
-				CC8FB1F923AA05CF003680E6 /* FriendAddViewController.swift in Sources */,
-				CC8FB1F723AA03D9003680E6 /* AddFriendViewController.swift in Sources */,
-				CC8FB1FB23AA05EF003680E6 /* SunnycodeReadViewController.swift in Sources */,
 				CCFAE9A02399E9100003F3E2 /* Sunny.xcdatamodeld in Sources */,
 				1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */,
 			);
