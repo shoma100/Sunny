@@ -27,4 +27,8 @@ class MyAccountViewController: UIViewController {
             self.uid.text = "id：" + id!
          }
     }
+    
+    @IBAction func myUnwindAction(segue: UIStoryboard) {
+        
+    }
 }
