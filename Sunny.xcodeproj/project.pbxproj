@@ -17,6 +17,7 @@
 		CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D0AF323AC6AC200030825 /* StringExt.swift */; };
 		CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995946239A159200DEA54E /* AccountcreateViewController.swift */; };
 		CC995949239A251600DEA54E /* topViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC995948239A251600DEA54E /* topViewController.swift */; };
+		CCA17C4223B09B9F00323811 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA17C4123B09B9F00323811 /* AccountDetailsViewController.swift */; };
 		CCB193F923AB073400244318 /* QrcodeReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193F823AB073400244318 /* QrcodeReadViewController.swift */; };
 		CCB193FB23AB141300244318 /* AddFriendoAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */; };
 		CCB193FD23AB14A000244318 /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB193FC23AB14A000244318 /* AddFriendViewController.swift */; };
@@ -41,6 +42,7 @@
 		CC5D0AF323AC6AC200030825 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		CC995946239A159200DEA54E /* AccountcreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountcreateViewController.swift; sourceTree = "<group>"; };
 		CC995948239A251600DEA54E /* topViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topViewController.swift; sourceTree = "<group>"; };
+		CCA17C4123B09B9F00323811 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		CCB193F823AB073400244318 /* QrcodeReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeReadViewController.swift; sourceTree = "<group>"; };
 		CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendoAuthViewController.swift; sourceTree = "<group>"; };
 		CCB193FC23AB14A000244318 /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				CCFAE9A62399E9160003F3E2 /* Info.plist */,
 				CCFAE99E2399E9100003F3E2 /* Sunny.xcdatamodeld */,
 				CC995946239A159200DEA54E /* AccountcreateViewController.swift */,
+				CCA17C4123B09B9F00323811 /* AccountDetailsViewController.swift */,
 				1AA621C0239F719C0077D331 /* LoginViewController.swift */,
 				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
 				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
@@ -272,6 +275,7 @@
 				CC995949239A251600DEA54E /* topViewController.swift in Sources */,
 				CCB193FB23AB141300244318 /* AddFriendoAuthViewController.swift in Sources */,
 				CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */,
+				CCA17C4223B09B9F00323811 /* AccountDetailsViewController.swift in Sources */,
 				CCFAE9A02399E9100003F3E2 /* Sunny.xcdatamodeld in Sources */,
 				1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */,
 				CCB193FD23AB14A000244318 /* AddFriendViewController.swift in Sources */,
