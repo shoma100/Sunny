@@ -33,14 +33,6 @@
             </objects>
             <point key="canvasLocation" x="135" y="90"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="mhB-dO-m37">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="topreference" id="RbU-1V-a9b" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vz-nl-4ug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="550" y="413"/>
-        </scene>
         <!--Initial View Controller-->
         <scene sceneID="ZI7-uL-nQ3">
             <objects>
@@ -210,33 +202,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qOm-rS-IUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="873.88392857142856"/>
-        </scene>
-        <!--GenerateQR-->
-        <scene sceneID="1l7-GX-Uyy">
-            <objects>
-                <viewController id="cjr-FP-N2T" customClass="GenerateQR" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2DK-Ja-8iE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh3-Be-RXM">
-                                <rect key="frame" x="10" y="48" width="404" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">友達がこのQRコードをスキャンすると,
-あなたを友達に追加できます。</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="G7J-v6-D3r"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mqX-7m-4eq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aO6-Bh-1HG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2526.0869565217395" y="873.88392857142856"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="0ZJ-o1-XEC">
