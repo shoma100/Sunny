@@ -32,4 +32,10 @@ class AddFriendAuthViewController: UIViewController {
                  }
     
     }
+    
+    @IBAction func add() {
+        let data = ["firends": [id! : true]]
+        ref.child("user/" + id!).updateChildValues(data)
+        self.performSegue(withIdentifier: "add", sender: self)
+    }
 }
