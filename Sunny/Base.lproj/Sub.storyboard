@@ -517,7 +517,7 @@
         <!--AccountSet View Controller-->
         <scene sceneID="ER7-Z4-kLY">
             <objects>
-                <viewController storyboardIdentifier="accountset" title="AccountSet View Controller" modalPresentationStyle="fullScreen" id="Lcb-Zz-VJJ" customClass="ViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="accountset" title="AccountSet View Controller" modalPresentationStyle="fullScreen" id="Lcb-Zz-VJJ" customClass="AccountSetViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5IE-eJ-zpZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -638,6 +638,9 @@
                                 <state key="normal" title="ログアウト">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout" destination="Lcb-Zz-VJJ" eventType="touchUpInside" id="426-fr-hBI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -929,6 +932,9 @@
                                 <state key="normal" title="はい">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="add" destination="fDH-lh-J7k" eventType="touchUpInside" id="AZI-6J-Wfe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49s-zA-jKK">
                                 <rect key="frame" x="132" y="549" width="158" height="49"/>
@@ -945,6 +951,7 @@
                     <navigationItem key="navigationItem" id="JsA-18-lKN"/>
                     <connections>
                         <outlet property="name" destination="qEZ-Qn-XgH" id="LpZ-p8-1jo"/>
+                        <segue destination="GED-9o-nOU" kind="show" identifier="add" id="a9z-yW-FX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ4-Vy-Rto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1169,10 +1176,10 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZUY-ic-YhD"/>
+        <segue reference="hdC-Yt-Mmf"/>
         <segue reference="nql-WP-PZo"/>
         <segue reference="BRH-TF-VEh"/>
-        <segue reference="sId-5v-no2"/>
+        <segue reference="drO-z6-ero"/>
         <segue reference="rct-gD-KVh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -97,8 +97,8 @@ class QrcodeReadViewController: UIViewController, AVCaptureMetadataOutputObjects
                         
                         if((snapshot.value) != nil){
                             self.data = metadata.stringValue!
-                            self.session.stopRunning()
                             self.performSegue(withIdentifier: "toAddFriend", sender: nil)
+                            self.session.stopRunning()
                         } else {
                             self.alert(title: "エラー", message: "ユーザが存在しません")
                         }
