@@ -1176,10 +1176,11 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TD4-hr-2iE"/>
         <segue reference="hdC-Yt-Mmf"/>
         <segue reference="nql-WP-PZo"/>
         <segue reference="BRH-TF-VEh"/>
-        <segue reference="drO-z6-ero"/>
+        <segue reference="s3B-an-noN"/>
         <segue reference="rct-gD-KVh"/>
     </inferredMetricsTieBreakers>
 </document>
