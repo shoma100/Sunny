@@ -93,7 +93,7 @@ class QrcodeReadViewController: UIViewController, AVCaptureMetadataOutputObjects
             if let val = metadata.stringValue {
                 if !(val.pregMatche(pattern: "[.#$¥[¥]]")) {
                     
-                    ref.child("user").child(metadata.stringValue!).observe(.value) { (snapshot) in
+                    ref.child("user").child(val).observe(.value) { (snapshot) in
                         
                         if((snapshot.value) != nil){
                             self.data = metadata.stringValue!

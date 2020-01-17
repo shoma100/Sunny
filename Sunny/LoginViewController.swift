@@ -18,12 +18,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         emailTextField.delegate = self //デリゲートをセット
         passwordTextField.delegate = self //デリゲートをセット
         passwordTextField.isSecureTextEntry  = true // 文字を非表示に
     }
 
+    @IBAction func swipe(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Camera", bundle: nil)
+        let nextView = storyboard.instantiateInitialViewController() as! CameraViewController
+        //右に遷移する
+         let transition = CATransition()
+         transition.duration = 0.5
+        transition.type = CATransitionType.push
+
+        //kCATransitionFromLeftにすれば左に遷移します
+        transition.subtype = CATransitionSubtype.fromRight
+        view.window!.layer.add(transition, forKey: kCATransition)
+        self.present(nextView, animated: false, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -49,10 +62,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let nextView = storyboard.instantiateInitialViewController() as! MyAccountViewController
         self.present(nextView, animated: true, completion: nil)
 
-        
-        
-        
-//        self.performSegue(withIdentifier: "toMypage", sender: self)
     }
     
     func login() {
