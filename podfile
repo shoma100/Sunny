@@ -11,4 +11,5 @@ target 'Sunny' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'FirebaseUI'
+  pod 'IQKeyboardManager'
 end

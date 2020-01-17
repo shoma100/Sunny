@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3D864423B22BB2005DE595 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3D864323B22BB2005DE595 /* Camera.swift */; };
+		1A3D864623B22DA5005DE595 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864523B22DA5005DE595 /* Camera.storyboard */; };
+		1A3D864823B24601005DE595 /* FaceTrakingTests in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864723B24600005DE595 /* FaceTrakingTests */; };
+		1A3D864A23B24612005DE595 /* FaceTrakingUITests in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864923B24612005DE595 /* FaceTrakingUITests */; };
 		1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA621C0239F719C0077D331 /* LoginViewController.swift */; };
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
 		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3D864323B22BB2005DE595 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		1A3D864523B22DA5005DE595 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		1A3D864723B24600005DE595 /* FaceTrakingTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTrakingTests; sourceTree = "<group>"; };
+		1A3D864923B24612005DE595 /* FaceTrakingUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTrakingUITests; sourceTree = "<group>"; };
 		1AA621C0239F719C0077D331 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 			children = (
 				CCFAE9942399E9100003F3E2 /* Sunny */,
 				CCFAE9932399E9100003F3E2 /* Products */,
+				1A3D864723B24600005DE595 /* FaceTrakingTests */,
+				1A3D864923B24612005DE595 /* FaceTrakingUITests */,
 				0F1645C168B10E78B7280563 /* Pods */,
 				2BAFF46AF4470D25AA3451EC /* Frameworks */,
 			);
@@ -126,6 +136,8 @@
 				CC5D0AF323AC6AC200030825 /* StringExt.swift */,
 				CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */,
 				CCB193FC23AB14A000244318 /* AddFriendViewController.swift */,
+				1A3D864323B22BB2005DE595 /* Camera.swift */,
+				1A3D864523B22DA5005DE595 /* Camera.storyboard */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -194,7 +206,10 @@
 				CCFAE9A22399E9160003F3E2 /* Assets.xcassets in Resources */,
 				1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */,
 				CCFAE99D2399E9100003F3E2 /* Main.storyboard in Resources */,
+				1A3D864A23B24612005DE595 /* FaceTrakingUITests in Resources */,
 				7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */,
+				1A3D864823B24601005DE595 /* FaceTrakingTests in Resources */,
+				1A3D864623B22DA5005DE595 /* Camera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3D864423B22BB2005DE595 /* Camera.swift in Sources */,
 				1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */,
 				1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */,
 				1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */,
@@ -425,14 +441,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GD39XY79F;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny20191220;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -447,14 +463,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GD39XY79F;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny20191220;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

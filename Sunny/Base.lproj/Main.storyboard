@@ -369,6 +369,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77647058823529413" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="GdT-dP-Bis" firstAttribute="trailing" secondItem="ORN-90-FJp" secondAttribute="trailing" constant="63" id="19O-Nm-H2d"/>
                             <constraint firstItem="SWH-1F-Ue0" firstAttribute="leading" secondItem="g1J-Th-0J0" secondAttribute="leading" id="3ys-XG-9e4"/>
@@ -408,15 +409,22 @@
                             <constraint firstItem="WyI-mS-JBI" firstAttribute="leading" secondItem="GdT-dP-Bis" secondAttribute="leading" constant="124" id="xF8-U2-NnH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GdT-dP-Bis"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XZw-hW-VMw" appends="YES" id="nyK-lq-L3d"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6Co-ls-Jdj"/>
                     <connections>
                         <outlet property="emailTextField" destination="SWH-1F-Ue0" id="EPu-w8-ZU1"/>
                         <outlet property="passwordTextField" destination="g1J-Th-0J0" id="3w5-3e-iTy"/>
-                        <segue destination="3db-S2-pPs" kind="show" identifier="toMypage" id="IQn-xH-bF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlu-si-8ZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="XZw-hW-VMw">
+                    <connections>
+                        <action selector="swipe:" destination="X19-0f-7Ml" id="GCv-iN-3Es"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1727.536231884058" y="89.732142857142847"/>
         </scene>
@@ -792,8 +800,8 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IQn-xH-bF1"/>
-        <segue reference="877-Ev-bh4"/>
-        <segue reference="cxT-s6-DPH"/>
+        <segue reference="XG9-Rz-QJo"/>
+        <segue reference="pst-lt-5Oh"/>
+        <segue reference="jAV-qq-hBN"/>
     </inferredMetricsTieBreakers>
 </document>

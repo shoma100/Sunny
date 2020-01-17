@@ -14,13 +14,13 @@ class AddFriendAuthViewController: UIViewController {
     var id:String?
     @IBOutlet weak var name: UILabel!
     let ref = Database.database().reference()
-
+    let user = Auth.auth().currentUser
     
     
     override func viewDidLoad() {
   
         print(id)
-        let user = Auth.auth().currentUser
+        
         //        uid.text = user?.uid
                 
                 ref.child("user").child(id!).observe(.value) { (snapshot) in
@@ -34,8 +34,8 @@ class AddFriendAuthViewController: UIViewController {
     }
     
     @IBAction func add() {
-        let data = ["firends": [id! : true]]
-        ref.child("user/" + id!).updateChildValues(data)
+        let data = [id! : true]
+        ref.child("friend").child(user!.uid).childByAutoId().setValue(data)
         self.performSegue(withIdentifier: "add", sender: self)
     }
 }
