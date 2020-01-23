@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GED-9o-nOU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCv-vg-owy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -10,7 +10,7 @@
         <!--Chat List View Controller-->
         <scene sceneID="PVw-8Q-tTf">
             <objects>
-                <viewController storyboardIdentifier="chatlist" modalPresentationStyle="fullScreen" id="eAM-ya-rwZ" customClass="ChatListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatlist" modalPresentationStyle="fullScreen" id="eAM-ya-rwZ" customClass="ChatListViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aA7-2s-zqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large" weight="light"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GED-9o-nOU" kind="show" id="sId-5v-no2"/>
+                                    <segue destination="gCv-vg-owy" kind="show" id="gMW-nP-xhg"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="検索" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-Xx-iNu">
@@ -79,7 +79,7 @@
         <!--MyAccount View Controller-->
         <scene sceneID="1Ri-IA-qJK">
             <objects>
-                <viewController storyboardIdentifier="myaccount" title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="GED-9o-nOU" customClass="MyAccountViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAccountViewController" title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="GED-9o-nOU" customClass="MyAccountViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYD-uR-IgT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
                                     <constraint firstAttribute="height" constant="45" id="zkt-pR-cef"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="17"/>
-                                <state key="normal" title="参加しいているグループ">
+                                <state key="normal" title="参加しているグループ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -414,9 +414,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="追加">
+                                <state key="normal" title="検索">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fDH-lh-J7k" kind="show" identifier="toAddFriend" id="CUg-Pz-KFT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2C-L7-Mj6">
                                 <rect key="frame" x="97" y="745" width="220" height="42"/>
@@ -450,7 +453,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="GED-9o-nOU" kind="show" id="Zqj-ia-3N8"/>
+                                    <segue destination="gCv-vg-owy" kind="show" id="Mu2-Qk-s3F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -458,6 +461,9 @@
                         <viewLayoutGuide key="safeArea" id="4eS-VR-ZuW"/>
                     </view>
                     <navigationItem key="navigationItem" id="hIN-fL-tTN"/>
+                    <connections>
+                        <outlet property="friendId" destination="sbG-ET-eCo" id="Fbk-aN-qdp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ux-Xi-lsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,7 +507,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="GED-9o-nOU" kind="show" id="P9k-tw-FyL"/>
+                                    <segue destination="gCv-vg-owy" kind="show" id="p1b-JO-QVU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -528,6 +534,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmB-KN-PEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4052.1739130434785" y="1938.6160714285713"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Woq-vQ-t5q">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="fullScreen" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gCv-vg-owy" customClass="PageViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="c3S-LY-TCg"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjY-5q-Llk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2845" y="1625"/>
         </scene>
         <!--Friend Table View Controller-->
         <scene sceneID="Tgc-Hb-Ndp">
@@ -567,7 +583,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="GED-9o-nOU" kind="show" id="035-Xo-13c"/>
+                                    <segue destination="gCv-vg-owy" kind="show" id="P4A-ku-0Aj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -611,7 +627,7 @@
                                     <navigationItem title="設定" id="hwe-bn-ELE">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="ICj-U7-ezu">
                                             <connections>
-                                                <segue destination="GED-9o-nOU" kind="show" id="drO-z6-ero"/>
+                                                <segue destination="gCv-vg-owy" kind="show" id="Eub-F2-XpP"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1032,7 +1048,7 @@
                     <navigationItem key="navigationItem" id="JsA-18-lKN"/>
                     <connections>
                         <outlet property="name" destination="qEZ-Qn-XgH" id="LpZ-p8-1jo"/>
-                        <segue destination="GED-9o-nOU" kind="show" identifier="add" id="a9z-yW-FX3"/>
+                        <segue destination="gCv-vg-owy" kind="show" identifier="add" id="3en-Gq-Iso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ4-Vy-Rto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1226,7 +1242,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="GED-9o-nOU" kind="show" id="QpQ-Iv-zby"/>
+                                    <segue destination="gCv-vg-owy" kind="show" id="wBj-vT-oI9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1254,10 +1270,11 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZUY-ic-YhD"/>
+        <segue reference="CUg-Pz-KFT"/>
+        <segue reference="hdC-Yt-Mmf"/>
         <segue reference="nql-WP-PZo"/>
+        <segue reference="3en-Gq-Iso"/>
         <segue reference="BRH-TF-VEh"/>
-        <segue reference="P9k-tw-FyL"/>
         <segue reference="rct-gD-KVh"/>
     </inferredMetricsTieBreakers>
 </document>
