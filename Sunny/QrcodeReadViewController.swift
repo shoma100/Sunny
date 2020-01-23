@@ -129,11 +129,9 @@ class QrcodeReadViewController: UIViewController, AVCaptureMetadataOutputObjects
              
         if(identifier == "toAddFriend") {
                 // NavigationControllerへの遷移の場合
-                 
+
                 // segueから遷移先のNavigationControllerを取得
             let vc = segue.destination as! AddFriendAuthViewController
-                 
-                
                 // 次画面のテキスト表示用のStringに、本画面のテキストフィールドのテキストを入れる
             vc.id = self.data
         }

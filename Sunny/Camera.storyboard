@@ -34,7 +34,7 @@
         <!--Camera View Controller-->
         <scene sceneID="Bm8-IW-P5i">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="hPf-uh-zmp" customClass="CameraViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="camera" modalPresentationStyle="fullScreen" id="hPf-uh-zmp" customClass="CameraViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ZfS-07-CE0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
