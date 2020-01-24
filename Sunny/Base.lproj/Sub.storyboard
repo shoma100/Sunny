@@ -175,7 +175,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eAM-ya-rwZ" kind="show" id="rct-gD-KVh"/>
+                                    <segue destination="c1K-Wr-qWR" kind="show" id="APg-oM-V9l"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-hK-DDG">
@@ -1173,10 +1173,10 @@
             </objects>
             <point key="canvasLocation" x="2606" y="-291"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Player View Controller-->
         <scene sceneID="7iw-bl-bod">
             <objects>
-                <viewController storyboardIdentifier="chat" id="7iI-F7-M8V" customClass="ChatViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chat" id="7iI-F7-M8V" customClass="AVPlayerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2oG-O2-uWS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1211,6 +1211,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLT-K5-cdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3503" y="-291"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="wdM-mJ-4b1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="c1K-Wr-qWR" customClass="ChatViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFU-Wg-dZb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="cLP-C5-fdv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k2j-wM-2lw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVz-Jl-TBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4642.0289855072469" y="244.41964285714283"/>
         </scene>
         <!--GenerateQR-->
         <scene sceneID="dnb-LG-huo">
@@ -1270,11 +1286,11 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="o8f-DX-XDM"/>
         <segue reference="CUg-Pz-KFT"/>
         <segue reference="hdC-Yt-Mmf"/>
         <segue reference="nql-WP-PZo"/>
         <segue reference="3en-Gq-Iso"/>
         <segue reference="BRH-TF-VEh"/>
-        <segue reference="rct-gD-KVh"/>
     </inferredMetricsTieBreakers>
 </document>
