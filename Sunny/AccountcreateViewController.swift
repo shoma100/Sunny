@@ -25,7 +25,7 @@ class AccountcreateViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     
     @IBAction func submit() {
-//        flg = searchId(id: id.text!)
+        //        flg = searchId(id: id.text!)
         //        if pass.text! == pass_conf.text! {
         //            let user = ["name":name.text!, "password":pass.text!, "mail":mail.text!]
         //            ref.child("user").child(id.text!).setValue(user)
@@ -38,11 +38,7 @@ class AccountcreateViewController: UIViewController {
         //        mail.endEditing(true)
         //        self.performSegue(withIdentifier: "toLogin", sender: nil)
         if pass.text! == pass_conf.text! {
-            if !flg {
-                signUp(email: mail.text!, password: pass.text!, name: name.text!)
-            } else{
-                self.alert(title: "エラー", message: "使用されているidです")
-            }
+            signUp(email: mail.text!, password: pass.text!, name: name.text!)
         } else{
             self.alert(title: "エラー", message: "パスワードが一致しません")
         }
@@ -131,21 +127,21 @@ class AccountcreateViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-//    func searchId(id:String) -> (result: Bool) {
-//        ref.child("user").observe(.value) { (snapshot) in
-//            var count = 0
-//            for data in snapshot.children {
-//                let snapData = data as! DataSnapshot
-//                // Dictionary型にキャスト
-//                let user = snapData.value as! [String: Any]
-//
-//                if id == user["id"] as! String {
-//                    count += 1
-//                    var result = true
-//                    return result
-//                }
-//            }
-//        }
-//    }
+    //    func searchId(id:String) -> (result: Bool) {
+    //        ref.child("user").observe(.value) { (snapshot) in
+    //            var count = 0
+    //            for data in snapshot.children {
+    //                let snapData = data as! DataSnapshot
+    //                // Dictionary型にキャスト
+    //                let user = snapData.value as! [String: Any]
+    //
+    //                if id == user["id"] as! String {
+    //                    count += 1
+    //                    var result = true
+    //                    return result
+    //                }
+    //            }
+    //        }
+    //    }
 }
 
