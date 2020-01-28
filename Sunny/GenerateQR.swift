@@ -34,5 +34,8 @@ class GenerateQR: UIViewController {
         qrImageView.image = uiImage
         self.view.addSubview(qrImageView)
     }
-
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

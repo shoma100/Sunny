@@ -39,7 +39,9 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
                 self.getFriendUserInfo(userId: key, comp: {
                     friend in
                     self.friends.append(friend)
-                    self.tableView.reloadData()
+                    if self.friends.count == value.count {
+                        self.tableView.reloadData()
+                    }
                     print("friends = ",self.friends)
                 })
             }
@@ -91,4 +93,13 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         //        removedData.delete()
     }
     
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        print("セルをタップしました")
+    }
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
+

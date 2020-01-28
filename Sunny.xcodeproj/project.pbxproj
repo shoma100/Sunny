@@ -13,6 +13,7 @@
 		1A3D864A23B24612005DE595 /* FaceTrakingUITests in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864923B24612005DE595 /* FaceTrakingUITests */; };
 		1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA621C0239F719C0077D331 /* LoginViewController.swift */; };
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
+		1AA807D223DEC84C00D1366B /* GroupCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA807D123DEC84C00D1366B /* GroupCreateViewController.swift */; };
 		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
 		1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */; };
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
@@ -44,6 +45,7 @@
 		1A3D864923B24612005DE595 /* FaceTrakingUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTrakingUITests; sourceTree = "<group>"; };
 		1AA621C0239F719C0077D331 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AA807D123DEC84C00D1366B /* GroupCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreateViewController.swift; sourceTree = "<group>"; };
 		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
 		1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				1A3D864523B22DA5005DE595 /* Camera.storyboard */,
 				1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */,
 				1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */,
+				1AA807D123DEC84C00D1366B /* GroupCreateViewController.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				CC7A2B6023D1529D00D0127A /* FriendTableViewController.swift in Sources */,
 				1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */,
 				1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */,
+				1AA807D223DEC84C00D1366B /* GroupCreateViewController.swift in Sources */,
 				CCFAE99A2399E9100003F3E2 /* ViewController.swift in Sources */,
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
 				CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */,

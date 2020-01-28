@@ -28,7 +28,7 @@ class PageViewController: UIPageViewController {
 
     func getThird() -> ChatListViewController {
         var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "chatlist") as! ChatListViewController
+        return storyboard.instantiateViewController(withIdentifier: "chatList") as! ChatListViewController
     }
 
     override func didReceiveMemoryWarning() {

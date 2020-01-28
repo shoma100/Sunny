@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCv-vg-owy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCv-vg-owy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat List View Controller-->
+        <!--View Controller-->
         <scene sceneID="PVw-8Q-tTf">
             <objects>
-                <viewController storyboardIdentifier="chatlist" modalPresentationStyle="fullScreen" id="eAM-ya-rwZ" customClass="ChatListViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eAM-ya-rwZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aA7-2s-zqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,9 +24,6 @@
                                 <state key="normal" image="person.crop.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large" weight="light"/>
                                 </state>
-                                <connections>
-                                    <segue destination="gCv-vg-owy" kind="show" id="gMW-nP-xhg"/>
-                                </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="検索" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-Xx-iNu">
                                 <rect key="frame" x="79" y="44" width="257" height="56"/>
@@ -43,9 +40,6 @@
                                 <state key="normal" image="bubble.left.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
                                 </state>
-                                <connections>
-                                    <segue destination="B51-Mv-hI7" kind="show" id="fyD-61-lE8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1U-AV-dbS">
                                 <rect key="frame" x="296" y="56" width="30" height="32"/>
@@ -54,9 +48,6 @@
                                 <state key="normal" image="person.badge.plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ICV-Nc-U1M" kind="show" id="zSz-Pc-eY0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppc-TQ-KA3">
                                 <rect key="frame" x="169" y="787" width="77" height="75"/>
@@ -74,12 +65,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SuA-FG-fTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836" y="1044"/>
+            <point key="canvasLocation" x="10343" y="-1568"/>
         </scene>
         <!--MyAccount View Controller-->
         <scene sceneID="1Ri-IA-qJK">
             <objects>
-                <viewController storyboardIdentifier="MyAccountViewController" title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="GED-9o-nOU" customClass="MyAccountViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="GED-9o-nOU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYD-uR-IgT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,9 +95,6 @@
                                     </attributedString>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="light"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ICV-Nc-U1M" kind="show" id="BRH-TF-VEh"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="グループ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzw-eb-jDw">
                                 <rect key="frame" x="41" y="394" width="332" height="21"/>
@@ -124,9 +112,6 @@
                                 <state key="normal" title="参加しているグループ">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="KOp-ya-Eus" kind="show" id="DIO-Jv-oli"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sunnyコード" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfy-di-eoe">
                                 <rect key="frame" x="41" y="502" width="332" height="28"/>
@@ -147,9 +132,6 @@
                                 <state key="normal" title="MySunnyコード">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="rzb-0t-Hfe" kind="show" id="si6-Fe-eDw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJ4-XQ-6ot">
                                 <rect key="frame" x="71" y="737" width="273" height="66"/>
@@ -161,9 +143,6 @@
                                 <state key="normal" title="アカウント設定">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Lcb-Zz-VJJ" kind="show" id="nql-WP-PZo"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZH-uj-4NF">
                                 <rect key="frame" x="37" y="44" width="31" height="32"/>
@@ -174,9 +153,6 @@
                                 <state key="normal" image="chevron.down" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
-                                <connections>
-                                    <segue destination="c1K-Wr-qWR" kind="show" id="APg-oM-V9l"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-hK-DDG">
                                 <rect key="frame" x="153" y="60" width="109" height="71"/>
@@ -224,9 +200,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="CdJ-ar-3mB" kind="show" id="XDM-23-ssB"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dct-cQ-2eC">
                                 <rect key="frame" x="52" y="255" width="32" height="34"/>
@@ -300,12 +273,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAu-Q3-svI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4052.1739130434785" y="1043.9732142857142"/>
+            <point key="canvasLocation" x="11013" y="-877"/>
         </scene>
-        <!--Group Create View Controller-->
+        <!--View Controller-->
         <scene sceneID="HrF-eZ-dI6">
             <objects>
-                <viewController storyboardIdentifier="groupcreate" modalPresentationStyle="fullScreen" id="B51-Mv-hI7" customClass="GroupCreateViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="groupcreate" modalPresentationStyle="fullScreen" id="B51-Mv-hI7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ut-4L-dKA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,9 +354,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue destination="eAM-ya-rwZ" kind="show" id="o8f-DX-XDM"/>
-                                </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="宛先：" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-2h-eXE">
                                 <rect key="frame" x="34" y="157" width="347" height="44"/>
@@ -399,12 +369,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9u-Sr-GfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="80" y="1037"/>
+            <point key="canvasLocation" x="9622" y="-1568"/>
         </scene>
-        <!--Add Friend View Controller-->
+        <!--View Controller-->
         <scene sceneID="2dN-Zf-SeS">
             <objects>
-                <viewController storyboardIdentifier="friendadd" modalPresentationStyle="fullScreen" id="ICV-Nc-U1M" customClass="AddFriendViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="friendadd" modalPresentationStyle="fullScreen" id="ICV-Nc-U1M" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5HV-ns-QbR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,9 +387,6 @@
                                 <state key="normal" title="検索">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="fDH-lh-J7k" kind="show" identifier="toAddFriend" id="CUg-Pz-KFT"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2C-L7-Mj6">
                                 <rect key="frame" x="97" y="745" width="220" height="42"/>
@@ -429,9 +396,6 @@
                                 <state key="normal" title="Sunnyコードで検索">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="3oW-Zg-vtL" kind="show" identifier="toQrRead" id="ZUY-ic-YhD"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザIDを入力" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbG-ET-eCo">
                                 <rect key="frame" x="62" y="199" width="290" height="38"/>
@@ -452,9 +416,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="gCv-vg-owy" kind="show" id="Mu2-Qk-s3F"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -467,7 +428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ux-Xi-lsa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1836.2318840579712" y="143.97321428571428"/>
+            <point key="canvasLocation" x="9281" y="-876"/>
         </scene>
         <!--Group Table View Controller-->
         <scene sceneID="pje-Rh-PmU">
@@ -495,7 +456,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.99803334470000005" green="0.77623409030000001" blue="0.43594363330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -507,11 +468,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="gCv-vg-owy" kind="show" id="p1b-JO-QVU"/>
+                                    <action selector="backTo:" destination="KOp-ya-Eus" eventType="touchUpInside" id="OOK-et-FnT"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99803334470000005" green="0.77623409030000001" blue="0.43594363330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eG3-0g-Xfd" firstAttribute="top" secondItem="Huy-Aa-9Pa" secondAttribute="topMargin" constant="-19" id="26A-b4-QgE"/>
                             <constraint firstItem="eG3-0g-Xfd" firstAttribute="leading" secondItem="0XW-3E-bLT" secondAttribute="leading" id="BWD-BK-cCq"/>
@@ -543,7 +504,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjY-5q-Llk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2845" y="1625"/>
+            <point key="canvasLocation" x="-1986" y="3108"/>
         </scene>
         <!--Friend Table View Controller-->
         <scene sceneID="Tgc-Hb-Ndp">
@@ -570,6 +531,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEW-72-4LU" id="0b3-gA-vrb">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.99805170300000001" green="0.77621889109999997" blue="0.45763814450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.9882352941176471" green="0.61960784313725492" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
@@ -583,11 +545,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="gCv-vg-owy" kind="show" id="P4A-ku-0Aj"/>
+                                    <action selector="backTo:" destination="CdJ-ar-3mB" eventType="touchUpInside" id="GKt-f3-guz"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99803334470000005" green="0.77623409030000001" blue="0.43594363330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="guz-7N-qEq" firstAttribute="leading" secondItem="x0P-3u-JSk" secondAttribute="leading" id="6Za-jT-f4J"/>
                             <constraint firstItem="JQF-57-O6O" firstAttribute="leading" secondItem="EzB-Zt-U7a" secondAttribute="leadingMargin" id="Ejt-yb-Fwy"/>
@@ -614,7 +576,7 @@
         <!--AccountSet View Controller-->
         <scene sceneID="ER7-Z4-kLY">
             <objects>
-                <viewController storyboardIdentifier="accountset" title="AccountSet View Controller" modalPresentationStyle="fullScreen" id="Lcb-Zz-VJJ" customClass="AccountSetViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="accountset" title="AccountSet View Controller" modalPresentationStyle="fullScreen" id="Lcb-Zz-VJJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5IE-eJ-zpZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -625,11 +587,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <items>
                                     <navigationItem title="設定" id="hwe-bn-ELE">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="ICj-U7-ezu">
-                                            <connections>
-                                                <segue destination="gCv-vg-owy" kind="show" id="Eub-F2-XpP"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="ICj-U7-ezu"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -655,9 +613,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue destination="qOX-RW-MTI" kind="show" id="HVB-PD-DCM"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザネーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmn-94-gxy">
                                 <rect key="frame" x="279" y="147" width="104" height="44"/>
@@ -698,9 +653,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue destination="NPt-Rv-mAA" kind="show" id="ka6-cP-SX5"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ユーザの生年月日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3M-W9-Ad9">
                                 <rect key="frame" x="243" y="242" width="140" height="49"/>
@@ -723,9 +675,6 @@
                                 <state key="normal" title="ブロックしたユーザ　　　　　　　　　　　　　　　＞">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="cSx-ba-bff" kind="show" id="7l8-sd-bGs"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXT-F3-Clr">
                                 <rect key="frame" x="96" y="724" width="223" height="57"/>
@@ -747,7 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJ3-hf-yWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4052" y="-733"/>
+            <point key="canvasLocation" x="12814" y="-613"/>
         </scene>
         <!--User Name Change View Controller-->
         <scene sceneID="M9O-bo-gMX">
@@ -792,12 +741,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sn1-TK-oqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4052" y="-1606"/>
+            <point key="canvasLocation" x="11897" y="-877"/>
         </scene>
-        <!--Birthday Change View Controller-->
+        <!--View Controller-->
         <scene sceneID="ein-1m-11R">
             <objects>
-                <viewController storyboardIdentifier="birthdaychange" modalPresentationStyle="fullScreen" id="NPt-Rv-mAA" customClass="BirthdayChangeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="birthdaychange" modalPresentationStyle="fullScreen" id="NPt-Rv-mAA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A9q-3J-xHt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,11 +757,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <items>
                                     <navigationItem title="生年月日" id="kVD-Fd-6VN">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="9Us-PB-oqE">
-                                            <connections>
-                                                <segue destination="Lcb-Zz-VJJ" kind="show" id="4AJ-F9-WG2"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="9Us-PB-oqE"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -842,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRw-f1-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5148" y="-733"/>
+            <point key="canvasLocation" x="11061" y="-1568"/>
         </scene>
         <!--Block List View Controller-->
         <scene sceneID="RA5-hh-ANc">
@@ -860,21 +805,21 @@
                                     <navigationItem title="ブロックしたユーザ" id="LjN-jR-60H">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="f3e-9O-GCN">
                                             <connections>
-                                                <segue destination="Lcb-Zz-VJJ" kind="show" id="qZ3-Uu-QGz"/>
+                                                <segue destination="q5M-sP-ueH" kind="show" id="a8g-Gh-ebX"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99807101490000005" green="0.77620285749999995" blue="0.47916907069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="WcW-Uc-wgZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="vXy-Hp-1J4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nb-uE-qA5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2986" y="-733"/>
+            <point key="canvasLocation" x="-3487" y="-733"/>
         </scene>
         <!--Qrcode Read View Controller-->
         <scene sceneID="vF0-13-vjb">
@@ -888,7 +833,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sdc-gJ-eUk"/>
                     <connections>
-                        <segue destination="fDH-lh-J7k" kind="show" identifier="toAddFriend" id="TD4-hr-2iE"/>
+                        <segue destination="RoZ-QD-cPf" kind="show" identifier="toAddFriend" id="gBi-6C-Gzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgV-Fo-oIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -973,12 +918,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4x-0s-aMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="-1010"/>
+            <point key="canvasLocation" x="3888" y="-1023"/>
         </scene>
-        <!--Add Friend Auth View Controller-->
+        <!--View Controller-->
         <scene sceneID="8kh-lb-jMp">
             <objects>
-                <viewController storyboardIdentifier="addfriend" modalPresentationStyle="fullScreen" id="fDH-lh-J7k" customClass="AddFriendAuthViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addfriend" modalPresentationStyle="fullScreen" id="fDH-lh-J7k" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tvM-fV-fkH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -988,9 +933,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="3oW-Zg-vtL" kind="show" id="hdC-Yt-Mmf"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-7b-iC8">
                                 <rect key="frame" x="34" y="130" width="345" height="532"/>
@@ -1048,12 +990,11 @@
                     <navigationItem key="navigationItem" id="JsA-18-lKN"/>
                     <connections>
                         <outlet property="name" destination="qEZ-Qn-XgH" id="LpZ-p8-1jo"/>
-                        <segue destination="gCv-vg-owy" kind="show" identifier="add" id="3en-Gq-Iso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ4-Vy-Rto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-412" y="-700"/>
+            <point key="canvasLocation" x="10274" y="-877"/>
         </scene>
         <!--Group Invite View Controller-->
         <scene sceneID="zxD-bz-ozd">
@@ -1103,7 +1044,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gvg-tt-w3p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="-291"/>
+            <point key="canvasLocation" x="2983" y="-304"/>
         </scene>
         <!--Group Detail View Controller-->
         <scene sceneID="POt-nf-nZo">
@@ -1171,7 +1112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Kl-WX-dTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="-291"/>
+            <point key="canvasLocation" x="3888" y="-304"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="7iw-bl-bod">
@@ -1210,7 +1151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLT-K5-cdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3503" y="-291"/>
+            <point key="canvasLocation" x="4786" y="-304"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="wdM-mJ-4b1">
@@ -1219,7 +1160,17 @@
                     <view key="view" contentMode="scaleToFill" id="JFU-Wg-dZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-ek-EZ4">
+                                <rect key="frame" x="66" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="gCv-vg-owy" kind="show" id="99e-dj-3Il"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99803334470000005" green="0.77623409030000001" blue="0.43594363330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cLP-C5-fdv"/>
                     </view>
                     <navigationItem key="navigationItem" id="k2j-wM-2lw"/>
@@ -1258,11 +1209,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="gCv-vg-owy" kind="show" id="wBj-vT-oI9"/>
+                                    <action selector="backTo:" destination="rzb-0t-Hfe" eventType="touchUpInside" id="9gA-lF-olJ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.98823529409999999" green="0.61960784310000006" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99805170300000001" green="0.77621889109999997" blue="0.45763814450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="knR-bf-H6e"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -1275,7 +1226,7 @@
         <!--Chat List View Controller-->
         <scene sceneID="BDQ-ab-oiZ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0Eo-7c-ncg" customClass="ChatListViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatList" modalPresentationStyle="fullScreen" id="0Eo-7c-ncg" customClass="ChatListViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XDu-CR-McR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1292,6 +1243,9 @@
                                 <state key="normal" image="person.crop.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large" weight="light"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gCv-vg-owy" kind="show" id="gMT-4B-VLV"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" text="" placeholder="検索" translatesAutoresizingMaskIntoConstraints="NO" id="go6-Ap-0IH">
                                 <rect key="frame" x="79" y="55" width="255" height="56"/>
@@ -1314,6 +1268,9 @@
                                 <state key="normal" image="bubble.left.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sQs-TR-pRp" kind="show" id="JpM-hM-gyW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-GS-Jdr">
                                 <rect key="frame" x="296" y="67" width="30" height="32"/>
@@ -1322,6 +1279,9 @@
                                 <state key="normal" image="person.badge.plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
+                                <connections>
+                                    <segue destination="IVa-9T-Rc0" kind="show" id="jFc-61-doa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNe-gm-yyU">
                                 <rect key="frame" x="169" y="786" width="76" height="76"/>
@@ -1353,12 +1313,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Be-NU-RbE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8532" y="773"/>
+            <point key="canvasLocation" x="-1052.1739130434783" y="1551.5625"/>
         </scene>
         <!--MyAccount View Controller-->
         <scene sceneID="dbi-1I-vPS">
             <objects>
-                <viewController title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="vDS-kt-pu2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyAccountViewController" title="MyAccount View Controller" modalPresentationStyle="fullScreen" id="vDS-kt-pu2" customClass="MyAccountViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvE-9W-cAv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1382,6 +1342,9 @@
                                     </attributedString>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="light"/>
                                 </state>
+                                <connections>
+                                    <segue destination="IVa-9T-Rc0" kind="show" id="zwE-V8-pVY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フレンド" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ked-Gx-P0k">
                                 <rect key="frame" x="25" y="319" width="70" height="30"/>
@@ -1405,6 +1368,9 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="light"/>
                                 </state>
+                                <connections>
+                                    <segue destination="CdJ-ar-3mB" kind="show" id="Mqg-ww-tca"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="グループ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpH-YB-mkQ">
                                 <rect key="frame" x="25" y="489" width="70" height="30"/>
@@ -1428,6 +1394,9 @@
                                 <state key="normal" title="　　　　参加しているグループ　　　＞">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KOp-ya-Eus" kind="show" id="kQr-nX-bSA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunnyコード" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl9-uD-Maj">
                                 <rect key="frame" x="25" y="589" width="100" height="30"/>
@@ -1450,6 +1419,9 @@
                                 <state key="normal" title="　　　　　　　MySunnyコード　　　　　＞">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rzb-0t-Hfe" kind="show" id="Qw1-on-tyc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nc-2S-XvR">
                                 <rect key="frame" x="30" y="44" width="55" height="55"/>
@@ -1460,9 +1432,12 @@
                                 <state key="normal" image="chevron.down" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
+                                <connections>
+                                    <segue destination="c1K-Wr-qWR" kind="show" id="es1-am-8m6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjz-R8-oN9">
-                                <rect key="frame" x="130" y="270" width="154" height="26"/>
+                                <rect key="frame" x="97" y="270" width="239" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="MY5-1w-Fzo"/>
                                 </constraints>
@@ -1481,7 +1456,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="light"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザネーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fee-RM-nR7">
-                                <rect key="frame" x="139" y="235" width="136" height="30"/>
+                                <rect key="frame" x="97" y="235" width="239" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="z4P-Kn-HKn"/>
                                 </constraints>
@@ -1499,6 +1474,9 @@
                                 <state key="normal" title="アカウント設定">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="q5M-sP-ueH" kind="show" id="CBg-uf-1hT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77647058820000003" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1509,19 +1487,19 @@
                             <constraint firstItem="Fl9-uD-Maj" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="25" id="7O1-MX-n2k"/>
                             <constraint firstItem="Fl9-uD-Maj" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="25" id="7bL-qa-7NI"/>
                             <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="rsi-jn-vnQ" secondAttribute="trailing" constant="47" id="8eL-5Z-Hbr"/>
-                            <constraint firstItem="rjz-R8-oN9" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="130" id="Flh-ly-ofK"/>
+                            <constraint firstItem="rjz-R8-oN9" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="97" id="Flh-ly-ofK"/>
                             <constraint firstItem="rsi-jn-vnQ" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="47" id="HjI-OJ-pE0"/>
                             <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="aYZ-SB-Tbq" secondAttribute="trailing" constant="47" id="IBA-Fa-A7a"/>
                             <constraint firstItem="Wj4-Ti-8L9" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="47" id="Ili-TM-Igd"/>
                             <constraint firstItem="bpH-YB-mkQ" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="25" id="L5a-ch-RRm"/>
                             <constraint firstItem="ked-Gx-P0k" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="25" id="Los-c2-dTj"/>
-                            <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="rjz-R8-oN9" secondAttribute="trailing" constant="130" id="Pa7-HR-DDb"/>
+                            <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="rjz-R8-oN9" secondAttribute="trailing" constant="78" id="Pa7-HR-DDb"/>
                             <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="uTN-mr-Kbs" secondAttribute="trailing" constant="124" id="PgO-qq-6f1"/>
                             <constraint firstItem="Wj4-Ti-8L9" firstAttribute="leading" secondItem="rsi-jn-vnQ" secondAttribute="leading" id="QXd-S2-sAj"/>
                             <constraint firstItem="bpH-YB-mkQ" firstAttribute="top" secondItem="rsi-jn-vnQ" secondAttribute="bottom" constant="15" id="SVg-dB-YyL"/>
                             <constraint firstItem="uTN-mr-Kbs" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="124" id="SVm-mt-2Ei"/>
                             <constraint firstItem="JDg-V9-yNk" firstAttribute="top" secondItem="ked-Gx-P0k" secondAttribute="bottom" constant="10" id="Tfb-Rg-afO"/>
-                            <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="fee-RM-nR7" secondAttribute="trailing" constant="139" id="UHf-vZ-MQE"/>
+                            <constraint firstItem="c0q-f9-y8Q" firstAttribute="trailing" secondItem="fee-RM-nR7" secondAttribute="trailing" constant="78" id="UHf-vZ-MQE"/>
                             <constraint firstItem="JDg-V9-yNk" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="47" id="UXU-zJ-wdK"/>
                             <constraint firstItem="aYZ-SB-Tbq" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="47" id="VPf-Z7-nis"/>
                             <constraint firstItem="bp7-uD-ygw" firstAttribute="top" secondItem="c0q-f9-y8Q" secondAttribute="top" constant="55" id="VoI-Yy-68U"/>
@@ -1534,7 +1512,7 @@
                             <constraint firstItem="uTN-mr-Kbs" firstAttribute="top" secondItem="aYZ-SB-Tbq" secondAttribute="bottom" constant="60" id="kKD-J9-KRf"/>
                             <constraint firstItem="rsi-jn-vnQ" firstAttribute="top" secondItem="JDg-V9-yNk" secondAttribute="bottom" constant="25" id="kpT-dY-joV"/>
                             <constraint firstItem="bp7-uD-ygw" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="144" id="lyT-C7-Z2R"/>
-                            <constraint firstItem="fee-RM-nR7" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="139" id="pws-Hc-fls"/>
+                            <constraint firstItem="fee-RM-nR7" firstAttribute="leading" secondItem="c0q-f9-y8Q" secondAttribute="leading" constant="97" id="pws-Hc-fls"/>
                             <constraint firstItem="aYZ-SB-Tbq" firstAttribute="leading" secondItem="Wj4-Ti-8L9" secondAttribute="leading" id="pyb-uI-J7n"/>
                             <constraint firstItem="Wj4-Ti-8L9" firstAttribute="top" secondItem="bpH-YB-mkQ" secondAttribute="bottom" constant="10" id="rG4-bu-XRi"/>
                             <constraint firstItem="rjz-R8-oN9" firstAttribute="top" secondItem="fee-RM-nR7" secondAttribute="bottom" constant="5" id="seP-Ks-oAO"/>
@@ -1545,15 +1523,19 @@
                         <viewLayoutGuide key="safeArea" id="c0q-f9-y8Q"/>
                     </view>
                     <navigationItem key="navigationItem" id="KfJ-Rx-wX9"/>
+                    <connections>
+                        <outlet property="uid" destination="rjz-R8-oN9" id="qud-rU-Sd7"/>
+                        <outlet property="unm" destination="fee-RM-nR7" id="gtc-RB-xgC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4F-uN-jHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6316" y="773"/>
+            <point key="canvasLocation" x="-2691.304347826087" y="718.52678571428567"/>
         </scene>
         <!--Group Create View Controller-->
         <scene sceneID="gfE-Ev-JxM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sQs-TR-pRp" customClass="GroupCreateViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sQs-TR-pRp" customClass="GroupCreateViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONH-Xc-UZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1632,6 +1614,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="hitotsumodoruyo:" destination="sQs-TR-pRp" eventType="touchUpInside" id="ilz-iM-YZS"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" placeholder="宛先：" translatesAutoresizingMaskIntoConstraints="NO" id="z2V-PO-ZsN">
                                 <rect key="frame" x="32" y="159" width="350" height="44"/>
@@ -1681,12 +1666,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uA-4P-DY4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7380" y="-127"/>
+            <point key="canvasLocation" x="2.8985507246376816" y="1043.9732142857142"/>
         </scene>
-        <!--Friend Add View Controller-->
+        <!--Add Friend View Controller-->
         <scene sceneID="oXx-zO-dYK">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="IVa-9T-Rc0" customClass="FriendAddViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IVa-9T-Rc0" customClass="AddFriendViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tp9-hn-9dy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1701,6 +1686,9 @@
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backTo:" destination="IVa-9T-Rc0" eventType="touchUpInside" id="Lon-Di-y77"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザ追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esA-Ym-CO2">
                                 <rect key="frame" x="124" y="119" width="166" height="45"/>
@@ -1721,6 +1709,9 @@
                                 <state key="normal" title="Sunnyコードを検索">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3oW-Zg-vtL" kind="show" identifier="toQrRead" id="Tf1-n7-MJf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザIDを入力" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjC-Sr-3VZ">
                                 <rect key="frame" x="57" y="199" width="300" height="38"/>
@@ -1737,9 +1728,12 @@
                                     <constraint firstAttribute="height" constant="50" id="Y3F-hZ-nhY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="追加">
+                                <state key="normal" title="検索">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="search:" destination="IVa-9T-Rc0" eventType="touchUpInside" id="ABT-mc-Xws"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77647058820000003" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1762,10 +1756,14 @@
                         <viewLayoutGuide key="safeArea" id="Hwt-LJ-L20"/>
                     </view>
                     <navigationItem key="navigationItem" id="UYX-XR-mcc"/>
+                    <connections>
+                        <outlet property="friendId" destination="yjC-Sr-3VZ" id="D7F-w5-caa"/>
+                        <segue destination="RoZ-QD-cPf" kind="show" identifier="toAddFriendCheck" id="C4s-Aq-eeH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhP-GP-Y6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8532" y="-127"/>
+            <point key="canvasLocation" x="-838" y="-98"/>
         </scene>
         <!--Group List View Controller-->
         <scene sceneID="kbW-PQ-ydt">
@@ -1800,7 +1798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPm-hO-f6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6316" y="1661"/>
+            <point key="canvasLocation" x="8058" y="-1585"/>
         </scene>
         <!--Friend List View Controller-->
         <scene sceneID="3Zl-v3-z0L">
@@ -1835,7 +1833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BN6-6l-b5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5109" y="1661"/>
+            <point key="canvasLocation" x="8833" y="-1585"/>
         </scene>
         <!--My Sunny Code View Controller-->
         <scene sceneID="5cd-2B-nrG">
@@ -1884,12 +1882,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRd-CZ-6vd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5109" y="773"/>
+            <point key="canvasLocation" x="7383" y="-1585"/>
         </scene>
         <!--Account Set View Controller-->
         <scene sceneID="Ghr-dt-auR">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="q5M-sP-ueH" customClass="AccountSetViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="q5M-sP-ueH" customClass="AccountSetViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UX3-wZ-uL7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1898,7 +1896,11 @@
                                 <rect key="frame" x="0.0" y="33" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="設定" id="xcs-Nm-Eay">
-                                        <barButtonItem key="leftBarButtonItem" image="lessthan" catalog="system" id="odI-1k-dEy"/>
+                                        <barButtonItem key="leftBarButtonItem" image="lessthan" catalog="system" id="odI-1k-dEy">
+                                            <connections>
+                                                <action selector="backTo:" destination="q5M-sP-ueH" id="DT9-hI-rfq"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1917,6 +1919,9 @@
                                 <state key="normal" title="名前　　　　　　　　　　　　　　　　　　　　　　　　　＞">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wvY-rI-PFx" kind="show" id="rG7-b1-BiT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-rA-JiS">
                                 <rect key="frame" x="0.0" y="202" width="414" height="50"/>
@@ -1937,6 +1942,9 @@
                                 <state key="normal" title="生年月日　　　　　　　　　　　　　　　　　　　　　　　＞">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xoI-CF-nMg" kind="show" id="8UB-wZ-hur"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeP-Vj-Uj1">
                                 <rect key="frame" x="0.0" y="308" width="414" height="50"/>
@@ -1947,6 +1955,9 @@
                                 <state key="normal" title="パスワード　　　　　　　　　　　　　　　　　　　　　　＞">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gpj-YA-DUP" kind="show" id="coR-Qq-UU1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント設定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNB-6i-Mcm">
                                 <rect key="frame" x="10" y="478" width="129" height="22"/>
@@ -1963,6 +1974,9 @@
                                 <state key="normal" title="ブロックしたユーザ　　　　　　　　　　　　　　　　　　＞">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cSx-ba-bff" kind="show" id="A5Z-Q7-yOA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnR-BA-QCu">
                                 <rect key="frame" x="123" y="700" width="168" height="50"/>
@@ -1973,6 +1987,9 @@
                                 <state key="normal" title="ログアウト">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout" destination="q5M-sP-ueH" eventType="touchUpInside" id="QeU-Ql-Hdn"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザネーム" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhu-EO-aTb">
                                 <rect key="frame" x="292" y="164" width="92" height="20"/>
@@ -2023,15 +2040,17 @@
                         <viewLayoutGuide key="safeArea" id="QpO-bf-hzU"/>
                     </view>
                     <navigationItem key="navigationItem" id="ajG-ND-vtd"/>
+                    <connections>
+                        <outlet property="unm" destination="Bhu-EO-aTb" id="UDH-nW-0C4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRN-f0-v5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6316" y="-1003"/>
+            <point key="canvasLocation" x="-4916" y="-733"/>
         </scene>
         <!--User Name Change View Controller-->
         <scene sceneID="2P5-0f-bfP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ebl-Qg-xPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="wvY-rI-PFx" customClass="UserNameChangeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s75-w6-cNQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2045,7 +2064,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="ユーザネーム" id="BLC-db-A9A">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="eci-oF-dsS"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" image="lessthan" catalog="system" id="eci-oF-dsS">
+                                            <connections>
+                                                <segue destination="q5M-sP-ueH" kind="show" id="py3-mj-MUY"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2083,8 +2106,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="C3w-hY-V8n"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebl-Qg-xPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6316" y="-1876"/>
+            <point key="canvasLocation" x="-3245" y="-1606"/>
         </scene>
         <!--Password Change View Controller-->
         <scene sceneID="JS5-vf-Y6b">
@@ -2112,6 +2136,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="q5M-sP-ueH" kind="show" id="PMb-pH-Jo6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3x-SM-4Rx">
                                 <rect key="frame" x="122" y="571" width="170" height="50"/>
@@ -2211,12 +2238,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uJ-3m-uAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7380" y="-1876"/>
+            <point key="canvasLocation" x="-4917" y="-1568"/>
         </scene>
-        <!--Birthday Change View Controller-->
+        <!--View Controller-->
         <scene sceneID="XdE-eE-LJG">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="xoI-CF-nMg" customClass="BirthdayChangeViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xoI-CF-nMg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8fR-RB-dFj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2229,7 +2256,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="生年月日" id="KCs-K5-BXf">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="I9r-y9-cgN"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="I9r-y9-cgN">
+                                            <connections>
+                                                <segue destination="q5M-sP-ueH" kind="show" id="xoI-fd-lsj"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2279,7 +2310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmE-B3-pMD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5438" y="-1876"/>
+            <point key="canvasLocation" x="-6022" y="-733"/>
         </scene>
         <!--Block List View Controller-->
         <scene sceneID="zli-PT-AHb">
@@ -2314,7 +2345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64f-UN-6Vm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7380" y="-1003"/>
+            <point key="canvasLocation" x="-8693" y="-613"/>
         </scene>
         <!--Sunny Code Read View Controller-->
         <scene sceneID="Zak-QR-DCu">
@@ -2351,7 +2382,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.77647058820000003" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99807101490000005" green="0.77620285749999995" blue="0.47916907069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rU6-Cl-zac" firstAttribute="top" secondItem="hFV-Ta-whK" secondAttribute="bottom" constant="40" id="56P-2P-I93"/>
                             <constraint firstItem="Hw7-qG-s83" firstAttribute="top" secondItem="rU6-Cl-zac" secondAttribute="bottom" constant="85" id="BJW-FH-iGo"/>
@@ -2368,7 +2399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5H4-Eb-1j0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9509" y="-127"/>
+            <point key="canvasLocation" x="11848" y="-1568"/>
         </scene>
         <!--Friend Detail View Controller-->
         <scene sceneID="OhA-Nj-QSs">
@@ -2493,22 +2524,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQA-ij-XBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9796" y="1669"/>
+            <point key="canvasLocation" x="4614" y="1044"/>
         </scene>
-        <!--Add Friend View Controller-->
+        <!--Add Friend Auth View Controller-->
         <scene sceneID="RFk-n2-TKB">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="RoZ-QD-cPf" customClass="AddFriendViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="RoZ-QD-cPf" customClass="AddFriendAuthViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tl-nl-YU3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-8p-sYC">
-                                <rect key="frame" x="34" y="44" width="61" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="戻る"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIN-F5-Q1c">
                                 <rect key="frame" x="34" y="130" width="345" height="532"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2546,6 +2571,9 @@
                                 <state key="normal" title="はい">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="add" destination="RoZ-QD-cPf" eventType="touchUpInside" id="Dv1-4T-CP4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-NL-ZhF">
                                 <rect key="frame" x="132" y="549" width="158" height="49"/>
@@ -2554,16 +2582,22 @@
                                 <state key="normal" title="キャンセル">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backTo:" destination="RoZ-QD-cPf" eventType="touchUpInside" id="yq2-O5-KxT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77647058820000003" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XCX-zC-2hf"/>
                     </view>
                     <navigationItem key="navigationItem" id="fi3-h5-Wgh"/>
+                    <connections>
+                        <outlet property="name" destination="IbS-6G-3iZ" id="b2I-1S-AzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clY-gH-E9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9509" y="-1003"/>
+            <point key="canvasLocation" x="891" y="-733"/>
         </scene>
         <!--Group Invite View Controller-->
         <scene sceneID="mdV-06-tTH">
@@ -2639,7 +2673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lS-ql-90c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5155" y="-127"/>
+            <point key="canvasLocation" x="2941" y="397"/>
         </scene>
         <!--Group Detail View Controller-->
         <scene sceneID="65m-o3-9RH">
@@ -2745,7 +2779,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74O-6L-M2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10516" y="1669"/>
+            <point key="canvasLocation" x="3617" y="997"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="4JF-Ye-MPC">
@@ -2802,7 +2836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uby-Nz-jxX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8532" y="1669"/>
+            <point key="canvasLocation" x="4786" y="365"/>
         </scene>
         <!--top View Controller-->
         <scene sceneID="cii-ao-frE">
@@ -2921,7 +2955,7 @@
         <!--Registration View Controller-->
         <scene sceneID="0pB-Eb-Ckc">
             <objects>
-                <viewController storyboardIdentifier="registration" title="Registration View Controller" modalPresentationStyle="fullScreen" id="FME-KJ-g0d" customClass="AccountcreateViewController" customModule="WorkSpaceSunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registration" title="Registration View Controller" modalPresentationStyle="fullScreen" id="FME-KJ-g0d" customClass="AccountcreateViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XqJ-y6-Xga">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3092,12 +3126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6T-MY-bN8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12022" y="1338"/>
+            <point key="canvasLocation" x="11272" y="1240"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="vFc-cJ-UiY">
             <objects>
-                <viewController title="Login View Controller" modalPresentationStyle="fullScreen" id="1Ax-nr-rlx" customClass="LoginViewController" customModule="WorkSpaceSunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login View Controller" modalPresentationStyle="fullScreen" id="1Ax-nr-rlx" customClass="LoginViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mp9-S2-fea">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3293,11 +3327,9 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="o8f-DX-XDM"/>
-        <segue reference="CUg-Pz-KFT"/>
-        <segue reference="hdC-Yt-Mmf"/>
-        <segue reference="nql-WP-PZo"/>
-        <segue reference="3en-Gq-Iso"/>
-        <segue reference="BRH-TF-VEh"/>
+        <segue reference="C4s-Aq-eeH"/>
+        <segue reference="py3-mj-MUY"/>
+        <segue reference="zwE-V8-pVY"/>
+        <segue reference="gMT-4B-VLV"/>
     </inferredMetricsTieBreakers>
 </document>

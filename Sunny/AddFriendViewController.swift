@@ -24,10 +24,10 @@ class AddFriendViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
+    //検索ボタン押下時
     @IBAction func search(_ sender: Any) {
         idSearch(id: friendId.text!, complete: {
             uid in
-            print(uid)
             self.uid = uid
             self.performSegue(withIdentifier: "toAddFriendCheck", sender: nil)
         })
@@ -53,16 +53,14 @@ class AddFriendViewController: UIViewController {
             return
         }
         if(identifier == "toAddFriendCheck") {
-            // NavigationControllerへの遷移の場合
-            
             // segueから遷移先のNavigationControllerを取得
             let vc = segue.destination as! AddFriendAuthViewController
             // 次画面のテキスト表示用のStringに、本画面のテキストフィールドのテキストを入れる
             vc.id = uid
         }
-        //        let next = segue.destination as? AddFriendAuthViewController
-        //        let _ = next?.view
-        //        next?.textField3.text = textField.text
     }
-
+    
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
