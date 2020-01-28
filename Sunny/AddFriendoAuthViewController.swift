@@ -19,9 +19,9 @@ class AddFriendAuthViewController: UIViewController {
 
 
     override func viewDidLoad() {
-        print(id)
+        print("追加するid：",id)
         //        uid.text = user?.uid
-        ref.child("user").child(id!).observe(.value) { (snapshot) in
+        ref.child("user").child(id as! String).observe(.value) { (snapshot) in
             let data = snapshot.value as? [String : AnyObject] ?? [:]
             let name = data["name"] as? String
             //                    let id = data["id"] as? String
@@ -30,6 +30,9 @@ class AddFriendAuthViewController: UIViewController {
         }
     }
 
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func add() {
         ref.child("friend").child(user!.uid).observe(.value) { (snapshot) in
             var data = snapshot.value as? [String : Any] ?? [:]

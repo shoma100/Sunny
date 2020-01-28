@@ -49,6 +49,9 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    @IBAction func backTo(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     
