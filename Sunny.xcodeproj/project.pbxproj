@@ -19,6 +19,7 @@
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
 		1AFC8CB223D6D1B1001725D9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */; };
 		1AFC8CB423D6D2D5001725D9 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */; };
+		246557A523E12BF20075E40E /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246557A423E12BF20075E40E /* UIView+Border.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
 		7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E78DCF923A9CAD40045923D /* Sub.storyboard */; };
 		CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D0AF323AC6AC200030825 /* StringExt.swift */; };
@@ -51,6 +52,7 @@
 		1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
 		1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		246557A423E12BF20075E40E /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		7289F2C5335F065664C861B0 /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E78DCFA23A9CAD40045923D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sub.storyboard; sourceTree = "<group>"; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		CCFAE9942399E9100003F3E2 /* Sunny */ = {
 			isa = PBXGroup;
 			children = (
+				246557A423E12BF20075E40E /* UIView+Border.swift */,
 				1AA621C2239F724D0077D331 /* GoogleService-Info.plist */,
 				CCFAE9952399E9100003F3E2 /* AppDelegate.swift */,
 				CCFAE9972399E9100003F3E2 /* SceneDelegate.swift */,
@@ -304,6 +307,7 @@
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
 				CCFAE9982399E9100003F3E2 /* SceneDelegate.swift in Sources */,
 				CC995947239A159200DEA54E /* AccountcreateViewController.swift in Sources */,
+				246557A523E12BF20075E40E /* UIView+Border.swift in Sources */,
 				CCB193F923AB073400244318 /* QrcodeReadViewController.swift in Sources */,
 				CC995949239A251600DEA54E /* topViewController.swift in Sources */,
 				CCB193FB23AB141300244318 /* AddFriendoAuthViewController.swift in Sources */,
@@ -461,14 +465,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ATXD4M2CY3;
+				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fools.Sunny-gonchan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -483,14 +487,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ATXD4M2CY3;
+				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fools.Sunny-gonchan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
