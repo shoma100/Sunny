@@ -97,6 +97,93 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		246557A623E1BD650075E40E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CC995948239A251600DEA54E /* topViewController.swift */,
+				CCFAE9992399E9100003F3E2 /* ViewController.swift */,
+				1AA621C0239F719C0077D331 /* LoginViewController.swift */,
+				CCFAE99B2399E9100003F3E2 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		246557A723E1BDCF0075E40E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				246557AE23E1BF6B0075E40E /* camera */,
+				246557AC23E1BE9B0075E40E /* chat */,
+				246557AB23E1BE840075E40E /* group */,
+				246557AA23E1BE740075E40E /* friend */,
+				246557A923E1BE5F0075E40E /* qr */,
+				246557A823E1BDFD0075E40E /* account */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		246557A823E1BDFD0075E40E /* account */ = {
+			isa = PBXGroup;
+			children = (
+				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
+				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
+		246557A923E1BE5F0075E40E /* qr */ = {
+			isa = PBXGroup;
+			children = (
+				CCB193F823AB073400244318 /* QrcodeReadViewController.swift */,
+				1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */,
+			);
+			path = qr;
+			sourceTree = "<group>";
+		};
+		246557AA23E1BE740075E40E /* friend */ = {
+			isa = PBXGroup;
+			children = (
+				CCB193FC23AB14A000244318 /* AddFriendViewController.swift */,
+				CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */,
+				CC7A2B5F23D1529D00D0127A /* FriendTableViewController.swift */,
+			);
+			path = friend;
+			sourceTree = "<group>";
+		};
+		246557AB23E1BE840075E40E /* group */ = {
+			isa = PBXGroup;
+			children = (
+				1AA807D123DEC84C00D1366B /* GroupCreateViewController.swift */,
+				CCB35A7A23D56CB300027D13 /* GroupTableViewController.swift */,
+			);
+			path = group;
+			sourceTree = "<group>";
+		};
+		246557AC23E1BE9B0075E40E /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		246557AD23E1BF510075E40E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC5D0AF323AC6AC200030825 /* StringExt.swift */,
+				246557A423E12BF20075E40E /* UIView+Border.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		246557AE23E1BF6B0075E40E /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				1A3D864323B22BB2005DE595 /* Camera.swift */,
+				1A3D864523B22DA5005DE595 /* Camera.storyboard */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
 		2BAFF46AF4470D25AA3451EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,34 +215,19 @@
 		CCFAE9942399E9100003F3E2 /* Sunny */ = {
 			isa = PBXGroup;
 			children = (
-				246557A423E12BF20075E40E /* UIView+Border.swift */,
+				246557AD23E1BF510075E40E /* Utils */,
+				246557A723E1BDCF0075E40E /* Menu */,
+				246557A623E1BD650075E40E /* Login */,
 				1AA621C2239F724D0077D331 /* GoogleService-Info.plist */,
 				CCFAE9952399E9100003F3E2 /* AppDelegate.swift */,
 				CCFAE9972399E9100003F3E2 /* SceneDelegate.swift */,
-				CC995948239A251600DEA54E /* topViewController.swift */,
-				CCFAE9992399E9100003F3E2 /* ViewController.swift */,
-				CC7A2B5F23D1529D00D0127A /* FriendTableViewController.swift */,
-				CCFAE99B2399E9100003F3E2 /* Main.storyboard */,
 				7E78DCF923A9CAD40045923D /* Sub.storyboard */,
-				CCB35A7A23D56CB300027D13 /* GroupTableViewController.swift */,
 				CCFAE9A12399E9160003F3E2 /* Assets.xcassets */,
 				CCFAE9A62399E9160003F3E2 /* Info.plist */,
 				CCFAE99E2399E9100003F3E2 /* Sunny.xcdatamodeld */,
 				CC995946239A159200DEA54E /* AccountcreateViewController.swift */,
 				CCA17C4123B09B9F00323811 /* AccountDetailsViewController.swift */,
-				1AA621C0239F719C0077D331 /* LoginViewController.swift */,
-				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
-				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
-				1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */,
-				CCB193F823AB073400244318 /* QrcodeReadViewController.swift */,
-				CC5D0AF323AC6AC200030825 /* StringExt.swift */,
-				CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */,
-				CCB193FC23AB14A000244318 /* AddFriendViewController.swift */,
-				1A3D864323B22BB2005DE595 /* Camera.swift */,
-				1A3D864523B22DA5005DE595 /* Camera.storyboard */,
 				1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */,
-				1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */,
-				1AA807D123DEC84C00D1366B /* GroupCreateViewController.swift */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
