@@ -9,18 +9,23 @@
 import UIKit
 import Firebase
 
-class AccountSetViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AccountSetViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let ref = Database.database().reference()
     let user = Auth.auth().currentUser
     var accountImgURL:URL!
     let imagePicker = UIImagePickerController()
     let storage = Storage.storage()
-    @IBOutlet weak var unm: UILabel!
+    
+    //tableViewのバックグラウンドカラー
+    public let backGroundColor:UIColor = UIColor(red: 236/255, green: 235/255, blue: 241/255, alpha: 1)
+    
+    @IBOutlet weak var table:UITableView!
     @IBOutlet weak var accountImg: UIImageView!
     
-    
     override func viewDidLoad(){
+        self.view.backgroundColor = backGroundColor
+        
         imagePicker.delegate = self
         
         // 角を丸くする
@@ -44,13 +49,13 @@ class AccountSetViewController: UIViewController,UIImagePickerControllerDelegate
                 self.accountImg.image = UIImage(named: "AppIcon")
             }
         }
-        
-        ref.child("user").child(user!.uid).observe(.value) { (snapshot) in
-            let data = snapshot.value as? [String : AnyObject] ?? [:]
-            let name = data["name"] as? String
-            _ = data["id"] as? String
-            self.unm.text = name!
-        }
+        //
+        //        ref.child("user").child(user!.uid).observe(.value) { (snapshot) in
+        //            let data = snapshot.value as? [String : AnyObject] ?? [:]
+        //            let name = data["name"] as? String
+        //            _ = data["id"] as? String
+        //            self.unm.text = name!
+        //        }
     }
     
     @objc func imageTaped(_ sender : UITapGestureRecognizer) {
@@ -130,6 +135,106 @@ class AccountSetViewController: UIViewController,UIImagePickerControllerDelegate
                 })
             }
         }
+    }
+    
+    //Headerの高さ
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
+    }
+    //Footerの高さ
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    //Headerが表示される時の処理
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        //Headerのラベルの文字色を設定
+        header.textLabel?.textColor = UIColor.gray
+        //Headerの背景色を設定
+        header.contentView.backgroundColor = backGroundColor
+    }
+    //Footerが表示される時の処理
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        guard let footer = view as? UITableViewHeaderFooterView else { return }
+        //Footerのラベルの文字色を設定
+        footer.textLabel?.textColor = UIColor.white
+        //Footerの背景色を設定
+        footer.contentView.backgroundColor = backGroundColor
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0: // 「全般」のセクション
+            return 5
+        case 1: // 「一般」のセクション
+            return 1
+        case 2: //　「その他」のセクション
+            return 1
+        default: // ここが実行されることはないはず
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                // 画像
+                //self.performSegue(withIdentifier: "toAccountSegue", sender: nil)
+                break
+            case 1:
+                // 名前
+                performSegue(withIdentifier: "showChangeUserName", sender: nil)
+                break
+            case 2:
+                // ユーザID
+                //self.performSegue(withIdentifier: "toPrivacySegue", sender: nil)
+                break
+            case 3:
+                // 生年月日
+                performSegue(withIdentifier: "showChangeBirthday", sender: nil)
+                break
+            case 4:
+                // パスワード
+                performSegue(withIdentifier: "showChangePassword", sender: nil)
+                break
+            default:
+                // ここに来ることはない..
+                break
+            }
+        case 1:
+            // アカウント設定
+            switch indexPath.row {
+            case 0:
+                // ブロックしたユーザ
+                performSegue(withIdentifier: "showBlockUser", sender: nil)
+                break
+            default:
+                // ここに来ることはない..
+                break
+            }
+        case 2:
+            // ログアウト
+            switch indexPath.row {
+            case 0:
+                // ログアウト
+                //self.performSegue(withIdentifier: "", sender: nil)
+                break
+            default:
+                // ここに来ることはない..
+                break
+            }
+        default:
+            // ここに来ることはない..
+            break
+        }
+        table.deselectRow(at: indexPath as IndexPath, animated: true)
     }
     
 }
