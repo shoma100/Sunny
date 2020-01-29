@@ -22,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self //デリゲートをセット
         passwordTextField.delegate = self //デリゲートをセット
         passwordTextField.isSecureTextEntry  = true // 文字を非表示に
+        
     }
 
     @IBAction func swipe(_ sender: Any) {

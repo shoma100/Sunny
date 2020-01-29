@@ -9,11 +9,20 @@
 import Foundation
 import UIKit
 import FirebaseUI
+import Firebase //Firebaseをインポート
 
 class topViewController: UIViewController,FUIAuthDelegate {
     @IBOutlet weak var signUp: UIButton!
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var google: UIButton!
+    @IBOutlet weak var AuthButton: UIButton!
+    
+    var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
+    
+    // 認証に使用するプロバイダの選択
+    let providers: [FUIAuthProvider] = [
+        FUIGoogleAuth()
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +36,11 @@ class topViewController: UIViewController,FUIAuthDelegate {
         
     }
     
-    @IBOutlet weak var AuthButton: UIButton!
-
-    var authUI: FUIAuth { get { return FUIAuth.defaultAuthUI()!}}
-    // 認証に使用するプロバイダの選択
-    let providers: [FUIAuthProvider] = [
-        FUIGoogleAuth()
-        ]
+    override func viewWillAppear(_ animated: Bool) {
+        if let _ = Auth.auth().currentUser {
+            self.transitionToView()
+        }
+    }
     
     @objc func AuthButtonTapped(sender : AnyObject) {
         // FirebaseUIのViewの取得
@@ -49,5 +56,13 @@ class topViewController: UIViewController,FUIAuthDelegate {
             self.performSegue(withIdentifier: "toTopView", sender: self)
         }
         // エラー時の処理をここに書く
+    }
+    
+    //ログイン完了後に、ListViewControllerへの遷移のためのメソッド
+    func transitionToView()  {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
+        let nextView = storyboard.instantiateInitialViewController() as! UINavigationController
+        self.present(nextView, animated: true, completion: nil)
+
     }
 }

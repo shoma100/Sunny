@@ -50,7 +50,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func getFrinedIdList(comp:@escaping([String]) -> Void) {
         ref.child("friend").child(user!.uid).observe(.value) { (snapshot) in
-            print(snapshot)
+            //TODO:友達が１人もいない場合には落ちる...
             let keys = [String]((snapshot.value as! [String: Any]).keys)
             print("keys = ",keys)
             
