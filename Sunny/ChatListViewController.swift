@@ -7,10 +7,3 @@
 //
 
 import UIKit
-
-class ChatListViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        
-    }
-}
