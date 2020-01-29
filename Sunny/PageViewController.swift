@@ -26,9 +26,9 @@ class PageViewController: UIPageViewController {
         return storyboard.instantiateViewController(withIdentifier: "MyAccountViewController") as! MyAccountViewController
     }
 
-    func getThird() -> ChatListViewController {
+    func getThird() -> ChatViewController {
         var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "chatList") as! ChatListViewController
+        return storyboard.instantiateViewController(withIdentifier: "chat") as! ChatViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +39,7 @@ class PageViewController: UIPageViewController {
 extension PageViewController : UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: ChatListViewController.self) {
+        if viewController.isKind(of: ChatViewController.self) {
             // 3 -> 2
             return getSecond()
         } else if viewController.isKind(of: MyAccountViewController.self) {
