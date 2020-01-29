@@ -47,7 +47,9 @@ class MyAccountViewController: UIViewController {
         
     }
     
-    @IBAction func myUnwindAction(segue: UIStoryboard) {
-        
+    
+    @IBAction func tappedAccountSetting(_ sender: Any) {
+        self.performSegue(withIdentifier: "showAccountSegue", sender: nil)
     }
+    
 }
