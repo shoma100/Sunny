@@ -17,7 +17,9 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate  {
     // Storyboardと接続↓
     
     
- 
+    
+    // Storyboardと接続↑
+    
     var testText:String = "default"
  
     override func viewDidLoad() {
@@ -29,15 +31,11 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate  {
         // デフォルト値
         userDefaults.register(defaults: ["DataStore": "default"])
  
-        label.text = readData()
- 
     }
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
  
         testText = textField.text!
- 
-        label.text = testText
  
         // キーボードを閉じる
         textField.resignFirstResponder()
@@ -77,6 +75,5 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate  {
         let str: String = userDefaults.object(forKey: "DataStore") as! String
  
         return str
-        
     }
 }
