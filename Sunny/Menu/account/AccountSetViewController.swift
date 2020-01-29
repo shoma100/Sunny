@@ -30,7 +30,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
         
         // 角を丸くする
         accountImg.contentMode = .scaleAspectFill
-        accountImg.layer.cornerRadius = accountImg.frame.width/2
+        accountImg.layer.cornerRadius = accountImg.frame.height/2
         accountImg.clipsToBounds = true
         
         accountImg.isUserInteractionEnabled = true
@@ -95,7 +95,6 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            accountImg.contentMode = .scaleAspectFit
             accountImg.image = pickedImage
         }
         upload(comp: { url in

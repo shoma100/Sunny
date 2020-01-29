@@ -12,8 +12,8 @@ import Firebase
 
 class AddFriendViewController: UIViewController {
     
-    let ref = Database.database().reference()
     @IBOutlet weak var friendId: UITextField!
+    let ref = Database.database().reference()
     var uid = ""
     
     override func viewDidLoad() {
@@ -27,23 +27,28 @@ class AddFriendViewController: UIViewController {
     //検索ボタン押下時
     @IBAction func search(_ sender: Any) {
         idSearch(id: friendId.text!, complete: {
-            uid in
-            self.uid = uid
-            self.performSegue(withIdentifier: "toAddFriendCheck", sender: nil)
+            result in
+            //nilチェック
+            if let id = result {
+                self.uid = id
+                self.performSegue(withIdentifier: "toAddFriendCheck", sender: nil)
+            }
         })
     }
     
-    func idSearch(id: String, complete: @escaping (String) -> Void) {
+    func idSearch(id: String, complete: @escaping (String?) -> Void) {
         ref.child("user").observe(.value) { (snapshot) in
-            //            Users直下のデータの数だけ繰り返す。
+            var resultId:String? = nil
+            //FIXME　同じidを持つユーザがいた場合を想定していない,自分を追加できてしまう
             for data in snapshot.children {
                 let snapData = data as! DataSnapshot
                 // Dictionary型にキャスト
                 let user = snapData.value as! [String: Any]
                 if id == user["id"] as! String {
-                    complete(snapData.key)
+                    resultId = snapData.key
                 }
             }
+            complete(resultId)
         }
     }
     /// セグエ実行前処理

@@ -50,38 +50,6 @@
             endingLineNumber = "52"
             landmarkName = "signUp(email:password:name:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E08F0388-7AB7-44A0-8060-55C69AB56D30 - 15420216af98699f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sunny.AccountcreateViewController.(signUp in _314BBBF0D8585620EB7DFD8C93B7CA44)(email: Swift.String, password: Swift.String, name: Swift.String) -&gt; ()"
-                  moduleName = "Sunny"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shun/Sunny/Sunny/AccountcreateViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "62">
-               </Location>
-               <Location
-                  uuid = "E08F0388-7AB7-44A0-8060-55C69AB56D30 - 51c401db955943dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Sunny.AccountcreateViewController.(signUp in _314BBBF0D8585620EB7DFD8C93B7CA44)(email: Swift.String, password: Swift.String, name: Swift.String) -&gt; ()"
-                  moduleName = "Sunny"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shun/Sunny/Sunny/AccountcreateViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "161">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -194,38 +162,6 @@
             endingLineNumber = "122"
             landmarkName = "upload(comp:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C9246568-7A7A-4606-90FE-C2A267588BA2 - ff3bc3d180e15a9f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Sunny.AccountSetViewController.(upload in _E61AF9B6FC3D1451419042F82AEE662E)(comp: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Sunny"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shun/Sunny/Sunny/AccountSetViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "2536">
-               </Location>
-               <Location
-                  uuid = "C9246568-7A7A-4606-90FE-C2A267588BA2 - 56f9fcc83747211d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Sunny.AccountSetViewController.(upload in _E61AF9B6FC3D1451419042F82AEE662E)(comp: (Swift.Optional&lt;Foundation.URL&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Sunny"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shun/Sunny/Sunny/AccountSetViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "274">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
