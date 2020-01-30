@@ -487,7 +487,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0iK-GM-p9y"/>
                     </view>
-                    <navigationItem key="navigationItem" title="グループ一覧" id="SeY-sJ-aCp"/>
+                    <navigationItem key="navigationItem" title="グループ一覧" id="SeY-sJ-aCp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="npD-6I-DWD">
+                            <connections>
+                                <segue destination="KlX-mh-t4b" kind="show" id="Si7-hy-ePN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TableView" destination="0XW-3E-bLT" id="oUD-Cf-rzT"/>
                     </connections>
@@ -1530,10 +1536,10 @@
             </objects>
             <point key="canvasLocation" x="-8855.072463768116" y="83.705357142857139"/>
         </scene>
-        <!--Group Create View Controller-->
+        <!--View Controller-->
         <scene sceneID="gfE-Ev-JxM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sQs-TR-pRp" customClass="GroupCreateViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sQs-TR-pRp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ONH-Xc-UZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1666,6 +1672,57 @@
             </objects>
             <point key="canvasLocation" x="-11129" y="1844"/>
         </scene>
+        <!--グループ作成-->
+        <scene sceneID="Bbg-8d-RxW">
+            <objects>
+                <viewController id="KlX-mh-t4b" customClass="GroupCreateViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lzg-wN-swv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Aix-zJ-3d5">
+                                <rect key="frame" x="0.0" y="132" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Groupcell" id="pBM-Xd-KlP">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pBM-Xd-KlP" id="qT4-1h-Upe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iIw-V1-2tk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1e9-ws-Xgy"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Aix-zJ-3d5" firstAttribute="top" secondItem="iIw-V1-2tk" secondAttribute="bottom" symbolic="YES" id="0fm-mw-4Lo"/>
+                            <constraint firstItem="Aix-zJ-3d5" firstAttribute="leading" secondItem="AFU-IR-wMm" secondAttribute="leading" id="FHS-c9-wg6"/>
+                            <constraint firstAttribute="bottom" secondItem="Aix-zJ-3d5" secondAttribute="bottom" id="dr0-b2-sWQ"/>
+                            <constraint firstItem="iIw-V1-2tk" firstAttribute="leading" secondItem="AFU-IR-wMm" secondAttribute="leading" id="em1-7g-Vux"/>
+                            <constraint firstItem="iIw-V1-2tk" firstAttribute="trailing" secondItem="AFU-IR-wMm" secondAttribute="trailing" id="gMS-f1-kTf"/>
+                            <constraint firstItem="Aix-zJ-3d5" firstAttribute="trailing" secondItem="AFU-IR-wMm" secondAttribute="trailing" id="z4Z-AA-y5z"/>
+                            <constraint firstItem="iIw-V1-2tk" firstAttribute="top" secondItem="AFU-IR-wMm" secondAttribute="top" id="z6X-7D-Tim"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AFU-IR-wMm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="グループ作成" id="GDz-4U-ed9"/>
+                    <connections>
+                        <outlet property="friendList" destination="Aix-zJ-3d5" id="SJY-tT-spK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7WS-tU-RCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10120" y="1844"/>
+        </scene>
         <!--Add Friend View Controller-->
         <scene sceneID="oXx-zO-dYK">
             <objects>
@@ -1675,7 +1732,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwE-NB-Kns">
-                                <rect key="frame" x="30" y="44" width="60" height="35"/>
+                                <rect key="frame" x="30" y="88" width="60" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="4T0-Kp-XkH"/>
                                     <constraint firstAttribute="height" constant="35" id="CfE-na-SZc"/>
@@ -1689,7 +1746,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザ追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esA-Ym-CO2">
-                                <rect key="frame" x="124" y="119" width="166" height="45"/>
+                                <rect key="frame" x="124" y="163" width="166" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="eDF-gf-RU5"/>
                                 </constraints>
@@ -1712,7 +1769,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザIDを入力" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yjC-Sr-3VZ">
-                                <rect key="frame" x="57" y="199" width="300" height="38"/>
+                                <rect key="frame" x="57" y="243" width="300" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="dOA-RH-vFZ"/>
                                 </constraints>
@@ -3487,7 +3544,6 @@
         <!--Navigation Controller-->
         <scene sceneID="0zO-Kc-eSK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWo-8o-7G2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="navigationRoot" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="pR4-5b-mG6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YCc-Vn-8PN">
@@ -3502,6 +3558,7 @@
                         <segue destination="vDS-kt-pu2" kind="relationship" relationship="rootViewController" id="sox-Vu-Ggp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWo-8o-7G2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-9765.217391304348" y="83.705357142857139"/>
         </scene>
@@ -3521,8 +3578,8 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C4s-Aq-eeH"/>
-        <segue reference="jFc-61-doa"/>
-        <segue reference="gMT-4B-VLV"/>
+        <segue reference="gBi-6C-Gzf"/>
+        <segue reference="zwE-V8-pVY"/>
+        <segue reference="99e-dj-3Il"/>
     </inferredMetricsTieBreakers>
 </document>

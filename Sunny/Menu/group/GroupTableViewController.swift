@@ -11,14 +11,10 @@ import UIKit
 
 class GroupTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
  
-    
-    
-    
     @IBOutlet weak var TableView: UITableView!
+    var groupNoneView:UIView?
     
-    
-    let TODO = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
-    
+    let TODO:[String] = []
     
     //最初からあるコード
     override func viewDidLoad() {
@@ -27,15 +23,23 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         let tblBackColor: UIColor = UIColor.clear
         TableView.backgroundColor = tblBackColor
         
+        //グループがない場合に表示するview
+        if TODO.count == 0 {
+            groupNoneView = UIView(frame: CGRect(x: 0,y: 0,width: self.view.frame.width,height: self.view.frame.height))
+            groupNoneView?.backgroundColor = UIColor.white
+            let title = UILabel()
+            title.text = "グループはありません"
+            title.frame = CGRect(x:self.view.frame.width/2,y: self.view.frame.height/2,width: 250,height:250)
+            title.textAlignment = .center
+            title.center = self.view.center
+            groupNoneView?.addSubview(title)
+            self.view.addSubview(groupNoneView!)
+        }
     }
     //最初からあるコード
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TODO.count
@@ -52,7 +56,5 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func backTo(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
     
 }
