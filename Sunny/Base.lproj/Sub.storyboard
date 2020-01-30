@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCv-vg-owy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCv-vg-owy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1117,7 +1117,7 @@
         <!--Player View Controller-->
         <scene sceneID="7iw-bl-bod">
             <objects>
-                <viewController id="7iI-F7-M8V" customClass="AVPlayerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chat" id="7iI-F7-M8V" customClass="AVPlayerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2oG-O2-uWS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1156,10 +1156,20 @@
         <!--Chat View Controller-->
         <scene sceneID="wdM-mJ-4b1">
             <objects>
-                <viewController storyboardIdentifier="chat" modalPresentationStyle="fullScreen" id="c1K-Wr-qWR" customClass="ChatViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="c1K-Wr-qWR" customClass="ChatViewController" customModule="Sunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JFU-Wg-dZb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MI-ek-EZ4">
+                                <rect key="frame" x="66" y="44" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="gCv-vg-owy" kind="show" id="99e-dj-3Il"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.99803334470000005" green="0.77623409030000001" blue="0.43594363330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cLP-C5-fdv"/>
                     </view>
@@ -2962,7 +2972,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-J7-DxV">
-                                <rect key="frame" x="115" y="169" width="184" height="210"/>
+                                <rect key="frame" x="115" y="169" width="185" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="3hD-lX-O7P"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="MMZ-bv-iAE"/>
@@ -2980,7 +2990,7 @@
                                 <state key="normal" title="戻る"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-P1-AyM">
-                                <rect key="frame" x="52.5" y="542" width="309" height="34"/>
+                                <rect key="frame" x="52.5" y="542" width="310" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="92y-9M-IzD"/>
                                     <constraint firstAttribute="width" constant="310" id="Xy2-eA-Fra"/>
@@ -2991,7 +3001,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pHP-id-KIR">
-                                <rect key="frame" x="52.5" y="606" width="309" height="34"/>
+                                <rect key="frame" x="52.5" y="606" width="310" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="auM-2h-yRa"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="jlN-wX-Hvr"/>
@@ -3002,7 +3012,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード（確認）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSx-ZE-6n4">
-                                <rect key="frame" x="52.5" y="670" width="309" height="34"/>
+                                <rect key="frame" x="52.5" y="670" width="310" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="HKx-nZ-AqT"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="310" id="HxL-Iv-NL5"/>
@@ -3015,7 +3025,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jea-sE-MQi">
-                                <rect key="frame" x="52.5" y="478" width="309" height="34"/>
+                                <rect key="frame" x="52.5" y="478" width="310" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="4EH-qe-GA6"/>
                                     <constraint firstAttribute="height" constant="34" id="MOU-nV-noo"/>
@@ -3026,7 +3036,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rlp-WV-tGG">
-                                <rect key="frame" x="52.5" y="414" width="309" height="34"/>
+                                <rect key="frame" x="52.5" y="414" width="310" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="JAZ-PS-Cjz"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Txy-SN-gNZ"/>
@@ -3037,7 +3047,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBS-6O-0oR">
-                                <rect key="frame" x="140" y="94" width="134" height="45"/>
+                                <rect key="frame" x="140" y="94" width="135" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="9pe-54-ZfI"/>
                                     <constraint firstAttribute="width" constant="135" id="Vkr-qn-yiA"/>
@@ -3050,7 +3060,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E0-Hb-vo5">
-                                <rect key="frame" x="124" y="749" width="166" height="50"/>
+                                <rect key="frame" x="124" y="749" width="167" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cJb-wu-Vc4"/>
@@ -3328,8 +3338,9 @@
         <image name="person.crop.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gBi-6C-Gzf"/>
+        <segue reference="C4s-Aq-eeH"/>
         <segue reference="CBg-uf-1hT"/>
-        <segue reference="jFc-61-doa"/>
+        <segue reference="zwE-V8-pVY"/>
+        <segue reference="gMT-4B-VLV"/>
     </inferredMetricsTieBreakers>
 </document>
