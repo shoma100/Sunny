@@ -14,21 +14,23 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate  {
     // UserDefaults のインスタンス
     let userDefaults = UserDefaults.standard
 
-    @IBOutlet weak var mailaddress: UITextField!
-    @IBOutlet weak var lavel: UILabel!
+    // Storyboardと接続↓
     
     
- 
+    
+    // Storyboardと接続↑
+    
     var testText:String = "default"
  
     override func viewDidLoad() {
         super.viewDidLoad()
  
         // textFiel の情報を受け取るための delegate を設定
-        mailaddress.delegate = self
+        textField.delegate = self
  
         // デフォルト値
         userDefaults.register(defaults: ["DataStore": "default"])
+ 
     }
  
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -52,6 +54,7 @@ class UserDefaultsViewController: UIViewController, UITextFieldDelegate  {
         // myData という名前で "1" という値を保存する
         userDefaults.set("1", forKey: "myData")
         userDefaults.synchronize()
+ 
     }
  
     func readData() -> String {

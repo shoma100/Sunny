@@ -21,7 +21,6 @@
 		1AFC8CB423D6D2D5001725D9 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */; };
 		246557A523E12BF20075E40E /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246557A423E12BF20075E40E /* UIView+Border.swift */; };
 		7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7289F2C5335F065664C861B0 /* Pods_Sunny.framework */; };
-		7E6B073A23E14D70001E3000 /* UserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6B073923E14D70001E3000 /* UserDefaultsViewController.swift */; };
 		7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E78DCF923A9CAD40045923D /* Sub.storyboard */; };
 		CC5D0AF423AC6AC200030825 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5D0AF323AC6AC200030825 /* StringExt.swift */; };
 		CC7A2B6023D1529D00D0127A /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2B5F23D1529D00D0127A /* FriendTableViewController.swift */; };
@@ -55,7 +54,6 @@
 		1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		246557A423E12BF20075E40E /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		7289F2C5335F065664C861B0 /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E6B073923E14D70001E3000 /* UserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsViewController.swift; sourceTree = "<group>"; };
 		7E78DCFA23A9CAD40045923D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sub.storyboard; sourceTree = "<group>"; };
 		ABEEE697902595EB4B4ECAEA /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				246557A423E12BF20075E40E /* UIView+Border.swift */,
-				7E6B073923E14D70001E3000 /* UserDefaultsViewController.swift */,
 				1AA621C2239F724D0077D331 /* GoogleService-Info.plist */,
 				CCFAE9952399E9100003F3E2 /* AppDelegate.swift */,
 				CCFAE9972399E9100003F3E2 /* SceneDelegate.swift */,
@@ -301,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3D864423B22BB2005DE595 /* Camera.swift in Sources */,
-				7E6B073A23E14D70001E3000 /* UserDefaultsViewController.swift in Sources */,
 				1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */,
 				CC7A2B6023D1529D00D0127A /* FriendTableViewController.swift in Sources */,
 				1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */,
