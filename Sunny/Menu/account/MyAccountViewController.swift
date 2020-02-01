@@ -35,13 +35,22 @@ class MyAccountViewController: UIViewController {
                 self.accountImg.image = UIImage(named: "AppIcon")
             }
             
-            ref.child("user").child(user.uid).observe(.value) { (snapshot) in
-                let data = snapshot.value as? [String : AnyObject] ?? [:]
-                var name = data["name"] as? String
-                var id = data["id"] as? String
-                self.unm.text = "ユーザ名：" + name!
-                self.uid.text = "id：" + id!
-            }
+            DB.getUserInfo_o(userId: user.uid, comp: {
+                value in
+                
+                if let name = value["name"] {
+                    self.unm.text = name
+                    self.uid.text = value["id"]
+                } else {
+                    DB.getUserInfo(userId: user.uid, comp: {
+                        item in
+                        
+                        self.unm.text = item!.getDisplayName()
+                        self.uid.text = item!.getSearchId()
+                    })
+                    
+                }
+            })
         }
         
         

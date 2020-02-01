@@ -26,31 +26,21 @@ class AddFriendViewController: UIViewController {
     }
     //検索ボタン押下時
     @IBAction func search(_ sender: Any) {
-        idSearch(id: friendId.text!, complete: {
+        guard let word = friendId.text else {
+            return
+        }
+        
+        DB.getUserInfo(userId: word, comp: {
             result in
+            
             //nilチェック
-            if let id = result {
-                self.uid = id
+            if let user = result {
+                self.uid = user.getUserId()
                 self.performSegue(withIdentifier: "toAddFriendCheck", sender: nil)
             }
         })
     }
     
-    func idSearch(id: String, complete: @escaping (String?) -> Void) {
-        ref.child("user").observe(.value) { (snapshot) in
-            var resultId:String? = nil
-            //FIXME　同じidを持つユーザがいた場合を想定していない,自分を追加できてしまう
-            for data in snapshot.children {
-                let snapData = data as! DataSnapshot
-                // Dictionary型にキャスト
-                let user = snapData.value as! [String: Any]
-                if id == user["id"] as! String {
-                    resultId = snapData.key
-                }
-            }
-            complete(resultId)
-        }
-    }
     /// セグエ実行前処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {
