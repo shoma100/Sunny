@@ -58,6 +58,7 @@ class group {
             "groupName" : groupName,
             "groupImagePath" : groupImagePath,
             "memberCount" : memberCount,
+            "memberList" : memberList,
             "createTimestamp" : createTimestamp,
             "updateTimestamp": updateTimestamp
         ]
