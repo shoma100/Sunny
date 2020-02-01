@@ -37,8 +37,40 @@ class topViewController: UIViewController,FUIAuthDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let _ = Auth.auth().currentUser {
-            self.transitionToView()
+        //FIXME: データ移行のため暫定対応
+        if let user = Auth.auth().currentUser {
+            DB.getUserInfo_o(userId: user.uid, comp: {
+                oldUserInfo in
+                
+                if let wn = oldUserInfo["name"]{
+                    let name = wn
+                    let searchId = oldUserInfo["id"]!
+                    let mail = user.email
+                    let expain = ""
+                    let uid = user.uid
+                    let account = Account(name: name,
+                                          mail: mail!,
+                                          explain: expain,
+                                          userId: uid,
+                                          searchId: searchId)
+                    DB.addUserDB(user: account)
+                } else {
+                    DB.getUserInfo(userId: user.uid, comp: {newUserInfo in
+                        let name = newUserInfo!.getDisplayName()
+                        let searchId = newUserInfo!.getSearchId()
+                        let mail = user.email
+                        let expain = ""
+                        let uid = user.uid
+                        let account = Account(name: name,
+                                              mail: mail!,
+                                              explain: expain,
+                                              userId: uid,
+                                              searchId: searchId)
+                        DB.addUserDB(user: account)
+                    })
+                }
+                self.transitionToView()
+            })
         }
     }
     
