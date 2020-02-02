@@ -18,6 +18,38 @@
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
 		1AFC8CB223D6D1B1001725D9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */; };
 		1AFC8CB423D6D2D5001725D9 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */; };
+		2424365A23E5ABCE00759EE4 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2424365923E5ABCE00759EE4 /* CameraController.swift */; };
+		2424365C23E5ABE100759EE4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2424365B23E5ABE100759EE4 /* test.storyboard */; };
+		2424369823E5B58A00759EE4 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2424365723E5ABC400759EE4 /* DeepAR.framework */; };
+		2424369923E5B58A00759EE4 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2424365723E5ABC400759EE4 /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		242436B823E5C48E00759EE4 /* blizzard in Resources */ = {isa = PBXBuildFile; fileRef = 2424369C23E5C48400759EE4 /* blizzard */; };
+		242436B923E5C48E00759EE4 /* twistedFace in Resources */ = {isa = PBXBuildFile; fileRef = 2424369D23E5C48400759EE4 /* twistedFace */; };
+		242436BA23E5C48E00759EE4 /* dalmatian in Resources */ = {isa = PBXBuildFile; fileRef = 2424369E23E5C48400759EE4 /* dalmatian */; };
+		242436BB23E5C48E00759EE4 /* realvhs in Resources */ = {isa = PBXBuildFile; fileRef = 2424369F23E5C48500759EE4 /* realvhs */; };
+		242436BC23E5C48E00759EE4 /* sleepingmask in Resources */ = {isa = PBXBuildFile; fileRef = 242436A023E5C48500759EE4 /* sleepingmask */; };
+		242436BD23E5C48E00759EE4 /* teddycigar in Resources */ = {isa = PBXBuildFile; fileRef = 242436A123E5C48600759EE4 /* teddycigar */; };
+		242436BE23E5C48E00759EE4 /* kanye in Resources */ = {isa = PBXBuildFile; fileRef = 242436A223E5C48600759EE4 /* kanye */; };
+		242436BF23E5C48E00759EE4 /* bigmouth in Resources */ = {isa = PBXBuildFile; fileRef = 242436A323E5C48600759EE4 /* bigmouth */; };
+		242436C023E5C48E00759EE4 /* grumpycat in Resources */ = {isa = PBXBuildFile; fileRef = 242436A423E5C48700759EE4 /* grumpycat */; };
+		242436C123E5C48E00759EE4 /* tv80 in Resources */ = {isa = PBXBuildFile; fileRef = 242436A523E5C48700759EE4 /* tv80 */; };
+		242436C223E5C48E00759EE4 /* slash in Resources */ = {isa = PBXBuildFile; fileRef = 242436A623E5C48700759EE4 /* slash */; };
+		242436C323E5C48E00759EE4 /* aviators in Resources */ = {isa = PBXBuildFile; fileRef = 242436A723E5C48800759EE4 /* aviators */; };
+		242436C423E5C48E00759EE4 /* filmcolorperfection in Resources */ = {isa = PBXBuildFile; fileRef = 242436A823E5C48800759EE4 /* filmcolorperfection */; };
+		242436C523E5C48E00759EE4 /* koala in Resources */ = {isa = PBXBuildFile; fileRef = 242436A923E5C48800759EE4 /* koala */; };
+		242436C623E5C48E00759EE4 /* fatify in Resources */ = {isa = PBXBuildFile; fileRef = 242436AA23E5C48900759EE4 /* fatify */; };
+		242436C723E5C48E00759EE4 /* rain in Resources */ = {isa = PBXBuildFile; fileRef = 242436AB23E5C48900759EE4 /* rain */; };
+		242436C823E5C48E00759EE4 /* sepia in Resources */ = {isa = PBXBuildFile; fileRef = 242436AC23E5C48900759EE4 /* sepia */; };
+		242436C923E5C48E00759EE4 /* flowers in Resources */ = {isa = PBXBuildFile; fileRef = 242436AD23E5C48A00759EE4 /* flowers */; };
+		242436CA23E5C48E00759EE4 /* mudMask in Resources */ = {isa = PBXBuildFile; fileRef = 242436AE23E5C48A00759EE4 /* mudMask */; };
+		242436CB23E5C48E00759EE4 /* tripleface in Resources */ = {isa = PBXBuildFile; fileRef = 242436AF23E5C48B00759EE4 /* tripleface */; };
+		242436CC23E5C48E00759EE4 /* drawingmanga in Resources */ = {isa = PBXBuildFile; fileRef = 242436B023E5C48B00759EE4 /* drawingmanga */; };
+		242436CD23E5C48E00759EE4 /* fire in Resources */ = {isa = PBXBuildFile; fileRef = 242436B123E5C48C00759EE4 /* fire */; };
+		242436CE23E5C48E00759EE4 /* lion in Resources */ = {isa = PBXBuildFile; fileRef = 242436B223E5C48C00759EE4 /* lion */; };
+		242436CF23E5C48E00759EE4 /* bleachbypass in Resources */ = {isa = PBXBuildFile; fileRef = 242436B323E5C48C00759EE4 /* bleachbypass */; };
+		242436D023E5C48E00759EE4 /* heart in Resources */ = {isa = PBXBuildFile; fileRef = 242436B423E5C48D00759EE4 /* heart */; };
+		242436D123E5C48E00759EE4 /* obama in Resources */ = {isa = PBXBuildFile; fileRef = 242436B523E5C48D00759EE4 /* obama */; };
+		242436D223E5C48E00759EE4 /* pug in Resources */ = {isa = PBXBuildFile; fileRef = 242436B623E5C48D00759EE4 /* pug */; };
+		242436D323E5C48E00759EE4 /* smallface in Resources */ = {isa = PBXBuildFile; fileRef = 242436B723E5C48E00759EE4 /* smallface */; };
 		2455B51923E32FE2000D7EC6 /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B51823E32FE2000D7EC6 /* group.swift */; };
 		2455B51B23E33AD2000D7EC6 /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B51A23E33AD2000D7EC6 /* Vault.swift */; };
 		2455B51D23E57723000D7EC6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455B51C23E57723000D7EC6 /* Account.swift */; };
@@ -46,6 +78,20 @@
 		CCFAE9A22399E9160003F3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFAE9A12399E9160003F3E2 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2424369A23E5B58A00759EE4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2424369923E5B58A00759EE4 /* DeepAR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1A3D864323B22BB2005DE595 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		1A3D864523B22DA5005DE595 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
@@ -58,6 +104,37 @@
 		1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
 		1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		2424365723E5ABC400759EE4 /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
+		2424365923E5ABCE00759EE4 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		2424365B23E5ABE100759EE4 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		2424369C23E5C48400759EE4 /* blizzard */ = {isa = PBXFileReference; lastKnownFileType = file; path = blizzard; sourceTree = "<group>"; };
+		2424369D23E5C48400759EE4 /* twistedFace */ = {isa = PBXFileReference; lastKnownFileType = file; path = twistedFace; sourceTree = "<group>"; };
+		2424369E23E5C48400759EE4 /* dalmatian */ = {isa = PBXFileReference; lastKnownFileType = file; path = dalmatian; sourceTree = "<group>"; };
+		2424369F23E5C48500759EE4 /* realvhs */ = {isa = PBXFileReference; lastKnownFileType = file; path = realvhs; sourceTree = "<group>"; };
+		242436A023E5C48500759EE4 /* sleepingmask */ = {isa = PBXFileReference; lastKnownFileType = file; path = sleepingmask; sourceTree = "<group>"; };
+		242436A123E5C48600759EE4 /* teddycigar */ = {isa = PBXFileReference; lastKnownFileType = file; path = teddycigar; sourceTree = "<group>"; };
+		242436A223E5C48600759EE4 /* kanye */ = {isa = PBXFileReference; lastKnownFileType = file; path = kanye; sourceTree = "<group>"; };
+		242436A323E5C48600759EE4 /* bigmouth */ = {isa = PBXFileReference; lastKnownFileType = file; path = bigmouth; sourceTree = "<group>"; };
+		242436A423E5C48700759EE4 /* grumpycat */ = {isa = PBXFileReference; lastKnownFileType = file; path = grumpycat; sourceTree = "<group>"; };
+		242436A523E5C48700759EE4 /* tv80 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tv80; sourceTree = "<group>"; };
+		242436A623E5C48700759EE4 /* slash */ = {isa = PBXFileReference; lastKnownFileType = file; path = slash; sourceTree = "<group>"; };
+		242436A723E5C48800759EE4 /* aviators */ = {isa = PBXFileReference; lastKnownFileType = file; path = aviators; sourceTree = "<group>"; };
+		242436A823E5C48800759EE4 /* filmcolorperfection */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmcolorperfection; sourceTree = "<group>"; };
+		242436A923E5C48800759EE4 /* koala */ = {isa = PBXFileReference; lastKnownFileType = file; path = koala; sourceTree = "<group>"; };
+		242436AA23E5C48900759EE4 /* fatify */ = {isa = PBXFileReference; lastKnownFileType = file; path = fatify; sourceTree = "<group>"; };
+		242436AB23E5C48900759EE4 /* rain */ = {isa = PBXFileReference; lastKnownFileType = file; path = rain; sourceTree = "<group>"; };
+		242436AC23E5C48900759EE4 /* sepia */ = {isa = PBXFileReference; lastKnownFileType = file; path = sepia; sourceTree = "<group>"; };
+		242436AD23E5C48A00759EE4 /* flowers */ = {isa = PBXFileReference; lastKnownFileType = file; path = flowers; sourceTree = "<group>"; };
+		242436AE23E5C48A00759EE4 /* mudMask */ = {isa = PBXFileReference; lastKnownFileType = file; path = mudMask; sourceTree = "<group>"; };
+		242436AF23E5C48B00759EE4 /* tripleface */ = {isa = PBXFileReference; lastKnownFileType = file; path = tripleface; sourceTree = "<group>"; };
+		242436B023E5C48B00759EE4 /* drawingmanga */ = {isa = PBXFileReference; lastKnownFileType = file; path = drawingmanga; sourceTree = "<group>"; };
+		242436B123E5C48C00759EE4 /* fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire; sourceTree = "<group>"; };
+		242436B223E5C48C00759EE4 /* lion */ = {isa = PBXFileReference; lastKnownFileType = file; path = lion; sourceTree = "<group>"; };
+		242436B323E5C48C00759EE4 /* bleachbypass */ = {isa = PBXFileReference; lastKnownFileType = file; path = bleachbypass; sourceTree = "<group>"; };
+		242436B423E5C48D00759EE4 /* heart */ = {isa = PBXFileReference; lastKnownFileType = file; path = heart; sourceTree = "<group>"; };
+		242436B523E5C48D00759EE4 /* obama */ = {isa = PBXFileReference; lastKnownFileType = file; path = obama; sourceTree = "<group>"; };
+		242436B623E5C48D00759EE4 /* pug */ = {isa = PBXFileReference; lastKnownFileType = file; path = pug; sourceTree = "<group>"; };
+		242436B723E5C48E00759EE4 /* smallface */ = {isa = PBXFileReference; lastKnownFileType = file; path = smallface; sourceTree = "<group>"; };
 		2455B51823E32FE2000D7EC6 /* group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
 		2455B51A23E33AD2000D7EC6 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
 		2455B51C23E57723000D7EC6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -96,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7164CA4996EF3409D3963D8B /* Pods_Sunny.framework in Frameworks */,
+				2424369823E5B58A00759EE4 /* DeepAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +187,41 @@
 				C8DE33C4F96F24FAD806A860 /* Pods-Sunny.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2424369B23E5C44100759EE4 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				242436A723E5C48800759EE4 /* aviators */,
+				242436A323E5C48600759EE4 /* bigmouth */,
+				242436B323E5C48C00759EE4 /* bleachbypass */,
+				2424369C23E5C48400759EE4 /* blizzard */,
+				2424369E23E5C48400759EE4 /* dalmatian */,
+				242436B023E5C48B00759EE4 /* drawingmanga */,
+				242436AA23E5C48900759EE4 /* fatify */,
+				242436A823E5C48800759EE4 /* filmcolorperfection */,
+				242436B123E5C48C00759EE4 /* fire */,
+				242436AD23E5C48A00759EE4 /* flowers */,
+				242436A423E5C48700759EE4 /* grumpycat */,
+				242436B423E5C48D00759EE4 /* heart */,
+				242436A223E5C48600759EE4 /* kanye */,
+				242436A923E5C48800759EE4 /* koala */,
+				242436B223E5C48C00759EE4 /* lion */,
+				242436AE23E5C48A00759EE4 /* mudMask */,
+				242436B523E5C48D00759EE4 /* obama */,
+				242436B623E5C48D00759EE4 /* pug */,
+				242436AB23E5C48900759EE4 /* rain */,
+				2424369F23E5C48500759EE4 /* realvhs */,
+				242436AC23E5C48900759EE4 /* sepia */,
+				242436A623E5C48700759EE4 /* slash */,
+				242436A023E5C48500759EE4 /* sleepingmask */,
+				242436B723E5C48E00759EE4 /* smallface */,
+				242436A123E5C48600759EE4 /* teddycigar */,
+				242436AF23E5C48B00759EE4 /* tripleface */,
+				242436A523E5C48700759EE4 /* tv80 */,
+				2424369D23E5C48400759EE4 /* twistedFace */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		2455B51E23E57FB4000D7EC6 /* db */ = {
@@ -202,6 +315,9 @@
 		246557AE23E1BF6B0075E40E /* camera */ = {
 			isa = PBXGroup;
 			children = (
+				2424369B23E5C44100759EE4 /* Effects */,
+				2424365923E5ABCE00759EE4 /* CameraController.swift */,
+				2424365B23E5ABE100759EE4 /* test.storyboard */,
 				1A3D864323B22BB2005DE595 /* Camera.swift */,
 				1A3D864523B22DA5005DE595 /* Camera.storyboard */,
 			);
@@ -222,6 +338,7 @@
 		2BAFF46AF4470D25AA3451EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2424365723E5ABC400759EE4 /* DeepAR.framework */,
 				7289F2C5335F065664C861B0 /* Pods_Sunny.framework */,
 			);
 			name = Frameworks;
@@ -282,6 +399,7 @@
 				CCFAE9902399E9100003F3E2 /* Resources */,
 				1EE0821E519671FE78CF10EA /* [CP] Embed Pods Frameworks */,
 				3822695D78F7608AA1CA967A /* [CP] Copy Pods Resources */,
+				2424369A23E5B58A00759EE4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,13 +448,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242436D023E5C48E00759EE4 /* heart in Resources */,
+				242436D323E5C48E00759EE4 /* smallface in Resources */,
+				242436CC23E5C48E00759EE4 /* drawingmanga in Resources */,
+				242436BB23E5C48E00759EE4 /* realvhs in Resources */,
 				CCFAE9A22399E9160003F3E2 /* Assets.xcassets in Resources */,
+				242436BA23E5C48E00759EE4 /* dalmatian in Resources */,
+				242436BE23E5C48E00759EE4 /* kanye in Resources */,
+				242436B823E5C48E00759EE4 /* blizzard in Resources */,
+				242436BC23E5C48E00759EE4 /* sleepingmask in Resources */,
+				242436C723E5C48E00759EE4 /* rain in Resources */,
+				242436C123E5C48E00759EE4 /* tv80 in Resources */,
 				1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */,
+				242436CD23E5C48E00759EE4 /* fire in Resources */,
+				242436BF23E5C48E00759EE4 /* bigmouth in Resources */,
+				242436BD23E5C48E00759EE4 /* teddycigar in Resources */,
 				CCFAE99D2399E9100003F3E2 /* Main.storyboard in Resources */,
+				242436C623E5C48E00759EE4 /* fatify in Resources */,
+				242436C523E5C48E00759EE4 /* koala in Resources */,
 				1A3D864A23B24612005DE595 /* FaceTrakingUITests in Resources */,
+				242436CA23E5C48E00759EE4 /* mudMask in Resources */,
+				242436C023E5C48E00759EE4 /* grumpycat in Resources */,
+				242436C323E5C48E00759EE4 /* aviators in Resources */,
+				242436D123E5C48E00759EE4 /* obama in Resources */,
 				7E78DCFB23A9CAD40045923D /* Sub.storyboard in Resources */,
+				242436C423E5C48E00759EE4 /* filmcolorperfection in Resources */,
+				242436C223E5C48E00759EE4 /* slash in Resources */,
 				1A3D864823B24601005DE595 /* FaceTrakingTests in Resources */,
+				242436D223E5C48E00759EE4 /* pug in Resources */,
+				2424365C23E5ABE100759EE4 /* test.storyboard in Resources */,
+				242436B923E5C48E00759EE4 /* twistedFace in Resources */,
+				242436C923E5C48E00759EE4 /* flowers in Resources */,
+				242436CB23E5C48E00759EE4 /* tripleface in Resources */,
+				242436CE23E5C48E00759EE4 /* lion in Resources */,
+				242436CF23E5C48E00759EE4 /* bleachbypass in Resources */,
 				1A3D864623B22DA5005DE595 /* Camera.storyboard in Resources */,
+				242436C823E5C48E00759EE4 /* sepia in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2424365A23E5ABCE00759EE4 /* CameraController.swift in Sources */,
 				246D919223E27F3D00220622 /* UIViewController+Extension.swift in Sources */,
 				1A3D864423B22BB2005DE595 /* Camera.swift in Sources */,
 				2455B52023E57FF1000D7EC6 /* DB.swift in Sources */,
@@ -582,6 +730,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -604,6 +756,10 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sunny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,14 +17,15 @@ class ViewController: UIViewController {
     }
     
     @objc func pageTransition(timer : Timer) {
-            let storyboard: UIStoryboard = self.storyboard!
-            let top = storyboard.instantiateViewController(identifier: "top") as! topViewController
-                top.modalTransitionStyle = .coverVertical
+        let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
+        let top = storyboard.instantiateInitialViewController() as! CameraController
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let top = storyboard.instantiateViewController(identifier: "top") as! topViewController
+//        top.modalTransitionStyle = .coverVertical
         
-            self.present(top,animated: true,completion: nil)
-        }
-
-
+        self.present(top,animated: true,completion: nil)
+    }
+    
     
 }
 
