@@ -37,8 +37,23 @@ class topViewController: UIViewController,FUIAuthDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let _ = Auth.auth().currentUser {
             self.transitionToView()
+        }
+//        isLogin(comp: {
+//            flg in
+//            if flg {
+//                self.transitionToView()
+//            }
+//        })
+    }
+    
+    func isLogin(comp:@escaping(Bool) -> Void) {
+        if let _ = Auth.auth().currentUser {
+            comp(true)
+        } else {
+            comp(false)
         }
     }
     
@@ -61,8 +76,7 @@ class topViewController: UIViewController,FUIAuthDelegate {
     //ログイン完了後に、ListViewControllerへの遷移のためのメソッド
     func transitionToView()  {
         let storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        let nextView = storyboard.instantiateInitialViewController() as! UINavigationController
+        let nextView = storyboard.instantiateInitialViewController() as! UIPageViewController
         self.present(nextView, animated: true, completion: nil)
-
     }
 }

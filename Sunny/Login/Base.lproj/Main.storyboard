@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,24 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="x57-0H-oPx">
-                                <rect key="frame" x="118" y="337.5" width="178" height="221"/>
+                                <rect key="frame" x="77" y="254" width="260" height="388"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="x57-0H-oPx" secondAttribute="height" multiplier="289:359" id="CcH-2u-GyO"/>
+                                    <constraint firstAttribute="width" secondItem="x57-0H-oPx" secondAttribute="height" multiplier="289:359" constant="-52.345403899721418" id="CcH-2u-GyO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.77647058823529413" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="x57-0H-oPx" secondAttribute="width" multiplier="0.704082" constant="289" id="CF0-Se-rlK"/>
+                            <constraint firstAttribute="width" secondItem="x57-0H-oPx" secondAttribute="width" multiplier="0.704082" constant="230.93868000000001" id="CF0-Se-rlK"/>
                             <constraint firstItem="x57-0H-oPx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vZw-SA-EF6"/>
                             <constraint firstItem="x57-0H-oPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgL-4z-LjL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="x57-0H-oPx" id="bu4-fx-LAL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="90"/>
+            <point key="canvasLocation" x="134.78260869565219" y="89.732142857142847"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="ZI7-uL-nQ3">

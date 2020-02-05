@@ -12,8 +12,13 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setViewControllers([getSecond()], direction: .forward, animated: true, completion: nil)
+        self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
+    }
+    
+    func getInit() -> UINavigationController {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "navigationRoot") as! UINavigationController
     }
 
     func getFirst() -> CameraViewController {
@@ -26,9 +31,9 @@ class PageViewController: UIPageViewController {
         return storyboard.instantiateViewController(withIdentifier: "MyAccountViewController") as! MyAccountViewController
     }
 
-    func getThird() -> ChatListViewController {
+    func getThird() -> ChatViewController {
         var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "chatList") as! ChatListViewController
+        return storyboard.instantiateViewController(withIdentifier: "chat") as! ChatViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +44,11 @@ class PageViewController: UIPageViewController {
 extension PageViewController : UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: ChatListViewController.self) {
+        print(viewController)
+        if viewController.isKind(of: ChatViewController.self) {
             // 3 -> 2
-            return getSecond()
-        } else if viewController.isKind(of: MyAccountViewController.self) {
+            return getInit()
+        } else if viewController.isKind(of: UINavigationController.self) {
             // 2 -> 1
             return getFirst()
         } else {
@@ -54,8 +60,8 @@ extension PageViewController : UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if viewController.isKind(of: CameraViewController.self) {
             // 1 -> 2
-            return getSecond()
-        } else if viewController.isKind(of: MyAccountViewController.self) {
+            return getInit()
+        } else if viewController.isKind(of: UINavigationController.self) {
             // 2 -> 3
             return getThird()
         } else {
