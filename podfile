@@ -6,10 +6,12 @@ target 'Sunny' do
   use_frameworks!
 
   # Pods for Sunny
-  pod 'JSQMessagesViewController'
   pod 'Firebase/Database'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'FirebaseUI'
   pod 'IQKeyboardManager'
+  pod 'MessageKit', '>= 1.0.0'
+  pod 'MessageInputBar'
+  pod 'Nuke', '~> 7.0'
 end

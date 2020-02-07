@@ -23,7 +23,26 @@ class DB {
     ///   - comp:クロージャー
     public static func getUserInfo(userId:String,comp:@escaping(Account?) -> Void) {
         self.ref = Database.database().reference().child("user").child(userId)
-        self.ref.observe(.value, with: { snapshot in
+        self.ref.observeSingleEvent(of: DataEventType.value, with: { snapshot in
+            
+            // データを取り出し配列に格納しています
+            if let values = snapshot.value as? [String:String] {
+                let user = Account(src: values)
+                comp(user)
+            }
+        })
+    }
+    
+    /// 指定したsearchIDに該当するユーザ情報を取得
+    ///
+    /// 該当するsearchIDを取得できない場合にはnilが戻るため
+    /// 必ずnilチェックを実施してください
+    /// - Parameters:
+    ///   - searchId:searchId
+    ///   - comp:クロージャー
+    public static func searchFriendId(searchId:String,comp:@escaping(Account?) -> Void) {
+        self.ref = Database.database().reference().child("search").child(searchId)
+        self.ref.observeSingleEvent(of: DataEventType.value, with: { snapshot in
             
             // データを取り出し配列に格納しています
             if let values = snapshot.value as? [String:String] {

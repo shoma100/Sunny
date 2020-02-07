@@ -13,6 +13,7 @@ import Firebase
 class AddFriendViewController: UIViewController {
     
     @IBOutlet weak var friendId: UITextField!
+    var alertController: UIAlertController!
     let ref = Database.database().reference()
     var uid = ""
     
@@ -26,19 +27,27 @@ class AddFriendViewController: UIViewController {
     }
     //検索ボタン押下時
     @IBAction func search(_ sender: Any) {
-        guard let word = friendId.text else {
-            return
-        }
-        
-        DB.getUserInfo(userId: word, comp: {
+//        print(friendId.hasText)
+//        guard let word = friendId.text else {
+//            print("nilだよ")
+//            return
+//        }
+//        print("nlじゃないよ")
+        if friendId.hasText {
+            DB.searchFriendId(searchId: friendId.text!, comp: {
             result in
-            
+            print("result = ",result)
             //nilチェック
             if let user = result {
                 self.uid = user.getUserId()
                 self.performSegue(withIdentifier: "toAddFriendCheck", sender: nil)
+            } else {
+                self.alert(title: "エラー", message: "ユーザーが存在しません。")
             }
         })
+        } else {
+            self.alert(title: "エラー", message: "ユーザIDを入力してください。")
+        }
     }
     
     /// セグエ実行前処理
@@ -55,7 +64,14 @@ class AddFriendViewController: UIViewController {
         }
     }
     
-    @IBAction func backTo(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    func alert(title:String, message:String) {
+        alertController = UIAlertController(title: title,
+                                            message: message,
+                                            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK",
+                                                style: .default,
+                                                handler: nil))
+        present(alertController, animated: true)
     }
+
 }

@@ -30,6 +30,7 @@ class Account {
         self.updateTimestamp = dateFormatter.string(from: date)
         self.searchId = searchId
     }
+    
     init(src:[String:String]) {
         self.displayName = src["displayName"]!
         self.userId = src["userId"]!

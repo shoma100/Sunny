@@ -11,6 +11,8 @@
 		1A3D864623B22DA5005DE595 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864523B22DA5005DE595 /* Camera.storyboard */; };
 		1A3D864823B24601005DE595 /* FaceTrakingTests in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864723B24600005DE595 /* FaceTrakingTests */; };
 		1A3D864A23B24612005DE595 /* FaceTrakingUITests in Resources */ = {isa = PBXBuildFile; fileRef = 1A3D864923B24612005DE595 /* FaceTrakingUITests */; };
+		1A7EE91823EA4851007BA87D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE91723EA4851007BA87D /* ChatViewController.swift */; };
+		1A7EE91A23EA55C7007BA87D /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE91923EA55C7007BA87D /* MockMessage.swift */; };
 		1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA621C0239F719C0077D331 /* LoginViewController.swift */; };
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
 		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
@@ -97,6 +99,8 @@
 		1A3D864523B22DA5005DE595 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		1A3D864723B24600005DE595 /* FaceTrakingTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTrakingTests; sourceTree = "<group>"; };
 		1A3D864923B24612005DE595 /* FaceTrakingUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTrakingUITests; sourceTree = "<group>"; };
+		1A7EE91723EA4851007BA87D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1A7EE91923EA55C7007BA87D /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		1AA621C0239F719C0077D331 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				1AFC8CB323D6D2D5001725D9 /* ChatListViewController.swift */,
+				1A7EE91723EA4851007BA87D /* ChatViewController.swift */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				2455B51823E32FE2000D7EC6 /* group.swift */,
 				2455B51A23E33AD2000D7EC6 /* Vault.swift */,
 				2455B51C23E57723000D7EC6 /* Account.swift */,
+				1A7EE91923EA55C7007BA87D /* MockMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -580,9 +586,11 @@
 				246557B123E1DB210075E40E /* Friend.swift in Sources */,
 				1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */,
 				CCB193FD23AB14A000244318 /* AddFriendViewController.swift in Sources */,
+				1A7EE91A23EA55C7007BA87D /* MockMessage.swift in Sources */,
 				2455B51B23E33AD2000D7EC6 /* Vault.swift in Sources */,
 				246D919423E309CD00220622 /* GroupSettingViewController.swift in Sources */,
 				CCB35A7B23D56CB300027D13 /* GroupTableViewController.swift in Sources */,
+				1A7EE91823EA4851007BA87D /* ChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -740,7 +748,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fools.Sunny-gonchan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -755,7 +763,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3J8Z9R5PBG;
+				DEVELOPMENT_TEAM = ATXD4M2CY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -766,7 +774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fools.Sunny-gonchan";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fools.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

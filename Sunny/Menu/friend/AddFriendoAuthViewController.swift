@@ -21,7 +21,7 @@ class AddFriendAuthViewController: UIViewController {
         print("追加するid：\(self.id)")
         ref.child("user").child(id).observe(.value) { (snapshot) in
             let data = snapshot.value as? [String : AnyObject] ?? [:]
-            let name = data["name"] as! String
+            let name = data["displayName"] as! String
             self.name.text = name
         }
     }
