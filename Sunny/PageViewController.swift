@@ -12,13 +12,19 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setViewControllers([getSecond()], direction: .forward, animated: true, completion: nil)
+        self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
     }
+    
+    
+    func getInit() -> UINavigationController {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "navigationRoot") as! UINavigationController
+    }
 
-    func getFirst() -> CameraViewController {
-        var storyboard: UIStoryboard = UIStoryboard(name: "Camera", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "camera") as! CameraViewController
+    func getFirst() -> CameraController {
+        var storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "cam") as! CameraController
     }
 
     func getSecond() -> MyAccountViewController {
@@ -26,9 +32,9 @@ class PageViewController: UIPageViewController {
         return storyboard.instantiateViewController(withIdentifier: "MyAccountViewController") as! MyAccountViewController
     }
 
-    func getThird() -> ChatListViewController {
+    func getThird() -> ChatViewController {
         var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "chatList") as! ChatListViewController
+        return storyboard.instantiateViewController(withIdentifier: "chat") as! ChatViewController
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,10 +45,11 @@ class PageViewController: UIPageViewController {
 extension PageViewController : UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: ChatListViewController.self) {
+        print("viewcon = ",viewController.view,"id = ",viewController.restorationIdentifier)
+        if viewController.isKind(of: ChatViewController.self) {
             // 3 -> 2
-            return getSecond()
-        } else if viewController.isKind(of: MyAccountViewController.self) {
+            return getInit()
+        } else if viewController.isKind(of: UINavigationController.self) {
             // 2 -> 1
             return getFirst()
         } else {
@@ -52,10 +59,11 @@ extension PageViewController : UIPageViewControllerDataSource {
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: CameraViewController.self) {
+        print("title = ",self.navigationController?.viewControllers[0],"id = ",self.restorationIdentifier)
+        if viewController.isKind(of: CameraController.self) {
             // 1 -> 2
-            return getSecond()
-        } else if viewController.isKind(of: MyAccountViewController.self) {
+            return getInit()
+        } else if viewController.isKind(of: UINavigationController.self) {
             // 2 -> 3
             return getThird()
         } else {

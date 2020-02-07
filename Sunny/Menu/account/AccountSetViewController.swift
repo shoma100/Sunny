@@ -18,7 +18,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
     let storage = Storage.storage()
     
     //tableViewのバックグラウンドカラー
-    public let backGroundColor:UIColor = UIColor(red: 236/255, green: 235/255, blue: 241/255, alpha: 1)
+    public let backGroundColor:UIColor = UIColor(red: 255/255, green: 198/255, blue: 122/255, alpha: 1)
     
     @IBOutlet weak var table:UITableView!
     @IBOutlet weak var accountImg: UIImageView!
@@ -36,10 +36,12 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
         accountImg.isUserInteractionEnabled = true
         accountImg.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTaped(_:))))
         
-        if let user = Auth.auth().currentUser {
-            if let accountImgURL = user.photoURL {
+        ref.child("user").child(user!.uid).observe(DataEventType.value, with: {
+            (snapshot) in
+            let user = snapshot.value as! [String : Any]
+            if let accountImgURL = user["iconURL"] {
                 do {
-                    let url = URL(string: accountImgURL.absoluteString)
+                    let url = URL(string: accountImgURL as! String)
                     let data = try Data(contentsOf: url!)
                     self.accountImg.image = UIImage(data: data)
                 } catch {
@@ -48,6 +50,8 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
             } else {
                 self.accountImg.image = UIImage(named: "AppIcon")
             }
+        }) { (error) in
+            print(error.localizedDescription)
         }
         //
         //        ref.child("user").child(user!.uid).observe(.value) { (snapshot) in
@@ -65,7 +69,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
     }
     
     
-    @IBAction func logout() {
+    func logout() {
         do {
             //do-try-catchの中で、FIRAuth.auth()?.signOut()を呼ぶだけで、ログアウトが完了
             try Auth.auth().signOut()
@@ -90,6 +94,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
             //FIXME: エラーハンドリング
             print(error.debugDescription)
         }
+        ref.child("user").child(user!.uid).updateChildValues(["iconURL": photoURL.absoluteString])
     }
     
     
@@ -138,6 +143,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
     
     //Headerの高さ
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
         return 60
     }
     //Footerの高さ
@@ -149,7 +155,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         //Headerのラベルの文字色を設定
-        header.textLabel?.textColor = UIColor.gray
+        header.textLabel?.textColor = UIColor.black
         //Headerの背景色を設定
         header.contentView.backgroundColor = backGroundColor
     }
@@ -224,6 +230,7 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
             case 0:
                 // ログアウト
                 //self.performSegue(withIdentifier: "", sender: nil)
+                logout()
                 break
             default:
                 // ここに来ることはない..

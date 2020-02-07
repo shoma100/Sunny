@@ -82,12 +82,12 @@ class AccountcreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        mail.layer.cornerRadius = 5.0
-        id.layer.cornerRadius = 5.0
-        name.layer.cornerRadius = 5.0
-        pass.layer.cornerRadius = 5.0
-        pass_conf.layer.cornerRadius = 5.0
-        button.layer.cornerRadius = 5.0
+//        mail.layer.cornerRadius = 5.0
+//        id.layer.cornerRadius = 5.0
+//        name.layer.cornerRadius = 5.0
+//        pass.layer.cornerRadius = 5.0
+//        pass_conf.layer.cornerRadius = 5.0
+//        button.layer.cornerRadius = 5.0
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

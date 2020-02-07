@@ -35,26 +35,35 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     func dbConnect() {
         getFrinedIdList(comp: {
             value in
-            for key in value {
-                self.getFriendUserInfo(userId: key, comp: {
-                    friend in
-                    self.friends.append(friend)
-                    if self.friends.count == value.count {
-                        self.tableView.reloadData()
-                    }
-                    print("friends = ",self.friends)
-                })
+            print(value.count)
+            if value.count != 0 {
+                for key in value {
+                    self.getFriendUserInfo(userId: key, comp: {
+                        friend in
+                        self.friends.append(friend)
+                        if self.friends.count == value.count {
+                            self.tableView.reloadData()
+                        }
+                        print("friends = ",self.friends)
+                    })
+                }
+            } else{
+                self.makeNoneView()
             }
         })
     }
     
     func getFrinedIdList(comp:@escaping([String]) -> Void) {
         ref.child("friend").child(user!.uid).observe(.value) { (snapshot) in
-            //TODO:友達が１人もいない場合には落ちる...
-            let keys = [String]((snapshot.value as! [String: Any]).keys)
-            print("keys = ",keys)
-            
-            comp(keys)
+            if snapshot.exists() {
+                //TODO:友達が１人もいない場合には落ちる...
+                let keys = [String]((snapshot.value as! [String: Any]).keys)
+                print("keys = ",keys)
+                
+                comp(keys)
+            } else {
+                comp([])
+            }
         }
     }
     
@@ -62,7 +71,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.ref.child("user").child(userId).observe(.value) { (snapshot) in
             // Dictionary型にキャスト
             let user = snapshot.value as! [String: Any]
-            let friendString = user["name"] as! String
+            let friendString = user["displayName"] as! String
             comp(friendString)
         }
     }
@@ -98,6 +107,18 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     @IBAction func backTo(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func makeNoneView() {
+        let groupNoneView = UIView(frame: CGRect(x: 0,y: 0,width: self.view.frame.width,height: self.view.frame.height))
+        groupNoneView.backgroundColor = UIColor.white
+        let title = UILabel(frame: CGRect(x:self.view.frame.width/2,y: self.view.frame.height/2,width: 250,height:250))
+        title.text = "友達はいません"
+        title.textAlignment = .center
+        title.center = self.view.center
+        groupNoneView.addSubview(title)
+        groupNoneView.backgroundColor = UIColor(red: 255/255, green: 198/255, blue: 122/255, alpha: 1)
+        self.view.addSubview(groupNoneView)
     }
     
     

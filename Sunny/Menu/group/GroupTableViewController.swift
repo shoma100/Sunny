@@ -54,6 +54,7 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         title.textAlignment = .center
         title.center = self.view.center
         groupNoneView.addSubview(title)
+        groupNoneView.backgroundColor = UIColor(red: 255/255, green: 198/255, blue: 122/255, alpha: 1)
         self.view.addSubview(groupNoneView)
     }
 }
