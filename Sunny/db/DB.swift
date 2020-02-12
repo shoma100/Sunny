@@ -100,16 +100,4 @@ class DB {
         let newRF = ref.child("friend").child(userId).childByAutoId()
         newRF.setValue(friend.toDictionary())
     }
-    
-    //FIXME: データ移行のため暫定実装
-    public static func getUserInfo_o(userId:String,comp:@escaping([String:String]) -> Void) {
-        ref = Database.database().reference();
-        ref.child("user").child(userId).observe(.value) { (snapshot) in
-            let data = snapshot.value as! [String : String]
-//                var name = data["name"] as? String
-//                var id = data["id"] as? String
-            comp(data)
-        }
-    }
-    
 }

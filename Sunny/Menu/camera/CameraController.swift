@@ -126,7 +126,7 @@ class CameraController: UIViewController ,ARViewDelegate {
     // MARK: - Private methods -
     
     private func setupArView() {
-        arView.setLicenseKey("409f43fa9fb75ab84404cf50aa65f6b99a85a7b5bc913570fa2662b580b32eb25d5a4671cb7d9fb4")
+        arView.setLicenseKey("4f16de1e11592c9c19abf8a8e2aefa6ead60951c4876b08001dfd3d457650d78cda84dbbf9ee2cd7]")
         arView.delegate = self
         arView.initialize()
     }
