@@ -83,22 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         if self.checkUserValidate(user: loginUser.user) {
                             // 完了済みなら、ListViewControllerに遷移
                             if let user = Auth.auth().currentUser {
-                                DB.getUserInfo_o(userId: user.uid, comp: {
-                                    oldUserInfo in
-                                    
-                                    let name = oldUserInfo["name"]!
-                                    let searchId = oldUserInfo["id"]!
-                                    let mail = user.email
-                                    let expain = ""
-                                    let uid = user.uid
-                                    let account = Account(name: name,
-                                                          mail: mail!,
-                                                          explain: expain,
-                                                          userId: uid,
-                                                          searchId: searchId)
-                                    DB.addUserDB(user: account)
-                                    self.transitionToView()
-                                })
+                                self.transitionToView()
                             }
                             self.transitionToView()
                         }else {

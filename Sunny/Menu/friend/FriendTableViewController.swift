@@ -21,9 +21,11 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     //最初からあるコード
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView()
-        let tblBackColor: UIColor = UIColor.clear
-        tableView.backgroundColor = tblBackColor
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+//        tableView.tableFooterView = UIView()
+//        let tblBackColor: UIColor = UIColor.clear
+//        tableView.backgroundColor = tblBackColor
         dbConnect()
     }
     //最初からあるコード
@@ -40,7 +42,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
                 for key in value {
                     self.getFriendUserInfo(userId: key, comp: {
                         friend in
-                        self.friends.append(friend)
+                        self.friends.append(friend.getDisplayName())
                         if self.friends.count == value.count {
                             self.tableView.reloadData()
                         }
@@ -67,12 +69,13 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    func getFriendUserInfo(userId:String, comp:@escaping(String) -> Void) {
+    func getFriendUserInfo(userId:String, comp:@escaping(Account) -> Void) {
         self.ref.child("user").child(userId).observe(.value) { (snapshot) in
-            // Dictionary型にキャスト
-            let user = snapshot.value as! [String: Any]
-            let friendString = user["displayName"] as! String
-            comp(friendString)
+            //値が取得できないことは考慮しない
+            if let value = snapshot.value as? [String:Any] {
+                let user = Account(src: value)
+                comp(user)
+            }
         }
     }
     
@@ -92,15 +95,15 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle != .delete {
-            return
-        }
-        let removedData = friends.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .fade)
-        //        removedData.delete()
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//
+//        if editingStyle != .delete {
+//            return
+//        }
+//        let removedData = friends.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//        //        removedData.delete()
+//    }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         print("セルをタップしました")

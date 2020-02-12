@@ -514,7 +514,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="CdJ-ar-3mB" id="URa-Ad-faY"/>
+                                    <outlet property="dataSource" destination="CdJ-ar-3mB" id="nLP-G1-Nmj"/>
+                                    <outlet property="delegate" destination="CdJ-ar-3mB" id="ChD-75-vqa"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -526,7 +527,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="フレンド一覧" id="hgR-yG-i0k"/>
                     <connections>
-                        <outlet property="tableView" destination="cJ7-kz-UHF" id="0eT-5a-zgi"/>
+                        <outlet property="tableView" destination="cJ7-kz-UHF" id="v4D-6L-xRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaV-Xq-8Sr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

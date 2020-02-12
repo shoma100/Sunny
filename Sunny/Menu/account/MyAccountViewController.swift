@@ -40,23 +40,7 @@ class MyAccountViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        
-        DB.getUserInfo_o(userId: user!.uid, comp: {
-            value in
-            
-            if let name = value["name"] {
-                self.unm.text = name
-                self.uid.text = value["id"]
-            } else {
-                DB.getUserInfo(userId: self.user!.uid, comp: {
-                    item in
-                    
-                    self.unm.text = item!.getDisplayName()
-                    self.uid.text = item!.getSearchId()
-                })
-                
-            }
-        })
+
     }
     
     
