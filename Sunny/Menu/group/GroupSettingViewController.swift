@@ -14,9 +14,11 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     @IBOutlet weak var groupIconImage: UIImageView!
     @IBOutlet weak var groupNameTextFiled: UITextField!
     @IBOutlet weak var memberList: UITableView!
+    let currentUser = Auth.auth().currentUser
     var ref:DatabaseReference!
     let imagePicker = UIImagePickerController()
-    public var member:[Account]!
+    public var member:[Account] = []
+    public var memberDic:[String:Any] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +110,11 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
     fileprivate func createGroup(comp:@escaping() -> Void) {
         let uuid = NSUUID().uuidString
         let groupName = groupNameTextFiled.text!
+        memberDic[currentUser!.uid] = true
         let memberCount = member.count
+        for i in member {
+            memberDic[i.getUserId()] = true
+        }
         //TODO: DB登録、画面遷移
         upload(comp: {
             url in
@@ -116,18 +122,20 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
                 let newGroup = group(groupUid: uuid,
                                      groupName: groupName,
                                      imagePath: u,
-                                     memberList: self.member,
+                                     memberList: self.memberDic,
                                      memberCount: memberCount)
                 self.addGroupDB(group: newGroup)
             }
+            comp()
         })
-        comp()
     }
     
     @objc func loadUi(_ selder: UIBarButtonItem) {
         createGroup(comp: {
             //くるくる終了
             self.dismissIndicator()
+            self.backTwo()
+            
         })
         //くるくる開始
         startIndicator()
@@ -138,6 +146,7 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
         ref = Database.database().reference();
         let newRF = ref.child("group").child(group.getGorupUid())
         newRF.setValue(group.toDictionary())
+        ref.child("user").child(currentUser!.uid).updateChildValues(["group": [group.getGorupUid(): true]])
     }
     
     //　ボルトの登録
@@ -178,6 +187,13 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
                 })
             }
         }
+    }
+    
+    func backTwo() {
+      // 遷移履歴を二つ戻る
+      let count = navigationController!.viewControllers.count - 3
+      let target = navigationController!.viewControllers[count]
+      navigationController?.popToViewController(target as UIViewController, animated: true)
     }
     
     /*
