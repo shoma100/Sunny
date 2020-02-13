@@ -169,26 +169,37 @@ extension ChatViewController: MessagesDisplayDelegate{
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         // message.sender.displayNameとかで送信者の名前を取得できるので
         // そこからイニシャルを生成するとよい
-        //        isFromCurrentSender(message: message) ? currentImageSet(avatarView: avatarView) : otherImageSet(avatarView: avatarView)
-        //        ref.child("user").child(message.sender.senderId).observeSingleEvent(of: DataEventType.value, with: {
-        //            (snapshot) in
-        //            let user = snapshot.value as! [String : Any]
-        //            if let accountImgURL = user["iconURL"] {
-        //                do {
-        //                    let url = URL(string: accountImgURL as! String)
-        //                    let data = try Data(contentsOf: url!)
-        //                    let avatar = Avatar(image: UIImage(data: data))
-        //                    avatarView.set(avatar: avatar)
-        //                } catch {
-        //                    print(error)
-        //                }
-        //            } else {
-        let avatar = Avatar(initials: message.sender.displayName)
-        avatarView.set(avatar: avatar)
-        //            }
-        //        }) { (error) in
-        //            print(error.localizedDescription)
-        //        }
+        isFromCurrentSender(message: message) ? currentImageSet(avatarView: avatarView) : otherImageSet(avatarView: avatarView)
+        ref.child("user").child(message.sender.senderId).observeSingleEvent(of: DataEventType.value, with: {
+            (snapshot) in
+            let user = snapshot.value as! [String : Any]
+            var avatar = Avatar(image: UIImage(named: "AppIcon"))
+            if let accountImgURL = user["iconURL"] {
+                do {
+                    let url = URL(string: accountImgURL as! String)
+                    //                            let data = try Data(contentsOf: url!)
+                    ImagePipeline.shared.loadImage(
+                        with: url!,
+                        progress: nil) { response, err in
+                            if err != nil {
+                                print(err)
+                            } else {
+                                avatar = Avatar(image: response?.image)
+                            }
+                    }
+                    //                            let avatar = Avatar(image: UIImage(data: data))
+                    avatarView.set(avatar: avatar)
+                } catch {
+                    print(error)
+                }
+            } else {
+                
+                let avatar = Avatar(initials: message.sender.displayName)
+                avatarView.set(avatar: avatar)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
         
     }
     

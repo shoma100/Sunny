@@ -44,7 +44,10 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
                         friend in
                         self.friends.append(friend.getDisplayName())
                         if self.friends.count == value.count {
-                            self.tableView.reloadData()
+                            print("リロードするで！")
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                         print("friends = ",self.friends)
                     })
@@ -71,6 +74,15 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func getFriendUserInfo(userId:String, comp:@escaping(Account) -> Void) {
         self.ref.child("user").child(userId).observe(.value) { (snapshot) in
+            // Dictionary型にキャスト
+//            let user = snapshot.value as! [String: Any]
+//            let friendString = user["displayName"] as! String
+//            comp(friendString)
+            //値が取得できないことは考慮しない
+//             if let value = snapshot.value as? [String:Any] {
+//                 let user = Account(src: value as! [String : String])
+//                 comp(user)
+//             }
             //値が取得できないことは考慮しない
             if let value = snapshot.value as? [String:Any] {
                 let user = Account(src: value)
@@ -82,6 +94,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     //セルの個数を指定するデリゲートメソッド（必須）
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("count = ",friends.count)
         return friends.count
     }
     
@@ -91,6 +104,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Friendcell", for: indexPath)
         
         // セルに表示する値を設定する
+        print("セルに入れる値 ＝ ",friends[indexPath.row],indexPath.row)
         cell.textLabel!.text = friends[indexPath.row]
         return cell
     }
@@ -107,9 +121,6 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         print("セルをタップしました")
-    }
-    @IBAction func backTo(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     fileprivate func makeNoneView() {

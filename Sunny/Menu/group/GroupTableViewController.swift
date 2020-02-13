@@ -8,29 +8,33 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class GroupTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
- 
+    
     @IBOutlet weak var TableView: UITableView!
-    let groupNameList:[String] = []
+    var groupNameList:[[String:Any]] = []
+    let currentUser = Auth.auth().currentUser
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TableView.tableFooterView = UIView()
-        let tblBackColor: UIColor = UIColor.clear
-        TableView.backgroundColor = tblBackColor
-        
-        if groupNameList.count == 0 {
-            //グループがない場合に表示するview
-            makeNoneView()
-        }
+//        TableView.tableFooterView = UIView()
+        TableView.delegate = self
+        TableView.dataSource = self
+//        let tblBackColor: UIColor = UIColor.clear
+//        TableView.backgroundColor = tblBackColor
+        getGroupList(comp: {
+            self.dismissIndicator()
+        })
+        startIndicator()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(groupNameList.count)
         return groupNameList.count
     }
     
@@ -38,8 +42,28 @@ class GroupTableViewController: UIViewController, UITableViewDelegate, UITableVi
         // セルを取得する
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "Groupcell", for: indexPath)
         // セルに表示する値を設定する
-        cell.textLabel!.text = groupNameList[indexPath.row]
+        print("name = ",groupNameList[indexPath.row]["groupName"] as! String)
+        cell.textLabel!.text = groupNameList[indexPath.row]["groupName"] as! String
         return cell
+    }
+    
+    func getGroupList(comp:@escaping() -> Void) {
+        DB.getUserJoinGroup(userId: currentUser!.uid, comp: {
+            result in
+//            self.groupNameList = result
+            if result.count == 0 {
+                //グループがない場合に表示するview
+                self.makeNoneView()
+                comp()
+            } else {
+                self.groupNameList = result
+                print("リロードする直前 = ",self.groupNameList)
+                DispatchQueue.main.async {
+                    self.TableView.reloadData()
+                    comp()
+                }
+            }
+        })
     }
     
     @IBAction func backTo(_ sender: Any) {

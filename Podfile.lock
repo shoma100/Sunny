@@ -345,6 +345,7 @@ PODS:
   - InputBarAccessoryView (4.2.2)
   - IQKeyboardManager (6.5.4)
   - leveldb-library (1.22)
+  - MercariQRScanner (1.5)
   - MessageInputBar (0.4.1):
     - MessageInputBar/Core (= 0.4.1)
   - MessageInputBar/Core (0.4.1)
@@ -366,6 +367,7 @@ DEPENDENCIES:
   - Firebase/Database
   - FirebaseUI
   - IQKeyboardManager
+  - MercariQRScanner
   - MessageInputBar
   - MessageKit (>= 1.0.0)
   - Nuke (~> 7.0)
@@ -401,6 +403,7 @@ SPEC REPOS:
     - InputBarAccessoryView
     - IQKeyboardManager
     - leveldb-library
+    - MercariQRScanner
     - MessageInputBar
     - MessageKit
     - nanopb
@@ -437,12 +440,13 @@ SPEC CHECKSUMS:
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MercariQRScanner: 2bec5b24cd5baf8a63a0cb905909ae7297a0dae2
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
   SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
 
-PODFILE CHECKSUM: ced36e89f9237a7c994b3de795fcea55039befac
+PODFILE CHECKSUM: 2889840e4d090db6eb7fa16382cf337e7cb36090
 
 COCOAPODS: 1.8.4

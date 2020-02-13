@@ -9,11 +9,12 @@
 import Foundation
 class Account {
     
+    private let displayName:String
+    private let explain:String
+    private let iconURL:String?
     private let userId:String
     private let searchId:String
-    private let displayName:String
     private let mail:String
-    private let explain:String
     private let insertTimestamp:String
     private let updateTimestamp:String
     private let group:[String:Bool]?
@@ -27,6 +28,7 @@ class Account {
         self.userId = userId
         self.mail = mail
         self.explain = explain ?? ""
+        self.iconURL = iconURL ?? ""
         self.insertTimestamp = dateFormatter.string(from: date)
         self.updateTimestamp = dateFormatter.string(from: date)
         self.searchId = searchId
@@ -38,6 +40,7 @@ class Account {
         self.userId = src["userId"] as! String
         self.mail = src["mail"] as! String
         self.explain = src["explain"] as! String
+        self.iconURL = src["iconURL"] as! String
         self.insertTimestamp = src["insertTimestamp"] as! String
         self.updateTimestamp = src["updateTimestamp"] as! String
         self.searchId = src["searchId"] as! String
@@ -65,6 +68,8 @@ class Account {
     public func getSearchId() -> String {
         return self.searchId
     }
+    public func getIconURL() -> String? {
+        return self.iconURL
     public func getGroup() -> [String:Bool]? {
         return self.group
     }
@@ -75,6 +80,7 @@ class Account {
             "userId" : userId,
             "mail" : mail,
             "explain" : explain,
+            "iconURL" : iconURL,
             "insertTimestamp" : insertTimestamp,
             "updateTimestamp" : updateTimestamp,
             "searchId" :searchId,

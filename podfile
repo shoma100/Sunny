@@ -14,4 +14,5 @@ target 'Sunny' do
   pod 'MessageKit', '>= 1.0.0'
   pod 'MessageInputBar'
   pod 'Nuke', '~> 7.0'
+  pod 'MercariQRScanner'
 end
