@@ -22,6 +22,7 @@ class ChatViewController: MessagesViewController{
     let user = Auth.auth().currentUser
     var userInfo = [String : Any]()
     var messageList: [MockMessage] = []
+    var id: String = ""
     
     
     lazy var formatter: DateFormatter = {
@@ -35,14 +36,12 @@ class ChatViewController: MessagesViewController{
         
         ref.child("user").child(user!.uid).observe(.value) {
             (snapshot) in
-            
             self.userInfo = snapshot.value as?
                 [String : AnyObject] ?? [:]
         }
         DispatchQueue.global().async {
-            
             DispatchQueue.main.async {
-                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: 1).observe(DataEventType.value) {
+                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: self.id).observe(DataEventType.value) {
                     (snapshot) in
                     self.messageList.removeAll()
                     // messageListにメッセージの配列をいれて
@@ -51,7 +50,6 @@ class ChatViewController: MessagesViewController{
                         // Dictionary型にキャスト
                         var user = snapData.value as! [String: Any]
                         user["key"] = snapData.key
-                        
                         self.messageList.append(self.getMessages(user: user as [String : Any]))
                     }
                     // messagesCollectionViewをリロードして
@@ -74,12 +72,6 @@ class ChatViewController: MessagesViewController{
         scrollsToBottomOnKeyboardBeginsEditing = true // default false
         maintainPositionOnKeyboardFrameChanged = true // default false
     }
-    
-    @IBAction func swipe(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMypage", sender: nil)
-    }
-    
-    
     
     // サンプル用に適当なメッセージ
     func getMessages(user: [String : Any]) -> MockMessage {
@@ -183,17 +175,18 @@ extension ChatViewController: MessagesDisplayDelegate{
                         progress: nil) { response, err in
                             if err != nil {
                                 print(err)
+                                let avatar = Avatar(initials: message.sender.displayName)
+                                avatarView.set(avatar: avatar)
                             } else {
                                 avatar = Avatar(image: response?.image)
+                                avatarView.set(avatar: avatar)
                             }
                     }
                     //                            let avatar = Avatar(image: UIImage(data: data))
-                    avatarView.set(avatar: avatar)
                 } catch {
                     print(error)
                 }
             } else {
-                
                 let avatar = Avatar(initials: message.sender.displayName)
                 avatarView.set(avatar: avatar)
             }
@@ -291,8 +284,9 @@ extension ChatViewController: MessageKit.MessageInputBarDelegate{
                 messagesCollectionView.insertSections([messageList.count - 1])
                 
             } else if let text = component as? String {
-                let data = ["content": text, "date": stringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss"),"name": self.userInfo["displayName"],"room": 1,"senderId": user?.uid]
+                let data = ["content": text, "date": stringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss"),"name": self.userInfo["displayName"],"room": self.id,"senderId": user?.uid]
                 ref.child("chat").childByAutoId().setValue(data)
+                
                 //                let attributedText = NSAttributedString(string: text, attributes: [.font: UIFont.systemFont(ofSize: 15),
                 //                                                                                   .foregroundColor: UIColor.white])
                 //                let message = MockMessage(attributedText: attributedText, sender: currentSender() as! Sender, messageId: UUID().uuidString, date: Date())
