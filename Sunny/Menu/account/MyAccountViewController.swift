@@ -47,9 +47,9 @@ class MyAccountViewController: UIViewController {
         DB.getUserInfo_o(userId: user!.uid, comp: {
             value in
             
-            if let name = value["name"] {
+            if let name = value["displayName"] {
                 self.unm.text = name as! String
-                self.uid.text = value["id"] as! String
+                self.uid.text = value["searchId"] as! String
             } else {
                 DB.getUserInfo(userId: self.user!.uid, comp: {
                     item in

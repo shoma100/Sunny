@@ -19,7 +19,7 @@ class Account {
     private let updateTimestamp:String
     private let group:[String:Bool]?
 
-    init(name:String,mail:String,explain:String?,userId:String,searchId:String,group:[String:Bool]) {
+    init(name:String,mail:String,explain:String?,iconURL:String?,userId:String,searchId:String,group:[String:Bool]) {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
@@ -70,6 +70,7 @@ class Account {
     }
     public func getIconURL() -> String? {
         return self.iconURL
+    }
     public func getGroup() -> [String:Bool]? {
         return self.group
     }
