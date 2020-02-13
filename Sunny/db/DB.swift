@@ -58,19 +58,18 @@ class DB {
     /// - Parameters:
     ///   - userId: ユーザID
     ///   - comp: クロージャー
-    public static func getFriendsInfo(userId:String,comp:@escaping([Friend]) -> Void) {
+    public static func getFriendsInfo(userId:String,comp:@escaping([String]) -> Void) {
         //クラス変数の初期化
-        var friends:[Friend] = []
+        var friends:[String] = []
         
         self.ref = Database.database().reference().child("friend").child(userId)
         self.ref.observe(.value, with: { snapshot in
             
             // データを取り出し配列に格納しています
-            if let values = snapshot.value as? [String:[String:Any]] {
-                for value in values {
-                    let val = value.value
-                    let friend = Friend(dic:val)
-                    friends.append(friend)
+            if let values = snapshot.value as? [String:Any] {
+                for value in values.keys {
+                    //                    let friend = Friend(dic:val)
+                    friends.append(value)
                 }
             }
             comp(friends)
@@ -99,5 +98,55 @@ class DB {
         let friend = Friend(user: newUser, blackFlg: false, insertDate: Date())
         let newRF = ref.child("friend").child(userId).childByAutoId()
         newRF.setValue(friend.toDictionary())
+    }    
+    //FIXME: データ移行のため暫定実装
+    public static func getUserInfo_o(userId:String,comp:@escaping([String:Any]) -> Void) {
+        ref = Database.database().reference();
+        ref.child("user").child(userId).observe(.value) { (snapshot) in
+            let data = snapshot.value as! [String : Any]
+            //                var name = data["name"] as? String
+            //                var id = data["id"] as? String
+            comp(data)
+        }
     }
+    
+    //ユーザの参加しているグループのID取得
+    public static func getUserJoinGroup(userId:String,comp:@escaping([[String:Any]]) -> Void) {
+        ref = Database.database().reference();
+        ref.child("user").child(userId).child("group").observe(.value) { (snapshot) in
+            if snapshot.exists() {
+                let data = snapshot.value as! [String : Any]
+                var info:[[String:Any]] = []
+                for groupId in data.keys {
+                    getGroupInfo(groupId:groupId, comp: {
+                        result in
+                        print("result = ",result)
+                        info.append(result.toDictionary())
+                        if info.count == data.count {
+                            print("comp前 = ",info[0])
+                            comp(info)
+                        }
+                    })
+                }
+            } else {
+                comp([])
+            }
+        }
+    }
+    //グループのIDをもとにグループの情報取得
+    public static func getGroupInfo(groupId:String,comp:@escaping(group) -> Void) {
+        ref = Database.database().reference();
+            ref.child("group").child(groupId).observe(.value) { (snapshot) in
+                let data = snapshot.value as! [String : Any]
+                print("data = ",data)
+                comp(group.init(src:data))
+            }
+    }
+    
+    //    public static func getChatUserInfo(userId:String,comp:@escaping() -> Void) {
+    //        ref = Database.database().reference();
+    //        ref.child("user").child(message.sender.senderId).observeSingleEvent(of: DataEventType.value, with: {
+    //        (snapshot) in
+    //    })
+    //    
 }

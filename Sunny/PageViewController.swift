@@ -12,7 +12,7 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
+        self.setViewControllers([getInit()], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
     }
     

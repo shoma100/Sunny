@@ -13,13 +13,14 @@ class group {
     private var gorupUid:String
     private var groupName:String
     private var groupImagePath:String
-    private var memberList:[Account]
+    private var memberList:[String:Any]
     private var memberCount:Int
     private var createTimestamp:String
     private var updateTimestamp:String
     
+    
     // model生成
-    init(groupUid:String,groupName:String,imagePath:URL,memberList:[Account],memberCount:Int) {
+    init(groupUid:String,groupName:String,imagePath:URL,memberList:[String:Any],memberCount:Int) {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
@@ -41,14 +42,15 @@ class group {
         self.memberCount = src["memberCount"] as! Int
         self.createTimestamp = src["createTimestamp"] as! String
         self.updateTimestamp = src["updateTimestamp"] as! String
+        self.memberList = src["memberList"] as! [String : Any]
+//        let users = src["memberList"] as! [[String:String]]
+//        var t:[Account] = []
+//        for i in users {
+//            let user = Account(src: i)
+//            t.append(user)
+//        }
+//        self.memberList = t
         
-        let users = src["memberList"] as! [[String:String]]
-        var t:[Account] = []
-        for i in users {
-            let user = Account(src: i)
-            t.append(user)
-        }
-        self.memberList = t
     }
     
     //model -> DB格納

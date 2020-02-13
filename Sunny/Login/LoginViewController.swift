@@ -82,9 +82,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         // バリデーションが完了しているか確認。完了ならそのままログイン
                         if self.checkUserValidate(user: loginUser.user) {
                             // 完了済みなら、ListViewControllerに遷移
-                            if let user = Auth.auth().currentUser {
-                                self.transitionToView()
-                            }
                             self.transitionToView()
                         }else {
                             // 完了していない場合は、アラートを表示

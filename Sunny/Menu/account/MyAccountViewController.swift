@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Nuke
 
 class MyAccountViewController: UIViewController {
     let ref = Database.database().reference()
@@ -29,8 +30,11 @@ class MyAccountViewController: UIViewController {
             if let accountImgURL = user["iconURL"] {
                 do {
                     let url = URL(string: accountImgURL as! String)
-                    let data = try Data(contentsOf: url!)
-                    self.accountImg.image = UIImage(data: data)
+                    let options = ImageLoadingOptions(
+                      placeholder: UIImage(named: "AppIcon"),
+                      transition: .fadeIn(duration: 0.5)
+                    )
+                    Nuke.loadImage(with: url!,options: options, into: self.accountImg)
                 } catch {
                     print(error)
                 }
@@ -40,7 +44,22 @@ class MyAccountViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-
+        DB.getUserInfo_o(userId: user!.uid, comp: {
+            value in
+            
+            if let name = value["name"] {
+                self.unm.text = name as! String
+                self.uid.text = value["id"] as! String
+            } else {
+                DB.getUserInfo(userId: self.user!.uid, comp: {
+                    item in
+                    
+                    self.unm.text = item!.getDisplayName()
+                    self.uid.text = item!.getSearchId()
+                })
+                
+            }
+        })
     }
     
     
