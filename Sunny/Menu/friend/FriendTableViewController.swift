@@ -21,8 +21,11 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     //最初からあるコード
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+//        tableView.tableFooterView = UIView()
+//        let tblBackColor: UIColor = UIColor.clear
+//        tableView.backgroundColor = tblBackColor
         dbConnect()
     }
     //最初からあるコード
@@ -76,11 +79,15 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
 //            let friendString = user["displayName"] as! String
 //            comp(friendString)
             //値が取得できないことは考慮しない
+//             if let value = snapshot.value as? [String:Any] {
+//                 let user = Account(src: value as! [String : String])
+//                 comp(user)
+//             }
+            //値が取得できないことは考慮しない
             if let value = snapshot.value as? [String:Any] {
-                let user = Account(src: value as! [String : String])
+                let user = Account(src: value)
                 comp(user)
             }
-
         }
     }
     
@@ -102,15 +109,15 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle != .delete {
-            return
-        }
-        let removedData = friends.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .fade)
-        //        removedData.delete()
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//
+//        if editingStyle != .delete {
+//            return
+//        }
+//        let removedData = friends.remove(at: indexPath.row)
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//        //        removedData.delete()
+//    }
     
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         print("セルをタップしました")

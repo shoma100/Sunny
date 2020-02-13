@@ -82,24 +82,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         // バリデーションが完了しているか確認。完了ならそのままログイン
                         if self.checkUserValidate(user: loginUser.user) {
                             // 完了済みなら、ListViewControllerに遷移
-//                            if (Auth.auth().currentUser != nil) {
-//                                DB.getUserInfo_o(userId: user.uid, comp: {
-//                                    oldUserInfo in
-//
-//                                    let name = oldUserInfo["name"]!
-//                                    let searchId = oldUserInfo["id"]!
-//                                    let mail = user.email
-//                                    let expain = ""
-//                                    let uid = user.uid
-//                                    let account = Account(name: name as! String,
-//                                                          mail: mail!,
-//                                                          explain: expain,
-//                                                          userId: uid,
-//                                                          searchId: searchId as! String)
-//                                    DB.addUserDB(user: account)
-//                                    self.transitionToView()
-//                                })
-//                            }
                             self.transitionToView()
                         }else {
                             // 完了していない場合は、アラートを表示
