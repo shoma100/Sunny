@@ -10,15 +10,16 @@ import Foundation
 class Account {
     
     private let displayName:String
-    private let explain:String?
+    private let explain:String
     private let iconURL:String?
     private let userId:String
     private let searchId:String
     private let mail:String
     private let insertTimestamp:String
     private let updateTimestamp:String
+    private let group:[String:Bool]?
 
-    init(name:String,mail:String,explain:String?,iconURL:String?,userId:String,searchId:String) {
+    init(name:String,mail:String,explain:String?,userId:String,searchId:String,group:[String:Bool]) {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
@@ -31,17 +32,19 @@ class Account {
         self.insertTimestamp = dateFormatter.string(from: date)
         self.updateTimestamp = dateFormatter.string(from: date)
         self.searchId = searchId
+        self.group = group
     }
     
-    init(src:[String:String]) {
-        self.displayName = src["displayName"]!
-        self.userId = src["userId"]!
-        self.mail = src["mail"]!
-        self.explain = src["explain"]!
-        self.iconURL = src["iconURL"]!
-        self.insertTimestamp = src["insertTimestamp"]!
-        self.updateTimestamp = src["updateTimestamp"]!
-        self.searchId = src["searchId"]!
+    init(src:[String:Any]) {
+        self.displayName = src["displayName"] as! String
+        self.userId = src["userId"] as! String
+        self.mail = src["mail"] as! String
+        self.explain = src["explain"] as! String
+        self.iconURL = src["iconURL"] as! String
+        self.insertTimestamp = src["insertTimestamp"] as! String
+        self.updateTimestamp = src["updateTimestamp"] as! String
+        self.searchId = src["searchId"] as! String
+        self.group = src["group"] as? [String:Bool]
     }
     
     public func getUserId() ->  String {
@@ -67,9 +70,11 @@ class Account {
     }
     public func getIconURL() -> String? {
         return self.iconURL
+    public func getGroup() -> [String:Bool]? {
+        return self.group
     }
     
-    func toDictionary() -> [String:String?] {
+    func toDictionary() -> [String:Any] {
         return [
             "displayName":displayName,
             "userId" : userId,
@@ -79,6 +84,7 @@ class Account {
             "insertTimestamp" : insertTimestamp,
             "updateTimestamp" : updateTimestamp,
             "searchId" :searchId,
+            "group" : group,
         ]
     }
 }

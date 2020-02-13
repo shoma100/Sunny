@@ -98,8 +98,7 @@ class DB {
         let friend = Friend(user: newUser, blackFlg: false, insertDate: Date())
         let newRF = ref.child("friend").child(userId).childByAutoId()
         newRF.setValue(friend.toDictionary())
-    }
-    
+    }    
     //FIXME: データ移行のため暫定実装
     public static func getUserInfo_o(userId:String,comp:@escaping([String:Any]) -> Void) {
         ref = Database.database().reference();
@@ -134,7 +133,6 @@ class DB {
             }
         }
     }
-    
     //グループのIDをもとにグループの情報取得
     public static func getGroupInfo(groupId:String,comp:@escaping(group) -> Void) {
         ref = Database.database().reference();

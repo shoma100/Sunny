@@ -44,7 +44,6 @@ class MyAccountViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        
         DB.getUserInfo_o(userId: user!.uid, comp: {
             value in
             
