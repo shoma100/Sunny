@@ -50,22 +50,24 @@ class GroupCreateViewController: UIViewController,UITableViewDelegate,UITableVie
         
         DB.getFriendsInfo(userId:uid,comp: {
             value in
-            
+            print(value)
             if value.count == 0 {
                 self.makeNoneView()
                 comp()
             }
             
             for item in value {
-                DB.getUserInfo(userId: item.getFriendUid(), comp: {
+                DB.getUserInfo(userId: item, comp: {
                     account in
                     // nilチェック
-                    if let a = account {
-                        self.friends.append(a)
+                    if let _ = account {
+                        self.friends.append(account!)
+                        self.friendList.reloadData()
                     }
                 })
             }
-            self.friendList.reloadData()
+            print("friendlist = ",self.friends)
+//            self.friendList.reloadData()
             comp()
         })
     }

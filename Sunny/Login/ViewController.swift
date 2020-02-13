@@ -27,8 +27,8 @@ class ViewController: UIViewController {
 //        top.modalTransitionStyle = .coverVertical
         
 //        self.present(top,animated: true,completion: nil)
-        
-        if let _ = Auth.auth().currentUser {
+
+        if (Auth.auth().currentUser != nil) && Auth.auth().currentUser!.isEmailVerified {
             self.transitionToView()
         } else {
             let storyboard: UIStoryboard = self.storyboard!

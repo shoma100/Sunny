@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Nuke
 
 class AccountSetViewController: UITableViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -42,8 +43,11 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
             if let accountImgURL = user["iconURL"] {
                 do {
                     let url = URL(string: accountImgURL as! String)
-                    let data = try Data(contentsOf: url!)
-                    self.accountImg.image = UIImage(data: data)
+                    let options = ImageLoadingOptions(
+                       placeholder: UIImage(named: "AppIcon"),
+                       transition: .fadeIn(duration: 0.5)
+                     )
+                     Nuke.loadImage(with: url!,options: options, into: self.accountImg)
                 } catch {
                     print(error)
                 }
