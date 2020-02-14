@@ -111,7 +111,7 @@ class GroupSettingViewController: UIViewController,UITableViewDelegate,UITableVi
         let uuid = NSUUID().uuidString
         let groupName = groupNameTextFiled.text!
         memberDic[currentUser!.uid] = true
-        let memberCount = member.count
+        let memberCount = member.count+1
         for i in member {
             memberDic[i.getUserId()] = true
         }

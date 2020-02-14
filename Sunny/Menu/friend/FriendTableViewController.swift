@@ -3,6 +3,7 @@
 //  Sunny
 //
 //  Created by 石井翔真 on 2020/01/17.
+
 //  Copyright © 2020 石井翔真. All rights reserved.
 //
 
@@ -14,7 +15,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     let ref = Database.database().reference()
     let user = Auth.auth().currentUser
-    var friends : [String] = []
+    var friends : [Account] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,9 +24,9 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-//        tableView.tableFooterView = UIView()
-//        let tblBackColor: UIColor = UIColor.clear
-//        tableView.backgroundColor = tblBackColor
+        //        tableView.tableFooterView = UIView()
+        //        let tblBackColor: UIColor = UIColor.clear
+        //        tableView.backgroundColor = tblBackColor
         dbConnect()
     }
     //最初からあるコード
@@ -42,7 +43,7 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
                 for key in value {
                     self.getFriendUserInfo(userId: key, comp: {
                         friend in
-                        self.friends.append(friend.getDisplayName())
+                        self.friends.append(friend)
                         if self.friends.count == value.count {
                             print("リロードするで！")
                             DispatchQueue.main.async {
@@ -75,14 +76,14 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
     func getFriendUserInfo(userId:String, comp:@escaping(Account) -> Void) {
         self.ref.child("user").child(userId).observe(.value) { (snapshot) in
             // Dictionary型にキャスト
-//            let user = snapshot.value as! [String: Any]
-//            let friendString = user["displayName"] as! String
-//            comp(friendString)
+            //            let user = snapshot.value as! [String: Any]
+            //            let friendString = user["displayName"] as! String
+            //            comp(friendString)
             //値が取得できないことは考慮しない
-//             if let value = snapshot.value as? [String:Any] {
-//                 let user = Account(src: value as! [String : String])
-//                 comp(user)
-//             }
+            //             if let value = snapshot.value as? [String:Any] {
+            //                 let user = Account(src: value as! [String : String])
+            //                 comp(user)
+            //             }
             //値が取得できないことは考慮しない
             if let value = snapshot.value as? [String:Any] {
                 let user = Account(src: value)
@@ -105,22 +106,27 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         // セルに表示する値を設定する
         print("セルに入れる値 ＝ ",friends[indexPath.row],indexPath.row)
-        cell.textLabel!.text = friends[indexPath.row]
+        cell.textLabel!.text = friends[indexPath.row].getDisplayName()
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//
-//        if editingStyle != .delete {
-//            return
-//        }
-//        let removedData = friends.remove(at: indexPath.row)
-//        tableView.deleteRows(at: [indexPath], with: .fade)
-//        //        removedData.delete()
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle != .delete {
+            return
+        }
+        let removedData = friends.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        //        removedData.delete()
+    }
     
-    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        print("セルをタップしました")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // 別の画面に遷移
+        performSegue(withIdentifier: "toFriendData", sender: friends[indexPath.row].getUserId())
     }
     
     fileprivate func makeNoneView() {
@@ -135,6 +141,12 @@ class FriendTableViewController: UIViewController, UITableViewDelegate, UITableV
         self.view.addSubview(groupNoneView)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFriendData" {
+            let nextVC = segue.destination as! FriendDetailViewController
+            nextVC.id = sender as! String
+        }
+    }
     
 }
 

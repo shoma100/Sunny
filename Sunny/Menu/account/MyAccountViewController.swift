@@ -61,10 +61,18 @@ class MyAccountViewController: UIViewController {
             }
         })
     }
+    @IBAction func toCamera(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "test", bundle: nil)
+        let nextView = storyboard.instantiateInitialViewController() as! CameraController
+        nextView.modalPresentationStyle = .fullScreen
+        self.present(nextView, animated: true, completion: nil)
+    }
     
     
     @IBAction func tappedAccountSetting(_ sender: Any) {
         self.performSegue(withIdentifier: "showAccountSegue", sender: nil)
     }
+    
+    
     
 }

@@ -136,11 +136,34 @@ class DB {
     //グループのIDをもとにグループの情報取得
     public static func getGroupInfo(groupId:String,comp:@escaping(group) -> Void) {
         ref = Database.database().reference();
-            ref.child("group").child(groupId).observe(.value) { (snapshot) in
-                let data = snapshot.value as! [String : Any]
-                print("data = ",data)
-                comp(group.init(src:data))
+        ref.child("group").child(groupId).observe(.value) { (snapshot) in
+            let data = snapshot.value as! [String : Any]
+            print("data = ",data)
+            comp(group.init(src:data))
+        }
+    }
+    
+    public static func createRoom(currentId:String,friendId:String){
+        ref = Database.database().reference();
+        ref.child("room").child(currentId).queryOrdered(byChild: "user").queryEqual(toValue: friendId).observe(.value) {
+            (snapshot) in
+            if !snapshot.exists() {
+                let date = stringFromDate(date:Date(),format: "yyyy-MM-dd HH:mm:ss")
+                let myData:[String:Any] = ["updatedAt": date,"user":friendId]
+                let friendData:[String:Any] = ["updatedAt": date,"user":currentId]
+                ref.child("room").child(currentId).childByAutoId().setValue(myData)
+                ref.child("room").child(friendId).childByAutoId().setValue(friendData)
             }
+        }
+    }
+    
+    public static func updateRoom(currentId:String,friendId:String,roomId:String){
+        ref = Database.database().reference();
+        let date = stringFromDate(date:Date(),format: "yyyy-MM-dd HH:mm:ss")
+        let myData:[String:Any] = ["updatedAt": date,"user":friendId]
+        let friendData:[String:Any] = ["updatedAt": date,"user":currentId]
+        ref.child("room").child(currentId).child(roomId).updateChildValues(myData)
+        ref.child("room").child(friendId).child(roomId).updateChildValues(friendData)
     }
     
     //    public static func getChatUserInfo(userId:String,comp:@escaping() -> Void) {
@@ -148,5 +171,19 @@ class DB {
     //        ref.child("user").child(message.sender.senderId).observeSingleEvent(of: DataEventType.value, with: {
     //        (snapshot) in
     //    })
-    //    
+    //
+    class func dateFromString(string: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        return formatter.date(from: string)!
+    }
+    
+    class func stringFromDate(date: Date, format: String) -> String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
 }
+

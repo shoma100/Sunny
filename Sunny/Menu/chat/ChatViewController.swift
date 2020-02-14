@@ -22,7 +22,8 @@ class ChatViewController: MessagesViewController{
     let user = Auth.auth().currentUser
     var userInfo = [String : Any]()
     var messageList: [MockMessage] = []
-    var id: String = ""
+    var roomId: String = ""
+    var friendId: String = ""
     
     
     lazy var formatter: DateFormatter = {
@@ -41,7 +42,7 @@ class ChatViewController: MessagesViewController{
         }
         DispatchQueue.global().async {
             DispatchQueue.main.async {
-                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: self.id).observe(DataEventType.value) {
+                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: self.roomId).observe(DataEventType.value) {
                     (snapshot) in
                     self.messageList.removeAll()
                     // messageListにメッセージの配列をいれて
@@ -284,8 +285,9 @@ extension ChatViewController: MessageKit.MessageInputBarDelegate{
                 messagesCollectionView.insertSections([messageList.count - 1])
                 
             } else if let text = component as? String {
-                let data = ["content": text, "date": stringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss"),"name": self.userInfo["displayName"],"room": self.id,"senderId": user?.uid]
+                let data = ["content": text, "date": stringFromDate(date: Date(), format: "yyyy-MM-dd HH:mm:ss"),"name": self.userInfo["displayName"],"room": self.roomId,"senderId": user?.uid]
                 ref.child("chat").childByAutoId().setValue(data)
+                DB.updateRoom(currentId: user!.uid, friendId: friendId, roomId: roomId)
                 
                 //                let attributedText = NSAttributedString(string: text, attributes: [.font: UIFont.systemFont(ofSize: 15),
                 //                                                                                   .foregroundColor: UIColor.white])

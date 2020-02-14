@@ -62,11 +62,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
         let nextView = storyboard.instantiateInitialViewController() as! UIPageViewController
         self.present(nextView, animated: true, completion: nil)
-
     }
     
     func login() {
-            //EmailとPasswordのTextFieldに文字がなければ、その後の処理をしない
+    //EmailとPasswordのTextFieldに文字がなければ、その後の処理をしない
             guard let email = emailTextField.text else { return }
             guard let password = passwordTextField.text else { return }
 

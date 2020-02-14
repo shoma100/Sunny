@@ -36,6 +36,11 @@ class PageViewController: UIPageViewController {
         var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "chat") as! ChatViewController
     }
+    
+    func getChatList() -> UINavigationController {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "chatNavi") as! UINavigationController
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,12 +51,19 @@ extension PageViewController : UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         print("viewcon = ",viewController.view,"id = ",viewController.restorationIdentifier)
-        if viewController.isKind(of: ChatViewController.self) {
+//        if viewController.isKind(of: ChatListViewController.self) {
+//            // 3 -> 2
+//            return getInit()
+//        } else if viewController.isKind(of: UINavigationController.self) {
+//            // 2 -> 1
+//            return getFirst()
+//        } else {
+//            // 1 -> end of the road
+//            return nil
+//        }
+        if viewController.restorationIdentifier == "chatNavi" {
             // 3 -> 2
             return getInit()
-        } else if viewController.isKind(of: UINavigationController.self) {
-            // 2 -> 1
-            return getFirst()
         } else {
             // 1 -> end of the road
             return nil
@@ -60,14 +72,21 @@ extension PageViewController : UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         print("title = ",self.navigationController?.viewControllers[0],"id = ",self.restorationIdentifier)
-        if viewController.isKind(of: CameraController.self) {
-            // 1 -> 2
-            return getInit()
-        } else if viewController.isKind(of: UINavigationController.self) {
-            // 2 -> 3
-            return getThird()
+//        if viewController.isKind(of: CameraController.self) {
+//            // 1 -> 2
+//            return getInit()
+//        } else if viewController.isKind(of: UINavigationController.self) {
+//            // 2 -> 3
+//            return getThird()
+//        } else {
+//            // 3 -> end of the road
+//            return nil
+//        }
+        if viewController.restorationIdentifier == "navigationRoot" {
+            // MyaccountView -> chatList
+            return getChatList()
         } else {
-            // 3 -> end of the road
+            // 1 -> end of the road
             return nil
         }
     }
