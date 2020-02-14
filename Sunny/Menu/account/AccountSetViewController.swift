@@ -72,7 +72,6 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
         present(imagePicker, animated: true, completion: nil)
     }
     
-    
     func logout() {
         do {
             //do-try-catchの中で、FIRAuth.auth()?.signOut()を呼ぶだけで、ログアウトが完了
@@ -84,10 +83,6 @@ class AccountSetViewController: UITableViewController,UIImagePickerControllerDel
         }catch let error as NSError {
             print("\(error.localizedDescription)")
         }
-    }
-    
-    @IBAction func backTo(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
     }
     
     //自分自身のユーザ情報の更新

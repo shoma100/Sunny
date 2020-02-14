@@ -19,19 +19,23 @@ class ChatListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var table: UITableView!
     
+    //Todo:モデルの配列作ってまとめる
     //画像の配列
     var imgArray: [NSString] = []
     //チャット相手のユーザ名を格納する配列
     var userArray: [NSString] = []
     //
     var keyArray: [NSString] = []
+    //
+    var userIdArray: [NSString] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userListSet()
     }
     
-    
+    //todo:roomのupdatedAt順にソート(queryOrderedByValue使うか配列をソートするか)
     func userListSet() {
         getRoomUsersInfo(comp: {
             snapshots in
@@ -43,6 +47,7 @@ class ChatListViewController: UIViewController, UITableViewDataSource, UITableVi
                     let user = snapshot.value as! [String:Any]
                     self.userArray.append(user["displayName"] as! NSString)
                     self.imgArray.append(user["iconURL"] as! NSString)
+                    self.userIdArray.append(user["userId"] as! NSString)
                     self.keyArray.append(snapData.key as NSString)
                     print("append後 = ",self.userArray,self.keyArray)
                     if self.userArray.count == snapshots.childrenCount {
@@ -56,13 +61,13 @@ class ChatListViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func getRoomUsersInfo(comp:@escaping(DataSnapshot) -> Void) {
-        ref.child("room").child(user!.uid).observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+        ref.child("room").child(user!.uid).observe(DataEventType.value, with: { (snapshot) in
             comp(snapshot)
         })
     }
     
     func getUserInfo(uid:String,comp:@escaping(DataSnapshot) -> Void) {
-        ref.child("user").child(uid).observeSingleEvent(of: DataEventType.value, with: { (snapshot) in
+        ref.child("user").child(uid).observe(DataEventType.value, with: { (snapshot) in
             comp(snapshot)
         })
     }
@@ -113,7 +118,7 @@ class ChatListViewController: UIViewController, UITableViewDataSource, UITableVi
 
         print("aaa",keyArray[indexPath.row])
         // 次の画面へ移動
-        performSegue(withIdentifier: "ChatDetails", sender: keyArray[indexPath.row] as String)
+        performSegue(withIdentifier: "ChatDetails", sender: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -129,7 +134,8 @@ class ChatListViewController: UIViewController, UITableViewDataSource, UITableVi
             let vc = segue.destination as! ChatViewController
                 // 次画面のテキスト表示用のStringに、本画面のテキストフィールドのテキストを入れる
             print("sender = ",sender)
-            vc.id = sender as! String
+            vc.roomId = keyArray[sender as! Int] as String
+            vc.friendId = userIdArray[sender as! Int] as String
         }
     }
     

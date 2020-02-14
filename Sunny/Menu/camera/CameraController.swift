@@ -256,6 +256,9 @@ class CameraController: UIViewController ,ARViewDelegate {
     func didInitialize() {}
     
     func faceVisiblityDidChange(_ faceVisible: Bool) {}
+    @IBAction func swipe(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension String {

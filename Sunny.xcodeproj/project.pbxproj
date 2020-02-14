@@ -16,6 +16,7 @@
 		1A7EE91C23ED267E007BA87D /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7EE91B23ED267E007BA87D /* FlashButton.swift */; };
 		1AA621C1239F719C0077D331 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA621C0239F719C0077D331 /* LoginViewController.swift */; };
 		1AA621C3239F724D0077D331 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AA621C2239F724D0077D331 /* GoogleService-Info.plist */; };
+		1AC5D1DF23F4F334004EA73E /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5D1DE23F4F334004EA73E /* FriendDetailViewController.swift */; };
 		1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */; };
 		1AEBD05023A76A2700B362AB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */; };
 		1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */; };
@@ -105,6 +106,7 @@
 		1A7EE91B23ED267E007BA87D /* FlashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
 		1AA621C0239F719C0077D331 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1AA621C2239F724D0077D331 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AC5D1DE23F4F334004EA73E /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSetViewController.swift; sourceTree = "<group>"; };
 		1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		1AEBD05123A9B6BA00B362AB /* GenerateQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQR.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		246557AA23E1BE740075E40E /* friend */ = {
 			isa = PBXGroup;
 			children = (
+				1AC5D1DE23F4F334004EA73E /* FriendDetailViewController.swift */,
 				CCB193FC23AB14A000244318 /* AddFriendViewController.swift */,
 				CCB193FA23AB141300244318 /* AddFriendoAuthViewController.swift */,
 				CC7A2B5F23D1529D00D0127A /* FriendTableViewController.swift */,
@@ -570,6 +573,7 @@
 				CC7A2B6023D1529D00D0127A /* FriendTableViewController.swift in Sources */,
 				1AEBD05223A9B6BA00B362AB /* GenerateQR.swift in Sources */,
 				1AEBD04E23A75B6C00B362AB /* AccountSetViewController.swift in Sources */,
+				1AC5D1DF23F4F334004EA73E /* FriendDetailViewController.swift in Sources */,
 				CCFAE99A2399E9100003F3E2 /* ViewController.swift in Sources */,
 				2455B51923E32FE2000D7EC6 /* group.swift in Sources */,
 				CCFAE9962399E9100003F3E2 /* AppDelegate.swift in Sources */,
