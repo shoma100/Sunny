@@ -47,6 +47,22 @@ class Account {
         self.group = src["group"] as? [String:Bool]
     }
     
+    init(displayName: String, userId: String,mail: String,searchId: String) {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+        
+        self.displayName = displayName
+        self.userId = userId
+        self.mail = mail
+        self.explain = ""
+        self.iconURL = nil
+        self.insertTimestamp = dateFormatter.string(from: date)
+        self.updateTimestamp = dateFormatter.string(from: date)
+        self.searchId = searchId
+        self.group = [String: Bool]()
+    }
+    
     public func getUserId() ->  String {
         return self.userId
     }

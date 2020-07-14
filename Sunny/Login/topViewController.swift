@@ -40,24 +40,7 @@ class topViewController: UIViewController,FUIAuthDelegate {
         //FIXME: データ移行のため暫定対応
         if let user = Auth.auth().currentUser {
             if Auth.auth().currentUser!.isEmailVerified {
-                DB.getUserInfo(userId: user.uid, comp: {newUserInfo in
-                    let name = newUserInfo!.getDisplayName()
-                    let searchId = newUserInfo!.getSearchId()
-                    let mail = user.email
-                    let expain = ""
-                    let iconURL = ""
-                    let uid = user.uid
-                    let group:[String:Bool] = [:]
-                    let account = Account(name: name,
-                                          mail: mail!,
-                                          explain: expain,
-                                          iconURL: iconURL,
-                                          userId: uid,
-                                          searchId: searchId,
-                                          group: group)
-                    DB.addUserDB(user: account)
-                    self.transitionToView()
-                })
+                self.transitionToView()
             }
         }
     }
@@ -83,6 +66,5 @@ class topViewController: UIViewController,FUIAuthDelegate {
         let storyboard: UIStoryboard = UIStoryboard(name: "Sub", bundle: nil)
         let nextView = storyboard.instantiateInitialViewController() as! UIPageViewController
         self.present(nextView, animated: true, completion: nil)
-        
     }
 }

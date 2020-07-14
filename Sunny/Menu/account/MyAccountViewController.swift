@@ -23,13 +23,17 @@ class MyAccountViewController: UIViewController {
         accountImg.contentMode = .scaleAspectFill
         accountImg.layer.cornerRadius = accountImg.frame.width/2
         accountImg.clipsToBounds = true
-        
+
         ref.child("user").child(user!.uid).observe(DataEventType.value, with: {
             (snapshot) in
             let user = snapshot.value as! [String : Any]
-            if let accountImgURL = user["iconURL"] {
+            if let accountImgURL: String = user["iconURL"] as? String {
                 do {
-                    let url = URL(string: accountImgURL as! String)
+                    if (accountImgURL.isEmpty) {
+                        self.accountImg.image = UIImage(named: "AppIcon")
+                        return
+                    }
+                    let url = URL(string: accountImgURL)
                     let options = ImageLoadingOptions(
                       placeholder: UIImage(named: "AppIcon"),
                       transition: .fadeIn(duration: 0.5)
@@ -53,7 +57,6 @@ class MyAccountViewController: UIViewController {
             } else {
                 DB.getUserInfo(userId: self.user!.uid, comp: {
                     item in
-                    
                     self.unm.text = item!.getDisplayName()
                     self.uid.text = item!.getSearchId()
                 })

@@ -267,6 +267,7 @@
 		246557A823E1BDFD0075E40E /* account */ = {
 			isa = PBXGroup;
 			children = (
+				CC995946239A159200DEA54E /* AccountcreateViewController.swift */,
 				1AEBD04F23A76A2700B362AB /* MyAccountViewController.swift */,
 				1AEBD04D23A75B6C00B362AB /* AccountSetViewController.swift */,
 			);
@@ -391,7 +392,6 @@
 				CCFAE9A12399E9160003F3E2 /* Assets.xcassets */,
 				CCFAE9A62399E9160003F3E2 /* Info.plist */,
 				CCFAE99E2399E9100003F3E2 /* Sunny.xcdatamodeld */,
-				CC995946239A159200DEA54E /* AccountcreateViewController.swift */,
 				CCA17C4123B09B9F00323811 /* AccountDetailsViewController.swift */,
 				1AFC8CB123D6D1B1001725D9 /* PageViewController.swift */,
 			);

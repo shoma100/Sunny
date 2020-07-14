@@ -15,7 +15,7 @@ import Firebase
 import Nuke
 
 
-class ChatViewController: MessagesViewController{
+class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate{
     
     
     let ref = Database.database().reference()
@@ -42,17 +42,17 @@ class ChatViewController: MessagesViewController{
         }
         DispatchQueue.global().async {
             DispatchQueue.main.async {
-                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: self.roomId).observe(DataEventType.value) {
+                self.ref.child("chat").queryOrdered(byChild: "room").queryEqual(toValue: self.roomId).observe(.childAdded) {
                     (snapshot) in
-                    self.messageList.removeAll()
+//                    self.messageList.removeAll()
                     // messageListにメッセージの配列をいれて
-                    for data in snapshot.children {
-                        let snapData = data as! DataSnapshot
+//                    for data in snapshot.children {
+//                        let snapData = data as! DataSnapshot
                         // Dictionary型にキャスト
-                        var user = snapData.value as! [String: Any]
-                        user["key"] = snapData.key
+                        var user = snapshot.value as! [String: Any]
+                        user["key"] = snapshot.key
                         self.messageList.append(self.getMessages(user: user as [String : Any]))
-                    }
+//                    }
                     // messagesCollectionViewをリロードして
                     self.messagesCollectionView.reloadData()
                     // 一番下までスクロールする
@@ -269,7 +269,7 @@ extension ChatViewController: MessageCellDelegate{
 }
 
 
-extension ChatViewController: MessageKit.MessageInputBarDelegate{
+extension ChatViewController: MessageInputBarDelegate{
     
     // メッセージ送信ボタンをタップした時の挙動
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {

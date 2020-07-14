@@ -24,7 +24,6 @@ class DB {
     public static func getUserInfo(userId:String,comp:@escaping(Account?) -> Void) {
         self.ref = Database.database().reference().child("user").child(userId)
         self.ref.observeSingleEvent(of: DataEventType.value, with: { snapshot in
-            
             // データを取り出し配列に格納しています
             if let values = snapshot.value as? [String:String] {
                 let user = Account(src: values)
@@ -151,8 +150,9 @@ class DB {
                 let date = stringFromDate(date:Date(),format: "yyyy-MM-dd HH:mm:ss")
                 let myData:[String:Any] = ["updatedAt": date,"user":friendId]
                 let friendData:[String:Any] = ["updatedAt": date,"user":currentId]
-                ref.child("room").child(currentId).childByAutoId().setValue(myData)
-                ref.child("room").child(friendId).childByAutoId().setValue(friendData)
+                let key = ref.child("room").child(currentId).childByAutoId().key
+                ref.child("room").child(currentId).child(key!).setValue(myData)
+                ref.child("room").child(friendId).child(key!).setValue(friendData)
             }
         }
     }

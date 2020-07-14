@@ -27,8 +27,14 @@ class ViewController: UIViewController {
 //        top.modalTransitionStyle = .coverVertical
         
 //        self.present(top,animated: true,completion: nil)
-
-        if (Auth.auth().currentUser != nil) && Auth.auth().currentUser!.isEmailVerified {
+        do {
+            //do-try-catchの中で、FIRAuth.auth()?.signOut()を呼ぶだけで、ログアウトが完了
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print("\(error.localizedDescription)")
+        }
+        let user = Auth.auth().currentUser
+        if (user != nil) && ((user?.isEmailVerified) != nil) {
             self.transitionToView()
         } else {
             let storyboard: UIStoryboard = self.storyboard!
